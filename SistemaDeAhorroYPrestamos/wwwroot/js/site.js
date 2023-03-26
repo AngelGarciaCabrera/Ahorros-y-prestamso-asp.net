@@ -10,7 +10,6 @@ const Telefono = document.getElementById("Telefono");
 const Guardar = document.getElementById("guardar");
 const eliminar = document.getElementById("eliminar");
 //validacion
-
 function validacion() {
 
     let isValid = true;
@@ -125,6 +124,13 @@ eliminar.addEventListener("click", function (datos) {
     clear();
     RemoverClases();
 });
+
+//Register Logica---------------------------------------------------------------------------------
+
+
+
+
+//Login Logica-------------------------------------------------
 
 
 

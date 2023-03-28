@@ -1,37 +1,66 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SistemaDeAhorroYPrestamos</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema De Ahorros Y Prestamos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SistemaDeAhorroYPrestamos.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SistemaDeAhorroYPrestamos</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Financiera</a>
+                <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
+                    <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span>
+                </button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Registro</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Registro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="login">login</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="login">login</a>
                         </li>
                     </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <a href="#" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">login</a> <a href="#"
+                                                                                    class="btn btn-info my-2 my-sm-0 text-uppercase">
+                            sign
+                            up
+                        </a>
+                    </form>
                 </div>
             </div>
         </nav>
+        <div class="container-fluid gtco-banner-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1> We promise to bring
+                        the best <span>solution</span> for
+                        your business. </h1>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus turpis nisl. </p>
+                    <a href="#">Contact Us <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                <div class="col-md-6">
+                    <div class="card"><img class="card-img-top img-fluid" src="images/banner-img.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
     </header>
             @RenderBody()
    

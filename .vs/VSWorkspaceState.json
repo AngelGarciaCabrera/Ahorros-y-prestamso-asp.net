@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SistemaDeAhorroYPrestamos",
+    "\\SistemaDeAhorroYPrestamos\\Controllers",
+    "\\SistemaDeAhorroYPrestamos\\Controllers\\Models",
+    "\\SistemaDeAhorroYPrestamos\\Controllers\\Models\\entities",
+    "\\SistemaDeAhorroYPrestamos\\Properties",
+    "\\SistemaDeAhorroYPrestamos\\Views",
+    "\\SistemaDeAhorroYPrestamos\\Views\\Home",
+    "\\SistemaDeAhorroYPrestamos\\Views\\Shared",
+    "\\SistemaDeAhorroYPrestamos\\wwwroot"
+  ],
+  "SelectedNode": "\\SistemaDeAhorroYPrestamos\\Views\\Shared\\_Layout.cshtml",
+  "PreviewInSolutionExplorer": false
+}

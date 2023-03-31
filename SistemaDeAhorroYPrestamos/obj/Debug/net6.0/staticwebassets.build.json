@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "35cuSOweDbgHmwGXS64YacPEKfQERVldJ3+SpWIBFjs=",
+  "Hash": "AaXSqg4WJDz0k7fMd5gplIydV3y/rlwkmrO+jlpGK7E=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Secure-Now-web-header.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\enlaces.js",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "js/enlaces.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\enlaces.js"
     },
     {
       "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\Login.js",

@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\img\\foto3.jfif"
     },
     {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\pexels-rodnae-productions-7947663.jpg",
+      "PackagePath": "staticwebassets\\img\\pexels-rodnae-productions-7947663.jpg"
+    },
+    {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\Login.js",
       "PackagePath": "staticwebassets\\js\\Login.js"
     },

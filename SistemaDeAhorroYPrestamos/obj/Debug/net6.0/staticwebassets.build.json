@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aM3LZe2EO7JWGwNFMDydZ15avp3JcrwQbSKwzIn8yUM=",
+  "Hash": "Y/NsgcSLg/YBlccjd79r10sRMl297x29AzQTEXpnJ/I=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Secure-Now-web-header.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\Login.js",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "js/Login.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Login.js"
     },
     {
       "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\site.js",

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\SistemaDeAhorroYPrestamos.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Home2.css",
+      "PackagePath": "staticwebassets\\css\\Home2.css"
+    },
+    {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\foto3.jfif",
       "PackagePath": "staticwebassets\\img\\foto3.jfif"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
     },
     {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\site.js",

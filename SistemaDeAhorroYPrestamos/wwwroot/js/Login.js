@@ -98,7 +98,7 @@ function RemoverClasesL() {
 }
 const boton = document.getElementById("general");
 
-
+/*
 boton.addEventListener('click', function (a) {
     a.preventDefault()
     generarFormulario()
@@ -155,3 +155,4 @@ function generarFormulario() {
     document.getElementById("GEnerar").appendChild(GEnerar);
 }
 
+//*

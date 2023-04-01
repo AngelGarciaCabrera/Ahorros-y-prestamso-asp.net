@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7DxIRLuAOH9YjgMy+yMrUEpnTpSmk81HT8HwHz8SFe0=",
+  "Hash": "OTze1i0NNV0BxWz0WNRsJVR80hcBvDC0iIOFOnzGaxI=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\foto3.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\kenny-eliason-GrXWeoP-Ji0-unsplash.jpg",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "img/kenny-eliason-GrXWeoP-Ji0-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\kenny-eliason-GrXWeoP-Ji0-unsplash.jpg"
     },
     {
       "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\Secure-Now-web-header.jpg",

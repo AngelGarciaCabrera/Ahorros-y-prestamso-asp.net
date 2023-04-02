@@ -25,6 +25,12 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         public IActionResult login()
         {
             return View();
+
+        }
+
+        public IActionResult registroinv()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

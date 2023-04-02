@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .my-form {
+            max-width: 600px;
+            /* Ancho máximo del formulario */
+            margin: auto;
+            /* Centra el formulario horizontalmente */
+            margin-top: 50px;
+            /* Agrega un margen superior para separar el formulario del borde superior de la pantalla */
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body onload="AsignacionDeCodigo()">
+
+    <section style="padding-top: 80px;">
+        <center>
+            <div class="card" style="width: 35rem;">
+                <form class="container my-form">
+                    <div class="card-header" style="background: #0400ff; color: #fff;">
+                        <h1 class="card-title">Formulario de inversión</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="codigo">Código:</label>
+                            <input type="text" id="codigo" name="codigo" class="form-control" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="interes">Interés:</label>
+                            <input type="text" id="interes" name="interes" class="form-control" readonly>
+                        </div>
+                    </div> <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="monto">Monto:</label>
+                            <input type="number" id="monto" name="monto" class="form-control">
+                        </div>
+                    </div> <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="fechabeng">Fecha de inicio:</label>
+                            <input type="datetime-local" id="fechabeng" name="fechabeng" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fechaend">Fecha de fin:</label>
+                            <input type="datetime-local" id="fechaend" name="fechaend" class="form-control">
+                        </div>
+                    </div> <br>
+                    <div>
+                        <input type="submit" value="Enviar" class="btn btn-outline-success">
+                        <input type="reset" value="Limpiar" class="btn btn-outline-danger">
+                    </div>
+                </form>
+            </div>
+        </center>
+    </section>
+
+    <script src="js.js"></script>
+</body>
+
+</html>

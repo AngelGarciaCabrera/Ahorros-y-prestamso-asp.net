@@ -30,22 +30,21 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="SolicitudDePrestamo">Home</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="SegundoHome">Segundo Home</a>
                         </li>
                     </ul>
-                        <form class="form-inline my-2 my-lg-0 " style="padding-left: 810px;" >
-                             <a class="btn btn-light my-2 my-sm-0 text-uppercase " style="margin:auto;" asp-area="" asp-controller="Home" asp-action="login">
-                                sign
-                                up
-                            </a>
-                            <a class="btn btn-light my-2 my-sm-0 text-uppercase" style="margin:auto;" asp-area="" asp-controller="Home" asp-action="Privacy" >
-                                    Registro
-                                </a>
-                        </form>
+                    <form class="form-inline my-2 my-lg-0">
+                        <a  class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">Login</a> <a 
+                                                                                 asp-area="" asp-controller="Home" asp-action="login"    class="btn btn-info my-2 my-sm-0 text-uppercase">
+                            sign
+                            up
+                        </a>
+                        <a href="#" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">Registro</a><a asp-area="" asp-controller="Home" asp-action="Privacy"
+                                                                                                               class="btn btn-info my-2 my-sm-0 text-uppercase">
+                            Registro
+                        </a>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -79,7 +78,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/Login.js"  asp-append-version="true"></script>
-    <script src="~/js/FormularioP.js"  asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

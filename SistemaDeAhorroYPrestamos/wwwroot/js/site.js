@@ -33,7 +33,7 @@ function validacion() {
         apellido.classList.add("input-correct");
     }
     const valuecedula = cedula.value;
-    if (valuecedula == "" || valuecedula == null || valuecedula == undefined ||  valuecedula1.length !== 11) {
+    if (valuecedula == "" || valuecedula == null || valuecedula == undefined || valuecedula.length !== 11) {
         cedula.classList.add("input-error");
         isValid = false;
     } else {

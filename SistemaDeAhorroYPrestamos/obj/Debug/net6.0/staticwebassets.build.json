@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OTze1i0NNV0BxWz0WNRsJVR80hcBvDC0iIOFOnzGaxI=",
+  "Hash": "sbkKFT1vQ6KWYNb5q95FeuSVPnCPkNlmS0VrH53InG8=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SistemaDeAhorroYPrestamos.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Home2.css",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "css/Home2.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Home2.css"
     },
     {
       "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\site.css",
@@ -168,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\kenny-eliason-GrXWeoP-Ji0-unsplash.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\pexels-rodnae-productions-7947663.jpg",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "img/pexels-rodnae-productions-7947663.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\pexels-rodnae-productions-7947663.jpg"
     },
     {
       "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\Secure-Now-web-header.jpg",

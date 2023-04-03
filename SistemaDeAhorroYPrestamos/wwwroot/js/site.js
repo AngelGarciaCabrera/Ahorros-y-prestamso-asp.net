@@ -33,7 +33,7 @@ function validacion() {
         apellido.classList.add("input-correct");
     }
     const valuecedula = cedula.value;
-    if (valuecedula == "" || valuecedula == null || valuecedula == undefined) {
+    if (valuecedula == "" || valuecedula == null || valuecedula == undefined ||  valuecedula1.length !== 11) {
         cedula.classList.add("input-error");
         isValid = false;
     } else {
@@ -110,6 +110,7 @@ function guardarDatos() {
         Direccion: Direccion.value,
     };
     console.log(Datos);
+    window.location.href = '/Home/SegundoHome';
 }
 
 Guardar.addEventListener("click", function (datos) {

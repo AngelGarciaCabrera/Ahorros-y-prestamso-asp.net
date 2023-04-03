@@ -16,6 +16,7 @@ function validacion2() {
 
     const valuecedula1 = CedulaL.value;
     if (valuecedula1 == "" || valuecedula1 == null || valuecedula1 == undefined || valuecedula1.length !== 11) {
+        alert("su cedula no es valida")
         CedulaL.classList.add("input-error");
         isValid = false;
     } else {
@@ -46,8 +47,8 @@ function ingresarDatos() {
 }
 
 
- IngresarL.addEventListener("click", function (Datol) {
-   
+IngresarL.addEventListener("click", function (Datol) {
+
     Datol.preventDefault();
     if (validacion2()) {
         ingresarDatos();
@@ -98,17 +99,18 @@ function RemoverClasesL() {
 }
 const boton = document.getElementById("general");
 
-/*
+
 boton.addEventListener('click', function (a) {
     a.preventDefault()
     generarFormulario()
 
 })
 
-let GEnerar = document.createElement("GEnerar");
+/*
+ * let GEnerar = document.createElement("GEnerar");
 function generarFormulario() {
     alert("Hola")
- 
+
     GEnerar.innerHTML = `
      <section id="formularioP" style="padding-top: 60px;">
         <center>
@@ -154,5 +156,4 @@ function generarFormulario() {
   `;
     document.getElementById("GEnerar").appendChild(GEnerar);
 }
-
-//*
+*/

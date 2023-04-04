@@ -2,67 +2,69 @@
     ViewData["Title"] = "Privacy Policy";
 }
 
-   <div class="contenedor-principal" style="padding-top: 5%; padding-bottom:5%">
-
-  <div class="text-center  shadow-lg p-3 mb-5 rounded bg-info" >
-    <H4>Informacion Personal</H4>
-   </div>
-   
-    <section class="contenido" style="margin-top: -20px;">
-      <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-        <div style="display: flex; justify-content: space-between;">
-          <form class="row g-3">
-            <div class="card" id="Formulario">
-              <div class="card-header">
-                <h6>Registro de Usuario</h6>
-              </div>
-              <div class="card-body">
-                <div class="mb-3">
-                    <label for="" class="form-label " style="float: left;">Nombre</label>
-                    <input type="text" class="form-control" id="name" placeholder="Nombre de usario" >
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label"  style="float: left;">Apellido</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Apellido de usario" >
-                  </div>
-                <div class="mb-3">
-                    <label for="" class="form-label"  style="float: left;">Cedula</label>
-                    <input type="number" class="form-control" id="cedula" placeholder="Ingrese Cedula">
-                  </div>
-                  <div class="mb-3">
-                    <label for="tex" class="form-label"  style="float: left;">Direccion</label>
-                    <input type="text" class="form-control" id="Direccion" placeholder="Direccion de usario">
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label"  style="float: left;">Telefono</label>
-                    <input type="text" class="form-control" id="Telefono" placeholder="Direccion de usario">
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label"  style="float: left;">Contraseña</label>
-                    <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
-                  </div>
-                  <div>
-                    <button type="button" class="btn btn-outline-info" id="guardar">Confirmar</button>
-                    <button type="button" class="btn btn-outline-danger" id="eliminar" >Eliminar</button>
-                  </div>
-                </form>
-            </div>
-        </div>
-    <div class="card-img-top" style="position: relative;" >
-   
-        <img src="/img/kenny-eliason-GrXWeoP-Ji0-unsplash.jpg" class="foto"  alt="..." id="img-preview"; style="opacity: 95%;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-          <strong>
-          <h2 class="Titulo">Formamos parte de tus sueños</h2>
-          <p class="subTITULO"> Banco Nacional De La Republica Dominicana </p>
-        </strong>
-        </div>
-      </div>
-  </div>
-</div>
-</div>
-</section>
   
 
-</div>
-    
+
+
+  
+  <main  id="formulario1" style="margin-top:10%" >
+
+    <div class="contenedor__todo">
+        <div class="caja__trasera">
+            <div class="caja__trasera-login" >
+                <h3>¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <button id="btn__registrarse">Regístrarse</button>
+            </div>
+        </div>
+
+        <!--Formulario de Login y registro-->
+        <div class="contenedor__login-register  ">
+            <!--Login-->
+            <form action="" class="formulario__login shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                <h2>Iniciar Sesión</h2>
+                <input type="number"  id="cedula1" placeholder="Ingrese Su Cedula" >
+                <p id="mi-elemento-p" class="text-muted">La cedula no es valida</p>
+                <input type="password"   id="contrasena1" placeholder="Ingrese Su Contraseña">
+                <p id="elemento-p" class="text-muted">Debe ingresar su contraseña</p>
+
+                <button type="button"  id="ingresar4">Ingresar</button>
+                
+               
+
+            </form>
+
+            <!--Register-->
+            <form action="" class="formulario__register shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                <h2>Regístrarse</h2>
+                <input type="text"  id="name" placeholder="Nombre de usario" >
+                <p id="Nombrep" class="text-muted">Debe agregar su nombre</p>
+                <input type="text"  id="lastname" placeholder="Apellido de usario" >
+                <p id="ApellidoP" class="text-muted">Debe agregar su Apellido</p>
+                <input type="number"  id="cedula" placeholder="Ingrese Cedula">
+                <p id="cedulaP" class="text-muted">Su cedula no es valida</p>
+                <input type="text"  id="Direccion" placeholder="Direccion de usario">
+                <p id="DireccionP" class="text-muted">Debe agregar su Dirrecion</p>
+                <input type="number"  id="Telefono" placeholder="Telefono">
+                <p id="telefonoP" class="text-muted">Debe agregar su telefono</p>
+                <input type="password"  id="contrasena" placeholder="Contraseña">
+                <p id="contraseñaP" class="text-muted">Debe agregar su contraseña</p>
+
+                <button id="guardar">Regístrarse</button>
+            </form>
+        </div>
+    </div>
+
+
+</main>
+
+ 
+
+
+  
+ 

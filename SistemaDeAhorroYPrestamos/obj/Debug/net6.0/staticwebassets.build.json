@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AaXSqg4WJDz0k7fMd5gplIydV3y/rlwkmrO+jlpGK7E=",
+  "Hash": "JoHl/QeGkivPPkh4U1g5ihAo3yBNi33Yd8U6MLaA5xk=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SistemaDeAhorroYPrestamos.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\contactenos.css",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "css/contactenos.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contactenos.css"
     },
     {
       "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\site.css",

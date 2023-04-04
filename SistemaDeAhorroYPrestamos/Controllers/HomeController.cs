@@ -33,6 +33,11 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
+        public IActionResult contactenos()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

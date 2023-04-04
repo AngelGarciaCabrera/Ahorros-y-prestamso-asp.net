@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\SistemaDeAhorroYPrestamos.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\contactenos.css",
+      "PackagePath": "staticwebassets\\css\\contactenos.css"
+    },
+    {
       "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

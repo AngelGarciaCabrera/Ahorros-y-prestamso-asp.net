@@ -1,51 +1,137 @@
-/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+*[b-u4qij48xcf] {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-a.navbar-brand[b-u4qij48xcf] {
+body[b-u4qij48xcf] {
+    font-family: 'Poppins', sans-serif;
+}
+
+header[b-u4qij48xcf] {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+    header nav[b-u4qij48xcf] {
+        width: 40%;
+        height: 13%;
+      
+         margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        header nav .ul_user[b-u4qij48xcf] {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul[b-u4qij48xcf] {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+            header nav ul li a[b-u4qij48xcf] {
+                
+                text-decoration: none;
+            }
+
+
+            header nav ul li[b-u4qij48xcf] {
+                list-style-type: none;
+                padding: 5px 0px 5px 25px;
+            }
+
+                header nav ul li a[b-u4qij48xcf] {
+                    
+                    text-decoration: none;
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transition: all .3s ease-in-out;
+                }
+
+    header .divisor[b-u4qij48xcf] {
+        width: 63%;
+        border: 1px solid #1d3ede;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header .navbar2[b-u4qij48xcf] {
+        position: relative;
+        top: calc(50% + 20px);
+        transform: translateY(-50%);
+        width: 25%;
+        height: 13%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+nav ul li a:hover[b-u4qij48xcf] {
+    padding: 5px 10px;
+    background: -webkit-linear-gradient(left, #1d3ede, #01e6f8);
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+
+/*a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
-a[b-u4qij48xcf] {
+a {
   color: #0077cc;
 }
 
-.btn-primary[b-u4qij48xcf] {
+.btn-primary {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active[b-u4qij48xcf], .nav-pills .show > .nav-link[b-u4qij48xcf] {
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
-.border-top[b-u4qij48xcf] {
+.border-top {
   border-top: 1px solid #e5e5e5;
 }
-.border-bottom[b-u4qij48xcf] {
+.border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.box-shadow[b-u4qij48xcf] {
+.box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-button.accept-policy[b-u4qij48xcf] {
+button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
 }
 
-.footer[b-u4qij48xcf] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+*/ .footer[b-u4qij48xcf] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
 }
+/*
 
 @font-face {
     font-family: "Lato-Regular";
@@ -77,29 +163,29 @@ button.accept-policy[b-u4qij48xcf] {
     src: url(../fonts/OpenSans-Semibold.ttf);
 }
 
-p[b-u4qij48xcf] {
+p {
     font-family: "OpenSans-Regular";
     color: #666666;
     font-size: 18px;
 }
 
-body[b-u4qij48xcf] {
+body {
     overflow: hidden;
     overflow-y: auto;
     font-family: "OpenSans-Regular";
 }
 
 @media (min-width: 1200px) {
-    .container[b-u4qij48xcf] {
+    .container {
         max-width: 1240px;
     }
 }
 
-#gtco-main-nav[b-u4qij48xcf] {
+#gtco-main-nav {
     padding: 20px 0;
 }
 
-    #gtco-main-nav .navbar-brand[b-u4qij48xcf] {
+    #gtco-main-nav .navbar-brand {
         font-size: 36px;
         font-family: "Lato-Black";
         text-transform: uppercase;
@@ -115,7 +201,7 @@ body[b-u4qij48xcf] {
         -o-text-fill-color: transparent;
     }
 
-    #gtco-main-nav .bar1[b-u4qij48xcf], #gtco-main-nav .bar2[b-u4qij48xcf], #gtco-main-nav .bar3[b-u4qij48xcf] {
+    #gtco-main-nav .bar1, #gtco-main-nav .bar2, #gtco-main-nav .bar3 {
         width: 25px;
         height: 2px;
         background-color: #fff;
@@ -125,21 +211,21 @@ body[b-u4qij48xcf] {
         position: relative;
     }
 
-    #gtco-main-nav .change .bar1[b-u4qij48xcf] {
+    #gtco-main-nav .change .bar1 {
         -webkit-transform: rotate(-42deg) translate(-2px, 6px);
         transform: rotate(-42deg) translate(-2px, 6px);
     }
 
-    #gtco-main-nav .change .bar2[b-u4qij48xcf] {
+    #gtco-main-nav .change .bar2 {
         opacity: 0;
     }
 
-    #gtco-main-nav .change .bar3[b-u4qij48xcf] {
+    #gtco-main-nav .change .bar3 {
         -webkit-transform: rotate(46deg) translate(-4px, -8px);
         transform: rotate(46deg) translate(-4px, -8px);
     }
 
-    #gtco-main-nav .navbar-nav li a[b-u4qij48xcf] {
+    #gtco-main-nav .navbar-nav li a {
         font-family: "OpenSans-Regular";
         font-size: 18px;
         color: #666666;
@@ -147,7 +233,7 @@ body[b-u4qij48xcf] {
         text-transform: uppercase;
     }
 
-    #gtco-main-nav form a[b-u4qij48xcf] {
+    #gtco-main-nav form a {
         font-family: "OpenSans-Semibold";
         font-size: 18px;
         color: #fff;
@@ -156,24 +242,24 @@ body[b-u4qij48xcf] {
         border-width: 2px;
     }
 
-        #gtco-main-nav form a.btn-info[b-u4qij48xcf] {
+        #gtco-main-nav form a.btn-info {
             background: #01e6f8;
             border-color: #01e6f8;
         }
 
-        #gtco-main-nav form a.btn-outline-dark[b-u4qij48xcf] {
+        #gtco-main-nav form a.btn-outline-dark {
             border-color: #fff;
             background-color: transparent;
         }
 
 @media (max-width: 991px) {
-    #gtco-main-nav form a.btn-outline-dark[b-u4qij48xcf] {
+    #gtco-main-nav form a.btn-outline-dark {
         border-color: #1d3ede;
         color: #1d3ede;
     }
 }
 
-#gtco-main-nav[b-u4qij48xcf]::after {
+#gtco-main-nav::after {
     position: absolute;
     content: "";
     height: 600px;
@@ -190,20 +276,20 @@ body[b-u4qij48xcf] {
 }
 
 @media (max-width: 1400px) {
-    #gtco-main-nav[b-u4qij48xcf]::after {
+    #gtco-main-nav::after {
         height: 550px;
         width: 800px;
     }
 }
 
 @media (max-width: 1199px) {
-    #gtco-main-nav[b-u4qij48xcf]::after {
+    #gtco-main-nav::after {
         width: 700px;
     }
 }
 
 @media (max-width: 991px) {
-    #gtco-main-nav[b-u4qij48xcf]::after {
+    #gtco-main-nav::after {
         width: 55%;
         left: auto;
         right: 0;
@@ -211,13 +297,13 @@ body[b-u4qij48xcf] {
 }
 
 @media (max-width: 600px) {
-    #gtco-main-nav[b-u4qij48xcf]::after {
+    #gtco-main-nav::after {
         width: 100%;
         height: 400px;
     }
 }
 
-#gtco-main-nav[b-u4qij48xcf]::before {
+#gtco-main-nav::before {
     position: absolute;
     content: "";
     height: 590px;
@@ -234,20 +320,20 @@ body[b-u4qij48xcf] {
 }
 
 @media (max-width: 1400px) {
-    #gtco-main-nav[b-u4qij48xcf]::before {
+    #gtco-main-nav::before {
         height: 540px;
         width: 810px;
     }
 }
 
 @media (max-width: 1199px) {
-    #gtco-main-nav[b-u4qij48xcf]::before {
+    #gtco-main-nav::before {
         width: 710px;
     }
 }
 
 @media (max-width: 991px) {
-    #gtco-main-nav[b-u4qij48xcf]::before {
+    #gtco-main-nav::before {
         width: 55%;
         left: auto;
         right: 0;
@@ -255,13 +341,13 @@ body[b-u4qij48xcf] {
 }
 
 @media (max-width: 600px) {
-    #gtco-main-nav[b-u4qij48xcf]::before {
+    #gtco-main-nav::before {
         width: 100%;
         height: 390px;
     }
 }
 
-.gtco-banner-area a[b-u4qij48xcf], .gtco-feature a[b-u4qij48xcf], .gtco-features a[b-u4qij48xcf], .gtco-news .owl-carousel .card a[b-u4qij48xcf], #gtco-footer .submit-button[b-u4qij48xcf] {
+.gtco-banner-area a, .gtco-feature a, .gtco-features a, .gtco-news .owl-carousel .card a, #gtco-footer .submit-button {
     background-image: -moz-linear-gradient(0deg, #06c6f9 0%, #38eaf9 100%);
     background-image: -webkit-linear-gradient(0deg, #06c6f9 0%, #38eaf9 100%);
     background-image: -ms-linear-gradient(0deg, #06c6f9 0%, #38eaf9 100%);
@@ -276,7 +362,7 @@ body[b-u4qij48xcf] {
     text-decoration: none !important;
 }
 
-    .gtco-banner-area a .fa[b-u4qij48xcf], .gtco-feature a .fa[b-u4qij48xcf], .gtco-features a .fa[b-u4qij48xcf], .gtco-news .owl-carousel .card a .fa[b-u4qij48xcf], #gtco-footer .submit-button .fa[b-u4qij48xcf] {
+    .gtco-banner-area a .fa, .gtco-feature a .fa, .gtco-features a .fa, .gtco-news .owl-carousel .card a .fa, #gtco-footer .submit-button .fa {
         background: #fff;
         border-radius: 50%;
         height: 32px;
@@ -288,24 +374,24 @@ body[b-u4qij48xcf] {
         margin-left: 15px;
     }
 
-.gtco-feature h2[b-u4qij48xcf], .gtco-features h2[b-u4qij48xcf] {
+.gtco-feature h2, .gtco-features h2 {
     font-family: "Lato-Regular";
     color: #000000;
     font-size: 36px;
     margin-bottom: 30px;
 }
 
-.card[b-u4qij48xcf] {
+.card {
     border: none;
     background: transparent;
 }
 
-.gtco-banner-area[b-u4qij48xcf] {
+.gtco-banner-area {
     margin-top: 20px;
     min-height: 500px;
 }
 
-    .gtco-banner-area h1[b-u4qij48xcf] {
+    .gtco-banner-area h1 {
         font-family: "Lato-Light";
         font-size: 48px;
         color: #000000;
@@ -313,32 +399,31 @@ body[b-u4qij48xcf] {
         margin-top: 70px;
     }
 
-        .gtco-banner-area h1 span[b-u4qij48xcf] {
+        .gtco-banner-area h1 span {
             font-family: "Lato-Medium";
         }
 
 @media (max-width: 1199px) {
-    .gtco-banner-area h1[b-u4qij48xcf] {
+    .gtco-banner-area h1 {
         margin-top: 30px;
     }
 }
 
-.gtco-banner-area p[b-u4qij48xcf] {
+.gtco-banner-area p {
     max-width: 450px;
     margin: 20px 0;
     margin-bottom: 40px;
 }
 
-.gtco-banner-area a[b-u4qij48xcf] {
+.gtco-banner-area a {
     display: inline;
     padding: 10px 30px;
     padding-right: 5px;
 }
 
-.gtco-banner-area .col-md-6 .card .card-img-top[b-u4qij48xcf] {
+.gtco-banner-area .col-md-6 .card .card-img-top {
     max-width: 430px;
     margin: 0 auto;
     margin-top: 30px;
     margin-right: 0;
-}
-
+}*/

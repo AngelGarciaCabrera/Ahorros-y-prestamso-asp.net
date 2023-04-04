@@ -8,47 +8,46 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SistemaDeAhorroYPrestamos.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/Home2.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Financiera</a>
-                <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
-                    <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="my-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="SegundoHome">Segundo Home</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <a  class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">Login</a> <a 
-                                                                                 asp-area="" asp-controller="Home" asp-action="login"    class="btn btn-info my-2 my-sm-0 text-uppercase">
-                            sign
-                            up
-                        </a>
-                        <a href="#" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">Registro</a><a asp-area="" asp-controller="Home" asp-action="Privacy"
-                                                                                                               class="btn btn-info my-2 my-sm-0 text-uppercase">
-                            Registro
-                        </a>
-                    </form>
-                </div>
+        <nav>
+            <img src="~/img/images.png" style="width: 220px; height: auto; margin-top:5%; margin-bottom:3%" alt="" class="logo">
+            <div class="ul_user">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-user"></i>
+                        <a  href="/Home/login">Inicia Sesion </a>
+                    </li>
+                    <li>
+                        <a href="/Home/Privacy">Inicia Sesion</a>
+                    </li>
+                </ul>
             </div>
         </nav>
-        <div class="container-fluid gtco-banner-area">
+        <span class="divisor"></span>
+        <nav class="">
+            <div class="ul_user2">
+                <ul>
+                    <li>
+                        <a href="/Home/index">Inicia Sesion</a>
+                    </li>
+                    <li>
+                        <a href="#">Contactanos</a>
+                    </li>
+                    <li>
+                        <a href="/Home/login">Sobre Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--<div class="container-fluid gtco-banner-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -61,23 +60,24 @@
                     <div class="card"><img class="card-img-top img-fluid" src="images/banner-img.png" alt=""></div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>-->
     </header>
             @RenderBody()
    
-    <footer class="border-top footer text-muted">
+    <!--<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - SistemaDeAhorroYPrestamos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
          <div class="container">
             &copy; 2023 - SistemaDeAhorroYPrestamos - <a asp-area="" asp-controller="Home" asp-action="login">login</a>
         </div>
-    </footer>
+    </footer>-->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/Login.js"  asp-append-version="true"></script>
+     <script src="~/js/logicaHome2.js"  asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

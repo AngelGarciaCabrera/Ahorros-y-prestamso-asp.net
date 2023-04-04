@@ -3,7 +3,10 @@ const CedulaL = document.getElementById("cedula1");
 const ContraseñaL = document.getElementById("contrasena1");
 const eliminarL = document.getElementById("LimpiarL")
 const IngresarL = document.getElementById("ingresar4")
-
+let elementoP = document.getElementById('mi-elemento-p');
+let contrasenap = document.getElementById('elemento-p');
+elementoP.style.display = 'none';
+contrasenap.style.display = 'none';
 
 
 
@@ -12,28 +15,33 @@ const IngresarL = document.getElementById("ingresar4")
 function validacion2() {
 
 
-    let isValid1 = true;
+    let isValid = true;
 
     const valuecedula1 = CedulaL.value;
     if (valuecedula1 == "" || valuecedula1 == null || valuecedula1 == undefined || valuecedula1.length !== 11) {
-        alert("su cedula no es valida")
+        elementoP.style.display = 'block';
         CedulaL.classList.add("input-error");
         isValid = false;
     } else {
         CedulaL.classList.remove("input-error");
         CedulaL.classList.add("input-correct");
+        elementoP.style.display = 'none';
+        
     }
 
     const contrasena1Value = ContraseñaL.value;
     if (contrasena1Value == "" || contrasena1Value == null || contrasena1Value == undefined) {
+        contrasenap.style.display = 'block';
         ContraseñaL.classList.add("input-error");
         isValid = false;
     } else {
         ContraseñaL.classList.remove("input-error");
         ContraseñaL.classList.add("input-correct");
+        contrasenap.style.display = 'none';
+       
     }
 
-    return isValid1;
+    return isValid;
 }
 
 function ingresarDatos() {
@@ -44,6 +52,8 @@ function ingresarDatos() {
 
     };
     console.log(Datol)
+    window.location.href = '/Home/SegundoHome';
+   
 }
 
 
@@ -51,10 +61,10 @@ IngresarL.addEventListener("click", function (Datol) {
 
     Datol.preventDefault();
     if (validacion2()) {
-        ingresarDatos();
-        console.log(Datol)
-
+       ingresarDatos();
+       
     }
+   
 })
 
 
@@ -72,7 +82,8 @@ eliminarL.addEventListener('click', function (a) {
 
 function clearl() {
     const inputs = formularioL.getElementsByTagName("input");
-
+    elementoP.style.display = 'none';
+    contrasenap.style.display = 'none';
 
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].value === "Enviar") {

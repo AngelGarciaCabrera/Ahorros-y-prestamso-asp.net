@@ -1,6 +1,7 @@
 ﻿const solicitarPrestamo = document.getElementById("solicitarPrestamos");
 
-solicitarPrestamo.addEventListener('click'function (e) {
-    e.preventDefault();
+solicitarPrestamo.onclick = function () {
+   
     window.location.href = '/Home/SolicitudDePrestamo';
-})
+   
+};

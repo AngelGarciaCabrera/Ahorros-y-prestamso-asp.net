@@ -126,14 +126,6 @@ eliminar.addEventListener("click", function (datos) {
     RemoverClases();
 });
 
-//Register Logica---------------------------------------------------------------------------------
-
-
-
-
-//Login Logica-------------------------------------------------
-
-
 
 
 

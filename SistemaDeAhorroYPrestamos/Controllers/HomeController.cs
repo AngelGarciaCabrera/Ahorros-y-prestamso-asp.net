@@ -30,6 +30,11 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+        public IActionResult AboutUS()
+        {
+            return View();
+        }
+
 
         public IActionResult SegundoHome()
         {

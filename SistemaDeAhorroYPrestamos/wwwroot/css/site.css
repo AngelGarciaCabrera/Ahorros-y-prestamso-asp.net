@@ -55,7 +55,7 @@ body {
 #mi-elemento-p {
     display: none;
 }
-. {
+.{
     display: none;
 }
 
@@ -104,3 +104,6 @@ body {
     font-style: normal;
 }
 
+    .text-muted {
+        display: none;
+    }

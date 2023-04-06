@@ -4,16 +4,16 @@ const ContraseñaL = document.getElementById("contrasena1");
 
 const IngresarL = document.getElementById("ingresar4")
 let elementoP = document.getElementById('mi-elemento-p');
-let contrasenap = document.getElementById('elemento-p');
-elementoP.style.display = 'none';
-contrasenap.style.display = 'none';
+let contrasenap = document.getElementById('contraseñap');
+
 
 
 
 
 
 function validacion2() {
-
+   
+    
 
     let isValid = true;
 

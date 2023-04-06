@@ -15,12 +15,7 @@ let DireccionP = document.getElementById('DireccionP');
 let TelefonoP = document.getElementById('telefonoP');
 let contrasenaP = document.getElementById('contraseñaP');
 
-nombreP.style.display = 'none';
-apellidoP.style.display = 'none';
-cedulaP.style.display = 'none';
-DireccionP.style.display = 'none';
-TelefonoP.style.display = 'none';
-contrasenaP.style.display = 'none';
+
 
 
 

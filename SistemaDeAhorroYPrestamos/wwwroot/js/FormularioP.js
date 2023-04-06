@@ -1,23 +1,17 @@
 ﻿
-
-
-
-
-
 //botones
 
 const Solicitar = document.getElementById("Solicitar");
 const Limpiar = document.getElementById("LimpiarP");
 const FechaI = document.getElementById("FechaI");
 const FechaF = document.getElementById("FechaF");
+let codigoR = crypto.randomUUID()
 
-function AsignacionDeCodigo() {
-
+function AsignacionDeCodigoP() {
     let codigoR = crypto.randomUUID()
     console.log(codigoR)
     const Codigo = document.getElementById("Codigo").value = codigoR;
-
-};
+}
 
 function Validate() {
     const valueFechaI = FechaI.value;
@@ -44,6 +38,7 @@ function Validate() {
     if (valueMonto == "" || valueMonto == null || valueMonto == undefined || valueMonto <= 999) {
         Monto.classList.remove("input-correct");
         Monto.classList.add("input-error");
+       
         isValid = false;
     } else {
         Monto.classList.remove("input-error");
@@ -56,13 +51,13 @@ function Validate() {
 
 };
 
-function CalcularInteres() {
+function CalcularInteres1() {
     const Monto = document.getElementById("Monto").value;
     const FechaI = document.getElementById("FechaI").value;
     const FechaF = document.getElementById("FechaF").value;
     if (Validate()) {
         VerificarFecha()
-        calcularTasaDeInteres()
+        calcularTasaDeInteres1()
 
     } else {
         alert("los datos deben ser correctos ")
@@ -109,7 +104,7 @@ function limpiar() {
 
 }
 
-function calcularTasaDeInteres() {
+function calcularTasaDeInteres1() {
     const fechaInicial = new Date(document.getElementById("FechaI").value);
     const fechaFinal = new Date(document.getElementById("FechaF").value);
     const monto = parseFloat(document.getElementById("Monto").value);
@@ -153,7 +148,9 @@ function calcularTasaDeInteres() {
 function enviar() {
 
     if (Validate()) {
-        calcularTasaDeInteres();
+        VerificarFecha()
+        CalcularInteres1()
+        calcularTasaDeInteres1();
         alert("Enviando...");
 
     } else {

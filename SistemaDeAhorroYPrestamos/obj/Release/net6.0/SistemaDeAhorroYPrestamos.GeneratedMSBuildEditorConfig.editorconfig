@@ -9,12 +9,16 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SistemaDeAhorroYPrestamos
 build_property.RootNamespace = SistemaDeAhorroYPrestamos
-build_property.ProjectDir = C:\Users\Henry\Source\Repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos\
+build_property.ProjectDir = C:\Users\Henry\source\repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Henry\Source\Repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos
+build_property.MSBuildProjectDirectory = C:\Users\Henry\source\repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Henry/source/repos/AngelGarciaCabrera/Ahorros-y-prestamso-asp.net/SistemaDeAhorroYPrestamos/Views/Home/AboutUS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVTLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Henry/source/repos/AngelGarciaCabrera/Ahorros-y-prestamso-asp.net/SistemaDeAhorroYPrestamos/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
@@ -30,6 +34,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Henry/source/repos/AngelGarciaCabrera/Ahorros-y-prestamso-asp.net/SistemaDeAhorroYPrestamos/Views/Home/SegundoHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1bmRvSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Henry/source/repos/AngelGarciaCabrera/Ahorros-y-prestamso-asp.net/SistemaDeAhorroYPrestamos/Views/Home/SolicitudDeInversion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb2xpY2l0dWREZUludmVyc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Henry/source/repos/AngelGarciaCabrera/Ahorros-y-prestamso-asp.net/SistemaDeAhorroYPrestamos/Views/Home/SolicitudDePrestamo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb2xpY2l0dWREZVByZXN0YW1vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Henry/source/repos/AngelGarciaCabrera/Ahorros-y-prestamso-asp.net/SistemaDeAhorroYPrestamos/Views/Shared/Error.cshtml]

@@ -40,7 +40,10 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
-
+        public IActionResult SolicitudDeInversion()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

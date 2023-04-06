@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "SolicitudDeInversion";
+}
+
+
+
+<body onload="AsignacionDeCodigo()">
+
+    <section  style="padding-top: 60px; padding-bottom: 40px;">
+        <center>
+            <div class="card shadow p-3 mb-5 bg-body-tertiary rounded " style="max-width: 500px; " >
+                <form >
+                    <div class="card-header p-3 mb-2 bg-primary text-white">
+                        <h1 class="card-title">Formulario de inversión</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="codigo">Código:</label>
+                            <input type="text" id="codigo" name="codigo" class="form-control" readonly>
+                        </div> 
+                        <div class="col-md-6">
+                            <label for="interes">Interés:</label>
+                            <input type="text" id="interes" name="interes" class="form-control" readonly>
+                        </div>
+                    </div> <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="monto">Monto:</label>
+                            <input type="number" id="monto" name="monto" class="form-control">
+                        </div>
+                    </div> <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="fechabeng">Fecha de inicio:</label>
+                            <input type="datetime-local" id="fechabeng" name="fechabeng" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fechaend">Fecha de fin:</label>
+                            <input type="datetime-local" id="fechaend" name="fechaend" class="form-control">
+                        </div>
+                    </div> <br>
+                    <div>
+                        <input type="submit" value="Enviar" class="btn btn-outline-success">
+                        <input type="reset" value="Limpiar" class="btn btn-outline-danger">
+                    </div>
+                </form>
+            </div>
+        </center>
+    </section>
+
+    <script src="js.js"></script>
+</body>

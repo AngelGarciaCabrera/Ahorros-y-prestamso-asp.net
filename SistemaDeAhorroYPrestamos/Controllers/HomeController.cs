@@ -21,6 +21,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         public IActionResult Privacy(Prestamos prestamo)
         {
+
             
             return View();
         }
@@ -46,6 +47,13 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+
+        public IActionResult TablaPrestamos()
+        {
+            return View();
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

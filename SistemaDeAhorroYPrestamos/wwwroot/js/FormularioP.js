@@ -5,6 +5,9 @@ const Solicitar = document.getElementById("Solicitar");
 const Limpiar = document.getElementById("LimpiarP");
 const FechaI = document.getElementById("FechaI");
 const FechaF = document.getElementById("FechaF");
+const CedulaFiador = document.getElementById("Fiador");
+const Garantia = document.getElementById("garantia");
+const AddGarantia = document.getElementById("addgarantia");
 let codigoR = crypto.randomUUID()
 
 function AsignacionDeCodigoP() {
@@ -14,6 +17,9 @@ function AsignacionDeCodigoP() {
 }
 
 function Validate() {
+   
+    const GarantiaValue = Garantia.value;
+    const FiadorValue = CedulaFiador.value;
     const valueFechaI = FechaI.value;
     const valueFechaF = FechaF.value;
     const valueMonto = Monto.value;
@@ -44,7 +50,28 @@ function Validate() {
         Monto.classList.remove("input-error");
         Monto.classList.add("input-correct");
     }
+    
+    debugger
+    if (GarantiaValue.length == 0 && FiadorValue.length !== 11) {
+        debugger
+        AddGarantia.style.display = 'none';
+        CedulaFiador.classList.remove("input-correct"); 
+        CedulaFiador.classList.add("input-error")
 
+
+    } else {
+        AddGarantia.style.display = 'block';
+        CedulaFiador.classList.add("input-correct")
+        CedulaFiador.classList.remove("input-error"); 
+      
+    }
+
+   
+  
+   
+   
+    
+    
     return isValidate;
     const Si = isValidate
 
@@ -160,4 +187,12 @@ function enviar() {
 
 
 
+}
+
+function mostrarOpciones() {
+    document.getElementById("opciones").style.display = "block";
+}
+
+function mostrarCampos() {
+    document.getElementById("campos").style.display = "block";
 }

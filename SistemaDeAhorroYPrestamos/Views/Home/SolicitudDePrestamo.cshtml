@@ -42,7 +42,47 @@
                         <label for="" class="form-label">Fecha Final</label>
                         <input type="date" id="FechaF"  class="form-control">
                     </div>
-               
+                     <div class="mb-3" >
+                        <label for="" class="form-label">Cedula de Fiador</label>
+                        <input type="number" id="Fiador"  class="form-control">
+                    </div>
+                <form>
+                  <div class="form-group" style="padding-bottom:13px">
+                    <label for="garantia">Garantía:</label>
+                    <input type="text" class="form-control" id="garantia" name="garantia">
+                  </div>
+                  <button type="button" id="addgarantia" class="btn btn-primary mb-3"  onclick="mostrarOpciones()">Agregar garantía</button>
+                  <div id="opciones" style="display: none;">
+                    <div class="form-group">
+                      <label for="tipo-garantia">Tipo de garantía:</label><br>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="inmueble" name="tipo-garantia" value="inmueble" onclick="mostrarCampos()">
+                        <label class="form-check-label" for="inmueble">Inmueble</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="automovil" name="tipo-garantia" value="automovil" onclick="mostrarCampos()">
+                        <label class="form-check-label" for="automovil">Automóvil</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="otros" name="tipo-garantia" value="otros" onclick="mostrarCampos()">
+                        <label class="form-check-label" for="otros">Otros</label>
+                      </div>
+                    </div>
+                    <div id="campos" style="display: none;">
+                      <div class="form-group">
+                        <label for="valor">Valor estimado:</label>
+                        <input type="number" class="form-control" id="valor" name="valor">
+                      </div>
+                      <div class="form-group">
+                        <label for="ubicacion">Ubicación:</label>
+                        <input type="text" class="form-control" id="ubicacion" name="ubicacion">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                   
+
                 </div>
                     <div style="padding-left: 20px;" >
                         <button  style="float:left;"  type="button" class="btn btn-outline-success" id="Calcularinteres" onclick="CalcularInteres1()" >Calcular Interes</button>

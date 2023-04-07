@@ -1,10 +1,16 @@
 ﻿
 //botones
-
+const CedulaFiador = document.getElementById("Fiador");
+const Garantia = document.getElementById("garantia");
 const Solicitar = document.getElementById("Solicitar");
 const Limpiar = document.getElementById("LimpiarP");
 const FechaI = document.getElementById("FechaI");
 const FechaF = document.getElementById("FechaF");
+//apartados de garatia
+
+const tipo_garantia = document.getElementById("TipoGarantia");
+const valorEstimadoDGarantia = document.getElementById("");
+const ubicacionDGarantia = document.getElementById("");
 
 const AddGarantia = document.getElementById("addgarantia");
 let codigoR = crypto.randomUUID()
@@ -73,8 +79,8 @@ function Validate() {
 };
 
 function CalcularInteres1() {
-    const CedulaFiador = document.getElementById("Fiador").value;
-    const Garantia = document.getElementById("garantia").value;
+    debugger
+    
     const Monto = document.getElementById("Monto").value;
     const FechaI = document.getElementById("FechaI").value;
     const FechaF = document.getElementById("FechaF").value;
@@ -119,11 +125,14 @@ function VerificarFecha() {
 }
 
 function limpiar() {
+    
     Monto.value = null;
     FechaI.value = null;
     FechaF.value = null;
-    CedulaFiador.value = "";
+    CedulaFiador.value = null;
     Garantia.value = null;
+    console.log(Garantia)
+    console.log(Garantia.value)
 
 
 }
@@ -152,7 +161,28 @@ function calcularTasaDeInteres1() {
     console.log(`Años: ${anos}`);
     console.log(`Tasa de interés: ${tasaDeInteres}`);
     console.log(`Tasa de interés final: ${tasaDeInteresInput.value}`);
+    const opcionesSeleccionadas = document.getElementsByName("tipo-garantia");
+    const opciones = {};
+    let opcionSeleccionada = '';
 
+    opcionesSeleccionadas.forEach((opcion) => {
+        if (opcion.checked) {
+            opciones[opcion.value] = opcion.value;
+            opcionSeleccionada = opcion.value;
+        } else {
+            opciones[opcion.value] = false;
+        }
+    });
+
+    const opcionesString = JSON.stringify(opciones);
+    const opcionesFinalString = opciones.toString();
+
+    let opcionTrue = '';
+    for (const opcion in opciones) {
+        if (opciones[opcion]) {
+            opcionTrue = opcion;
+        }
+    }
 
     const resultados = {};
 
@@ -164,6 +194,10 @@ function calcularTasaDeInteres1() {
     resultados.anos = anos;
     resultados.tasaDeInteres = tasaDeInteres;
     resultados.interesFinal = interesFinal;
+    resultados.Garantia = Garantia.value
+    resultados.Ceduladelfiador = CedulaFiador.value
+    resultados.tipo = opcionTrue;
+   
     console.log(resultados)
 
     // devolver el objeto con los resultados

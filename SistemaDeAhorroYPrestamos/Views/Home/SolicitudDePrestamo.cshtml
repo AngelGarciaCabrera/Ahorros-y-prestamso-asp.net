@@ -55,19 +55,21 @@
                   <div id="opciones" style="display: none;">
                     <div class="form-group">
                       <label for="tipo-garantia">Tipo de garantía:</label><br>
-                      <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" id="inmueble" name="tipo-garantia" value="inmueble" onclick="mostrarCampos()">
-                        <label class="form-check-label" for="inmueble">Inmueble</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" id="automovil" name="tipo-garantia" value="automovil" onclick="mostrarCampos()">
-                        <label class="form-check-label" for="automovil">Automóvil</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input" id="otros" name="tipo-garantia" value="otros" onclick="mostrarCampos()">
-                        <label class="form-check-label" for="otros">Otros</label>
-                      </div>
-                    </div>
+
+                          <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input"  name="tipo-garantia" value="inmueble" onclick="mostrarCampos()">
+                            <label class="form-check-label" id="TipoGarantia" value="inmueble" for="inmueble">Inmueble</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input"  name="tipo-garantia" value="automovil" onclick="mostrarCampos()">
+                            <label class="form-check-label"id="TipoGarantia" value="AutoMovil"  for="automovil">Automóvil</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input"  name="tipo-garantia" value="otros" onclick="mostrarCampos()">
+                            <label class="form-check-label"  id="TipoGarantia"for="otros" value="otro">Otros</label>
+                          </div>
+                        </div>
+
                     <div id="campos" style="display: none;">
                       <div class="form-group">
                         <label for="valor">Valor estimado:</label>

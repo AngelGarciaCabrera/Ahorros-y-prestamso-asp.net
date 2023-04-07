@@ -56,9 +56,9 @@ function Validate() {
         Monto.classList.add("input-correct");
     }
     
-    debugger
+    
     if (GarantiaValue.length == 0 && FiadorValue.length !== 11) {
-        debugger
+       
         AddGarantia.style.display = 'none';
         CedulaFiador.classList.remove("input-correct"); 
         CedulaFiador.classList.add("input-error")
@@ -79,7 +79,7 @@ function Validate() {
 };
 
 function CalcularInteres1() {
-    debugger
+   
     
     const Monto = document.getElementById("Monto").value;
     const FechaI = document.getElementById("FechaI").value;
@@ -136,6 +136,7 @@ function limpiar() {
 
 
 }
+
 
 function calcularTasaDeInteres1() {
     const fechaInicial = new Date(document.getElementById("FechaI").value);
@@ -202,17 +203,27 @@ function calcularTasaDeInteres1() {
     resultados.tipo = opcionTrue;
    
     console.log(resultados)
-
+    localStorage.setItem('Prestamo', JSON.stringify(resultados));
+    console.log("subido al local")
     // devolver el objeto con los resultados
     return resultados;
+
+}
+function Buscar() {
+    const usuarioGuardado = localStorage.getItem('Prestamo');
+    const miObjetoRecuperado = JSON.parse(usuarioGuardado);
+    console.log(miObjetoRecuperado);
 }
 function enviar() {
 
     if (Validate()) {
         VerificarFecha()
         CalcularInteres1()
+
         calcularTasaDeInteres1();
-        alert("Enviando...");
+        Buscar()
+        
+        
 
     } else {
         alert("debe completar los datos")

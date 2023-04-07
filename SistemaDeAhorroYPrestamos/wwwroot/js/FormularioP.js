@@ -183,19 +183,22 @@ function calcularTasaDeInteres1() {
             opcionTrue = opcion;
         }
     }
-
+    const ValorGarantia = document.getElementById("valor");
+    const ubicacion = document.getElementById("ubicacion");
     const resultados = {};
 
     // agregar propiedades y valores al objeto
     resultados.monto = monto;
-    resultados.FechaInicial = fechaInicial.value;
-    resultados.FechaFinal = fechaFinal.value;
+    resultados.FechaInicial = fechaInicial.toLocaleDateString();
+    resultados.FechaFinal = fechaFinal.toLocaleDateString();
     resultados.dias = dias;
     resultados.anos = anos;
     resultados.tasaDeInteres = tasaDeInteres;
     resultados.interesFinal = interesFinal;
     resultados.Garantia = Garantia.value
     resultados.Ceduladelfiador = CedulaFiador.value
+    resultados.ValorGarantia = ValorGarantia.value
+    resultados.ubicacion = ubicacion.value
     resultados.tipo = opcionTrue;
    
     console.log(resultados)

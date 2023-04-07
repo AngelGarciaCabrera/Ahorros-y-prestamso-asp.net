@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaDeAhorroYPrestamos.Controllers.Models.entities;
 using SistemaDeAhorroYPrestamos.Models;
 using System.Diagnostics;
 
@@ -18,8 +19,9 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy(Prestamos prestamo)
         {
+            
             return View();
         }
         public IActionResult login()

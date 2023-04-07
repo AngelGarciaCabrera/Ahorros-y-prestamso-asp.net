@@ -5,8 +5,7 @@ const Solicitar = document.getElementById("Solicitar");
 const Limpiar = document.getElementById("LimpiarP");
 const FechaI = document.getElementById("FechaI");
 const FechaF = document.getElementById("FechaF");
-const CedulaFiador = document.getElementById("Fiador");
-const Garantia = document.getElementById("garantia");
+
 const AddGarantia = document.getElementById("addgarantia");
 let codigoR = crypto.randomUUID()
 
@@ -66,11 +65,6 @@ function Validate() {
       
     }
 
-   
-  
-   
-   
-    
     
     return isValidate;
     const Si = isValidate
@@ -79,6 +73,8 @@ function Validate() {
 };
 
 function CalcularInteres1() {
+    const CedulaFiador = document.getElementById("Fiador").value;
+    const Garantia = document.getElementById("garantia").value;
     const Monto = document.getElementById("Monto").value;
     const FechaI = document.getElementById("FechaI").value;
     const FechaF = document.getElementById("FechaF").value;
@@ -126,7 +122,8 @@ function limpiar() {
     Monto.value = null;
     FechaI.value = null;
     FechaF.value = null;
-
+    CedulaFiador.value = "";
+    Garantia.value = null;
 
 
 }

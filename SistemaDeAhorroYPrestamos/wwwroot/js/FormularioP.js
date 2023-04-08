@@ -142,25 +142,34 @@ function calcularTasaDeInteres1() {
     const fechaInicial = new Date(document.getElementById("FechaI").value);
     const fechaFinal = new Date(document.getElementById("FechaF").value);
     const monto = parseFloat(document.getElementById("Monto").value);
-
+    
     const unDiaEnMilisegundos = 1000 * 60 * 60 * 24;
     const dias = (fechaFinal - fechaInicial) / unDiaEnMilisegundos;
-
+    let meses = (fechaFinal.getFullYear() - fechaInicial.getFullYear()) * 12 + (fechaFinal.getMonth() - fechaInicial.getMonth());
     const tasaBase = 0.05; // tasa base del 5%
     const tasaAdicional = 0.02; // tasa adicional del 2% por año adicional
     const anos = dias / 365; // calcula el número de años
-
+    
     let tasaDeInteres = (1 + tasaBase + tasaAdicional * anos) ** anos - 1; // aplica la fórmula de interés compuesto
-
-    let tasaDeInteresInput = document.getElementById("Interes"); //captura el elemento
+    debugger
+    let tasaDeInteresInput = document.getElementById("Interes");
+    debugger//captura el elemento
     tasaDeInteresInput.value = `${(tasaDeInteres * 100).toFixed(2)}%`;
     const interesFinal = tasaDeInteresInput.value
+   
+    const cuotaMensuales = monto / meses * (1 + tasaDeInteres);
+    const cuotaMensualRedondeada = cuotaMensuales.toFixed(2);
+   
+  
+ 
     console.log(`Monto: ${monto}`);
     console.log(`Fecha inicial: ${fechaInicial}`);
     console.log(`Fecha final: ${fechaFinal}`);
+    console.log("Hay " + meses + " meses entre las fechas.");
     console.log(`Días: ${dias}`);
     console.log(`Años: ${anos}`);
     console.log(`Tasa de interés: ${tasaDeInteres}`);
+    console.log(`cuotasMensuales: ${cuotaMensualRedondeada}`);
     console.log(`Tasa de interés final: ${tasaDeInteresInput.value}`);
     const opcionesSeleccionadas = document.getElementsByName("tipo-garantia");
     const opciones = {};
@@ -186,19 +195,23 @@ function calcularTasaDeInteres1() {
     }
     const ValorGarantia = document.getElementById("valor");
     const ubicacion = document.getElementById("ubicacion");
+
     const resultados = {};
 
     // agregar propiedades y valores al objeto
     resultados.monto = monto;
+
     resultados.FechaInicial = fechaInicial.toLocaleDateString();
     resultados.FechaFinal = fechaFinal.toLocaleDateString();
     resultados.dias = dias;
+    resultados.meses = meses;
     resultados.anos = anos;
-    resultados.tasaDeInteres = tasaDeInteres;
     resultados.interesFinal = interesFinal;
     resultados.Garantia = Garantia.value
     resultados.Ceduladelfiador = CedulaFiador.value
     resultados.ValorGarantia = ValorGarantia.value
+    resultados.CantidadDeCuotas = meses;
+    resultados.MontoDeCuotas = cuotaMensualRedondeada;
     resultados.ubicacion = ubicacion.value
     resultados.tipo = opcionTrue;
    
@@ -210,6 +223,7 @@ function calcularTasaDeInteres1() {
 
 }
 function Buscar() {
+    /* window.location.href = '/Home/TablaPrestamos';*/
     const usuarioGuardado = localStorage.getItem('Prestamo');
     const miObjetoRecuperado = JSON.parse(usuarioGuardado);
     console.log(miObjetoRecuperado);

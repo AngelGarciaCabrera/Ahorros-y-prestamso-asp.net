@@ -6,6 +6,8 @@ const Solicitar = document.getElementById("Solicitar");
 const Limpiar = document.getElementById("LimpiarP");
 const FechaI = document.getElementById("FechaI");
 const FechaF = document.getElementById("FechaF");
+
+
 //apartados de garatia
 
 const tipo_garantia = document.getElementById("TipoGarantia");
@@ -108,7 +110,7 @@ function VerificarFecha() {
     var FechaFinalConFormato = fechaF.substring(0, 10);
 
     if (FechaInicialConFormato < FechaFinalConFormato) {
-        alert("la fecha es correcta");
+        
         return FechaIsValida = true;
     } else if (FechaInicialConFormato > FechaFinalConFormato) {
         alert("La fecha final debe ser despues que la fecha inical");
@@ -142,21 +144,21 @@ function calcularTasaDeInteres1() {
     const fechaInicial = new Date(document.getElementById("FechaI").value);
     const fechaFinal = new Date(document.getElementById("FechaF").value);
     const monto = parseFloat(document.getElementById("Monto").value);
-    
+
     const unDiaEnMilisegundos = 1000 * 60 * 60 * 24;
     const dias = (fechaFinal - fechaInicial) / unDiaEnMilisegundos;
     let meses = (fechaFinal.getFullYear() - fechaInicial.getFullYear()) * 12 + (fechaFinal.getMonth() - fechaInicial.getMonth());
     const tasaBase = 0.05; // tasa base del 5%
     const tasaAdicional = 0.02; // tasa adicional del 2% por año adicional
     const anos = dias / 365; // calcula el número de años
-    
+
     let tasaDeInteres = (1 + tasaBase + tasaAdicional * anos) ** anos - 1; // aplica la fórmula de interés compuesto
     debugger
     let tasaDeInteresInput = document.getElementById("Interes");
     debugger//captura el elemento
     tasaDeInteresInput.value = `${(tasaDeInteres * 100).toFixed(2)}%`;
     const interesFinal = tasaDeInteresInput.value
-   
+
     const cuotaMensuales = monto / meses * (1 + tasaDeInteres);
     const cuotaMensualRedondeada = cuotaMensuales.toFixed(2);
 
@@ -193,13 +195,14 @@ function calcularTasaDeInteres1() {
     }
     const ValorGarantia = document.getElementById("valor");
     const ubicacion = document.getElementById("ubicacion");
-
-
-
+    JSON.parse
+    const KeyPrestamos= "Prestamo"
+    
     const resultados = {};
-
+  
     // agregar propiedades y valores al objeto
-    resultados.id = Codigo.value; 
+   
+    resultados.id = Codigo.value;
     resultados.monto = monto;
     resultados.FechaInicial = fechaInicial.toLocaleDateString();
     resultados.FechaInicial = fechaInicial.toLocaleDateString();
@@ -215,14 +218,18 @@ function calcularTasaDeInteres1() {
     resultados.MontoDeCuotas = cuotaMensualRedondeada;
     resultados.ubicacion = ubicacion.value
     resultados.tipo = opcionTrue;
-   
-    console.log(resultados)
-    localStorage.setItem('Prestamo', JSON.stringify(resultados));
+
+    const PrestamosGuardados = JSON.parse(localStorage.getItem(KeyPrestamos) || '[]');
+    PrestamosGuardados.push(resultados)
+
+    /*console.log(resultados)*/
+    localStorage.setItem('Prestamo', JSON.stringify(PrestamosGuardados));
     console.log("subido al local")
     // devolver el objeto con los resultados
     return resultados;
 
 }
+
 function Buscar() {
     window.location.href = '/Home/TablaPrestamos'
     
@@ -235,7 +242,7 @@ function enviar() {
 
         calcularTasaDeInteres1();
         Buscar()
-        
+        calcular()
         
 
     } else {
@@ -253,4 +260,27 @@ function mostrarOpciones() {
 
 function mostrarCampos() {
     document.getElementById("campos").style.display = "block";
+}
+
+function calcular() {
+
+    const cuotas = {};
+
+    for (let i = 0; i <= meses; i++) {
+        const saldoPendiente = monto * Math.pow(1 + (tasaDeInteres / 12), i) - cuotaMensual * (Math.pow(1 + (tasaDeInteres / 12), i) - 1) / (tasaDeInteres / 12);
+        const interesMensual = saldoPendiente * (tasaDeInteres / 12);
+        const capitalMensual = cuotaMensual - interesMensual;
+        const fechaCuota = new Date(fechaInicial.getFullYear(), fechaInicial.getMonth() + i, fechaInicial.getDate());
+        const fechaFormato = `${fechaCuota.getDate()}/${fechaCuota.getMonth() + 1}`;
+        cuotas.push({
+            fecha: fechaFormato,
+            capital: capitalMensual.toFixed(2),
+            interes: interesMensual.toFixed(2),
+            cuota: cuotaMensual.toFixed(2),
+            saldo: saldoPendiente.toFixed(2)
+
+        })
+                    
+    }
+    console.log(cuotas)
 }

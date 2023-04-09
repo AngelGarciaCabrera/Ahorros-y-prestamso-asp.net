@@ -9,7 +9,6 @@ namespace SistemaDeAhorroYPrestamos.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -27,8 +26,9 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         }
         public IActionResult login()
         {
-            return View();
+          return View();
         }
+        
         public IActionResult SolicitudDePrestamo()
         {
             return View();
@@ -38,9 +38,11 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
+      
         public IActionResult SegundoHome()
         {
-
+            
+            
             return View();
         }
         public IActionResult SolicitudDeInversion()

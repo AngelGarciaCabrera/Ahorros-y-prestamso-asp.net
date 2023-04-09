@@ -60,11 +60,10 @@ IngresarL.addEventListener("click", function (Datol) {
     Datol.preventDefault();
     if (validacion2()) {
         ingresarDatos();
-
+      
     }
 
 })
-
 
 
 

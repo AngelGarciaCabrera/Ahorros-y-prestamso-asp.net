@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SistemaDeAhorroYPrestamos.Controllers.Models.entities;
+
 using SistemaDeAhorroYPrestamos.Models;
 using System.Diagnostics;
+
 
 namespace SistemaDeAhorroYPrestamos.Controllers
 {
@@ -19,9 +20,8 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-        public IActionResult Privacy(Prestamos prestamo)
+        public IActionResult Privacy()
         {
-
             
             return View();
         }
@@ -38,9 +38,9 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-
         public IActionResult SegundoHome()
         {
+
             return View();
         }
         public IActionResult SolicitudDeInversion()

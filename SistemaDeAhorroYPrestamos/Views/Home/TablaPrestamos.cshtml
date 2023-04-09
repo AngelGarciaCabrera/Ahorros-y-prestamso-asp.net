@@ -1,46 +1,23 @@
 ﻿
+
 @{
     ViewData["Title"] = "TablaPrestamos";
 }
-<center>
+<body  onload="LlenarTablaPrestmaos()">
+
+    <center>
     <section style="padding-top:4%">
          <div class="card" style="max-width:70%">
             <div class="card-header "style="background-color:dodgerblue">
                  <h1 class="card-title">Tabla Prestamos</h1></div>
                 <div class="card-body"  style="overflow-y: scroll;">
-                   <table class="table table-hover " >
-                      <thead>
-                        <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">Monto(Mensuales)</th>
-                          <th scope="col">Cuotas(Mensuales)</th>
-                          <th scope="col">Fecha De pago</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1232</th>
-                          <td>1500</td>
-                          <td>12</td>
-                          <td>30</td>
-                           
-                        </tr>
-                        <tr>
-                           <th scope="row">5232</th>
-                          <td>1500</td>
-                          <td>12</td>
-                          <td>30</td>
-                           
-                        </tr>
-                        <tr>
-                           <th scope="row">1332</th>
-                          <td>1500</td>
-                          <td>12</td>
-                          <td>30</td>
-                           
-                        </tr>
-                      </tbody>
+                   <table class="table table-hover " id="tabla" >
+                      
                     </table>
+                    
+        </div>
+        <div>
+            <button><link href=""> mas informacion..</button>
         </div>
 
     </div>
@@ -49,4 +26,7 @@
    
 
 </center>
+
+
+</body>
 

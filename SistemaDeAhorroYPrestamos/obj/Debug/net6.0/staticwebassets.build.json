@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kY+zDCIh4zDNYqL3pZJFIgupUmmb9RIeMppQAYPFwKI=",
+  "Hash": "j/mYXRxVhSSwpUYX2J0G2NCP74S2S9ptMZUf9IWST2Q=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -508,6 +508,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\TablaPrestamos.js",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "js/TablaPrestamos.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\TablaPrestamos.js"
     },
     {
       "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -159,9 +159,7 @@ function calcularTasaDeInteres1() {
    
     const cuotaMensuales = monto / meses * (1 + tasaDeInteres);
     const cuotaMensualRedondeada = cuotaMensuales.toFixed(2);
-   
-  
- 
+
     console.log(`Monto: ${monto}`);
     console.log(`Fecha inicial: ${fechaInicial}`);
     console.log(`Fecha final: ${fechaFinal}`);
@@ -196,11 +194,14 @@ function calcularTasaDeInteres1() {
     const ValorGarantia = document.getElementById("valor");
     const ubicacion = document.getElementById("ubicacion");
 
+
+
     const resultados = {};
 
     // agregar propiedades y valores al objeto
+    resultados.id = Codigo.value; 
     resultados.monto = monto;
-
+    resultados.FechaInicial = fechaInicial.toLocaleDateString();
     resultados.FechaInicial = fechaInicial.toLocaleDateString();
     resultados.FechaFinal = fechaFinal.toLocaleDateString();
     resultados.dias = dias;
@@ -223,10 +224,8 @@ function calcularTasaDeInteres1() {
 
 }
 function Buscar() {
-    /* window.location.href = '/Home/TablaPrestamos';*/
-    const usuarioGuardado = localStorage.getItem('Prestamo');
-    const miObjetoRecuperado = JSON.parse(usuarioGuardado);
-    console.log(miObjetoRecuperado);
+    window.location.href = '/Home/TablaPrestamos'
+    
 }
 function enviar() {
 

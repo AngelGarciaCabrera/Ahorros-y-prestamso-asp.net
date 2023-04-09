@@ -44,9 +44,14 @@ function validarFormulario(evento) {
         interes: interes.toFixed(2) + '%',
         cuotas: calcularCuotas()
     };
-    localStorage.setItem('inversion', JSON.stringify(inversion));
 
     console.log(inversion);
+
+    // Guardar las cuotas en el LocalStorage
+    localStorage.setItem('cuotas', JSON.stringify(inversion.cuotas));
+
+    mostrarCuotas(calcularCuotas());
+
 }
 
 function limpiar() {
@@ -95,7 +100,7 @@ function calcularCuotas() {
     const cuotaMensual = monto * (tasaDeInteres / 12) / (1 - Math.pow(1 + (tasaDeInteres / 12), -plazoEnMeses));
     const cuotas = [];
 
-    for (let i = 0; i < plazoEnMeses; i++) {
+for (let i = 0; i <= plazoEnMeses; i++) {
         const saldoPendiente = monto * Math.pow(1 + (tasaDeInteres / 12), i) - cuotaMensual * (Math.pow(1 + (tasaDeInteres / 12), i) - 1) / (tasaDeInteres / 12);
         const interesMensual = saldoPendiente * (tasaDeInteres / 12);
         const capitalMensual = cuotaMensual - interesMensual;
@@ -110,12 +115,21 @@ function calcularCuotas() {
         });
     }
 
-
     console.log(`Plazo en meses: ${plazoEnMeses}`);
     console.log(`Cuota mensual: ${cuotaMensual.toFixed(2)}`);
     console.log(cuotas);
 
     return cuotas;
+}
+
+function mostrarCuotas() {
+    const cuotasString = localStorage.getItem('cuotas');
+    if (cuotasString) {
+        const cuotas = JSON.parse(cuotasString);
+        console.log(cuotas);
+    } else {
+        console.log('No hay cuotas guardadas en el LocalStorage');
+    }
 }
 
 

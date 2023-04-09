@@ -1,28 +1,80 @@
 ﻿
-@{
-    ViewData["Title"] = "TablaInversion";
-}
-
-<center>
-    <section style="padding-top:4%">
-        <div class ="card" style="max-width:70%">
-            <div class="card-header " style="background-color:dodgerblue">
-                <h1 class="card-title">Cuotas de tu inversion</h1>
+<body onload="LlenarTablaPrestmaos(1)">
+    <center>
+        <section style="padding-top:4%">
+            <div class="card" style="max-width:70%">
+                <div class="card-header " style="background-color:dodgerblue">
+                    <h1 class="card-title">Cuotas de tu inversión</h1>
+                </div>
+                <div class="card-body" style="overflow-y: scroll;">
+                    <table class="table" id="tabla">
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" onclick="MostrarTodosLosMeses()">Mostrar Todos los Meses</button>
+                </div>
             </div>
-            <div class="card-body"  style="overflow-y: scroll;">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Codigo del prestamo</th>
-                            <th scope="col">Cuenta de banco</th>
-                            <th scope="col">Monto de inversion</th>
-                            <th scope="col">Cuota</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+        </section>
+    </center>
 
-        </div>
-    </section>
-</center>
+    <script>
+        const cuotasGuardadas = localStorage.getItem('cuotas');
+        const arrayCuotas = JSON.parse(cuotasGuardadas);
+
+        function LlenarTablaPrestmaos(cantidadMeses) {
+            // Obtener la tabla y la fila de encabezado
+            var tabla = document.getElementById('tabla');
+            var filaEncabezado = tabla.insertRow();
+            // Crear las celdas de encabezado
+            var fecha = filaEncabezado.insertCell();
+            fecha.innerHTML = '<th>Fecha</th>';
+
+            var capital = filaEncabezado.insertCell();
+            capital.innerHTML = '<th>Capital</th>';
+
+            var interes = filaEncabezado.insertCell();
+            interes.innerHTML = '<th>Interes</th>';
+
+            var cuotapago = filaEncabezado.insertCell();
+            cuotapago.innerHTML = '<th>Cuota</th>';
+
+            var saldopago = filaEncabezado.insertCell();
+            saldopago.innerHTML = '<th>Saldo</th>';
+
+            // Crear las filas de datos
+            for (var i = 0; i < cantidadMeses; i++) {
+                var filaDatos = tabla.insertRow();
+                // Crear las celdas de datos
+                var fechaArray = filaDatos.insertCell();
+                fechaArray.innerHTML = '<td>' + arrayCuotas[i]['fecha'] + '</td>';
+
+                var capitalArray = filaDatos.insertCell();
+                capitalArray.innerHTML = '<td>' + arrayCuotas[i]['capital'] + '</td>';
+
+                var interesArray = filaDatos.insertCell();
+                interesArray.innerHTML = '<td>' + arrayCuotas[i]['interes'] + '</td>';
+
+                var cuotaArray = filaDatos.insertCell();
+                cuotaArray.innerHTML = '<td>' + arrayCuotas[i]['cuota'] + '</td>';
+
+                var saldoarray = filaDatos.insertCell();
+                saldoarray.innerHTML = '<td>' + arrayCuotas[i]['saldo'] + '</td>';
+            }
+        }
+
+        function MostrarTodosLosMeses() {
+            var tabla = document.getElementById('tabla');
+            // Limpiar la tabla
+            tabla.innerHTML = '';
+
+            // Volver a llenar la tabla con todas las filas de datos
+            LlenarTablaPrestmaos(arrayCuotas.length);
+
+            // Ocultar el botón de "Mostrar Todos los Meses"
+            var botonMostrarTodosLosMeses = document.getElementsByTagName("button")[0];
+            botonMostrarTodosLosMeses.style.display = "none";
+        }
+    </script>
+
+</body>
 

@@ -26,4 +26,6 @@ public partial class Inversione
     public virtual Cliente ClienteCedulaNavigation { get; set; } = null!;
 
     public virtual CuentaBanco? CuentaBancoNumeroNavigation { get; set; }
+
+    public virtual ICollection<CuotaInversion>? CuetasInverion { get; set; }
 }

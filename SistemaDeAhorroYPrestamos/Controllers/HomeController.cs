@@ -52,6 +52,11 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+
+        public IActionResult SolicitudPrestamo()
+        {
+            return View();
+        }
         public IActionResult AboutUS()
         {
             return View();

@@ -29,4 +29,5 @@ public partial class Prestamo
     public virtual Cliente ClienteCedulaNavigation { get; set; } = null!;
 
     public virtual ICollection<Garantium> Garantia { get; } = new List<Garantium>();
+    public virtual ICollection<CuotaPrestamo> CuotasPrestamo { get; } = new List<CuotaPrestamo>();
 }

@@ -212,7 +212,14 @@ public partial class AhorrosPrestamosContext : DbContext
             entity.HasOne(d => d.CuentaBancoNumeroNavigation).WithOne(p => p.Inversione)
                 .HasForeignKey<Inversione>(d => d.CuentaBancoNumero)
                 .HasConstraintName("FK__Inversion__cuent__2E1BDC42");
+
+
+            entity.HasMany(d => d.CuetasInverion).WithOne(p => p.CodigoInversionNavigation)
+             .HasForeignKey(d => d.CodigoInversion)
+             .OnDelete(DeleteBehavior.ClientSetNull)
+             .HasConstraintName("FK__Cuotas__Inversion__cuotaReservada");
         });
+    
 
         modelBuilder.Entity<Prestamo>(entity =>
         {
@@ -242,7 +249,12 @@ public partial class AhorrosPrestamosContext : DbContext
                 .HasForeignKey(d => d.ClienteCedula)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Prestamos__clien__31EC6D26");
-        });
+
+       entity.HasMany(d => d.CuotasPrestamo).WithOne(p => p.PrestamoCodigoNavigation)
+                .HasForeignKey(d => d.PrestamoCodigo)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Cuotas__Prestamo__cuotaReservada");
+    });
 
         OnModelCreatingPartial(modelBuilder);
     }

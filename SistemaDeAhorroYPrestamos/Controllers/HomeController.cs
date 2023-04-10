@@ -9,9 +9,13 @@ namespace SistemaDeAhorroYPrestamos.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
+
+        private readonly AhorrosPrestamosContext _BaseDatos;
+
+        public HomeController(ILogger<HomeController> logger , AhorrosPrestamosContext baseDatos)
         {
             _logger = logger;
+            _BaseDatos = baseDatos;
         }
 
         public IActionResult Index()

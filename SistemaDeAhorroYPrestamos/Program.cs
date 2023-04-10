@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using SistemaDeAhorroYPrestamos.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AhorrosPrestamosContext>(opcion =>
+{
+    opcion.UseSqlServer(builder.Configuration.GetConnectionString("BaseDeDatos"));
+});
 
 var app = builder.Build();
 

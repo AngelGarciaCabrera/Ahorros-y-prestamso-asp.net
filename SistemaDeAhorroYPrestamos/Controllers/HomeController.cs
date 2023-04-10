@@ -19,16 +19,31 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Register()
         {
             
-            return View();
+            return View("login");
         }
+
+
+        [HttpPost]
+        public IActionResult login(Cliente cliente)
+        {
+            if (ModelState.ContainsKey("Cedula") && ModelState["Cedula"].Errors.Count != 0 ||
+                ModelState.ContainsKey("Contrasena") && ModelState["Contrasena"].Errors.Count != 0)
+            {
+                return View(cliente);
+            }
+
+            return RedirectToAction("SegundoHome");
+        }
+
         public IActionResult login()
         {
-          return View();
+                return View();
+           
         }
-        
+
         public IActionResult SolicitudDePrestamo()
         {
             return View();
@@ -39,12 +54,10 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         }
 
       
-        public IActionResult SegundoHome()
+        public IActionResult SegundoHome(Cliente cliente)
         {
-            
-            
             return View();
-        }
+        } 
         public IActionResult SolicitudDeInversion()
         {
             return View();

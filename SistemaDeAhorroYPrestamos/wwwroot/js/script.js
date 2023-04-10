@@ -62,3 +62,11 @@ function register() {
         caja_trasera_login.style.opacity = "1";
     }
 }
+
+function updateLogin(url) {
+    if (url.includes('register')) {
+        register()
+    } else {
+        iniciarSesion()
+    }
+}

@@ -69,4 +69,4 @@ function calcularTasaDeInteres() {
 
 
 // Agregar evento de envío del formulario
-form.addEventListener('submit', validarFormulario);
+/*  form.addEventListener('submit', validarFormulario);*/

@@ -1,0 +1,20 @@
+﻿@model Cliente
+@{
+    ViewData["Title"] = "LoginComponet";
+}
+
+
+
+ @using (Html.BeginForm("login", "Home", FormMethod.Post, htmlAttributes: new { @class = "formulario__login shadow-lg p-3 mb-5 bg-body-tertiary rounded" }))
+            {    <h2>Iniciar Sesión</h2>
+                @Html.LabelFor(model => model.Cedula)
+                @Html.EditorFor(model => model.Cedula)
+                @Html.ValidationMessageFor(model => model.Cedula)
+                <br />
+                @Html.LabelFor(model => model.Contrasena)
+                @Html.EditorFor(model => model.Contrasena)
+                @Html.ValidationMessageFor(model => model.Contrasena)
+                <br />
+                <input type="submit" value="Submit" />
+                @Html.ValidationSummary(true)
+            }

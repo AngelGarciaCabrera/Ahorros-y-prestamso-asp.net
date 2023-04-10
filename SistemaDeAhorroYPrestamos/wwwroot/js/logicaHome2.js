@@ -2,7 +2,7 @@
 
 solicitarPrestamo.onclick = function () {
    
-    window.location.href = '/Home/SolicitudDePrestamo';
+    window.location.href = '/Prestamos/SolicitudPrestamo';
    
 };
 

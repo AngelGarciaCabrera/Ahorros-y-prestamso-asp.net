@@ -5,7 +5,7 @@
 
 
 
-       @using (Html.BeginForm("Privacy", "Home", FormMethod.Post, htmlAttributes: new { @class = "formulario__register shadow-lg p-3 mb-5 bg-body-tertiary rounded" }))
+       @using (Html.BeginForm("register", "Home", FormMethod.Post, htmlAttributes: new { @class = "formulario__register shadow-lg p-3 mb-5 bg-body-tertiary rounded" }))
             {   <h2>Regístrarse</h2>
                 @Html.LabelFor(model => model.Nombre)
                 @Html.EditorFor(model => model.Nombre)

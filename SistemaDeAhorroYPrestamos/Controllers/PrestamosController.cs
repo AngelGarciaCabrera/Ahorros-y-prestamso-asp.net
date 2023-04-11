@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaDeAhorroYPrestamos.Helpers.Validators;
 using SistemaDeAhorroYPrestamos.Models;
 
 namespace SistemaDeAhorroYPrestamos.Controllers
@@ -8,11 +9,14 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         private readonly ILogger<PrestamosController> _logger;
 
         private readonly AhorrosPrestamosContext _BaseDatos;
+        // Validador de prestamos
+        private PrestamosValidator validator;
 
         public PrestamosController(ILogger<PrestamosController> logger, AhorrosPrestamosContext baseDatos)
         {
             _logger = logger;
             _BaseDatos = baseDatos;
+            validator = new PrestamosValidator();
         }
         public IActionResult Index()
         {
@@ -28,10 +32,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                 // El botón "Enviar" fue presionado
                 // realizar las acciones correspondientes aquí
 
-                if (ModelState.ContainsKey("Monto") && ModelState["Monto"].Errors.Count != 0 ||
-                ModelState.ContainsKey("FechaBeg") && ModelState["FechaBeg"].Errors.Count != 0 ||
-                ModelState.ContainsKey("FechaEnd") && ModelState["FechaEnd"].Errors.Count != 0 ||
-                 ModelState.ContainsKey("ClienteCedula") && ModelState["ClienteCedula"].Errors.Count != 0)
+                if (validator.validate(ModelState))
                 {
                     return View(prestamo);
                 }

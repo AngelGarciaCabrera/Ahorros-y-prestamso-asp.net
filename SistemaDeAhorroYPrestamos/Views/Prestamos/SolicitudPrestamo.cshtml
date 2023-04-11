@@ -1,14 +1,14 @@
 ﻿@model SistemaDeAhorroYPrestamos.Models.Prestamo
 
 @{
-    var codigo = Guid.NewGuid().ToString("N");;
+    var codigo = new Random().Next(1, 1000);
     ViewData["Title"] = "SolicitudPrestamo";
     var fechaHoy = DateTime.Now;
     var fechaMinima = fechaHoy.AddMonths(1);
 }
 
 
- <section id="formularioP" style="padding-top: 60px; padding-bottom: 40px;">
+ <section id="formularioP" style="padding-top: 60px; padding-bottom: 40px;" >
 
 <center>
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded"  style="max-width: 500px; ">

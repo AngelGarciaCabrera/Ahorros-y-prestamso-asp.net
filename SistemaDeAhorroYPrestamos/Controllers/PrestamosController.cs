@@ -37,7 +37,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                 }
 
                
-                return RedirectToAction("login", "Home");
+                return RedirectToAction("TablaPrestamos", "Home");
             }
             if (botonPresionado == "CalcularInteres")
             {

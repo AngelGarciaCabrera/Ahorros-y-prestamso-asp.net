@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewData["Title"] = "SolicitudInversion";
+}
+
+
+@model Inversione
+
+
+
+<section  style="padding-top: 60px; padding-bottom: 40px;">
+    <center>
+        @using (Html.BeginForm())
+        {
+            <div class="card shadow p-3 mb-5 bg-body-tertiary rounded " style="max-width: 500px; " >
+            @Html.AntiForgeryToken()
+            <div class="card-header p-3 mb-2 bg-primary text-white">
+                <h1 class="card-title">Formulario de inversión</h1>
+              </div>
+
+            <div class="row">
+             <div class="col-md-6">
+                  <label for="codigo">Código:</label>
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control" ,@readonly = "readonly"} })
+                    @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+             <div class="col-md-6">
+                <label for="codigo">Interes:</label>
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.Interes, new { htmlAttributes = new { @class = "form-control",@readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.Interes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12">
+                <label for="codigo" style="padding-top:10px">Monto:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Monto, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Monto, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            </div>
+              <div class="row">
+            <div class="col-md-6">
+                 <label for="codigo" style="padding-top:10px">Fecha Inicial:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FechaBeg, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FechaBeg, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6" style="padding-top:10px">
+                <label for="codigo">Fecha final:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FechaEnd, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FechaEnd, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-6" style="padding-top:10px">
+                  <label for="codigo">Cuenta De banco:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CuentaBancoNumero, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CuentaBancoNumero, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6" style="padding-top:10px">
+                <label for="codigo">Cliente Cedula:</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ClienteCedula, new { htmlAttributes = new { @class = "form-control",@readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.ClienteCedula, "", new { @class = "text-danger" })
+                </div>
+            </div>
+             </div>
+            <div class="form-group" style="padding-top:20px"> 
+
+               <input type="submit"  name="botonevaluar" value="Enviar" class="btn btn-outline-success">
+                <input type="reset" name="botonevaluar" value="Limpiar" class="btn btn-outline-danger">
+
+            </div>
+             </div>
+            }
+   </center>
+  </section>

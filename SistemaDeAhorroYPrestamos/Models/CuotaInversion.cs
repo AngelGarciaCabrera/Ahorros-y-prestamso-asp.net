@@ -11,7 +11,7 @@ public partial class CuotaInversion
     [Required]
     public DateTime FechaPlanificada { get; set; }
     [Required]
-    public string Tipo { get; set; }
+    public string? Tipo { get; set; }
     [Required]
     public DateTime? FechaRealizada { get; set; }
     [Required]

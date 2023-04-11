@@ -13,12 +13,18 @@ public partial class Inversione
     [RegularExpression(@"^\d+(\.\d{1,2})?$", ErrorMessage = "El monto debe tener un máximo de 2 decimales")]
     public decimal Monto { get; set; }
     [Required]
+    [DataType(DataType.Date, ErrorMessage = "La fecha inicial debe ser de tipo DateTime")]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime FechaBeg { get; set; }
+    
     [Required]
+    [DataType(DataType.Date, ErrorMessage = "La fecha final debe ser de tipo DateTime")]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime FechaEnd { get; set; }
    
     [Required]
     [StringLength(14, MinimumLength = 10, ErrorMessage = "La Cuenta no es valida")]
+
     public string? CuentaBancoNumero { get; set; }
     [Required]
     public string ClienteCedula { get; set; } = null!;
@@ -28,4 +34,6 @@ public partial class Inversione
     public virtual CuentaBanco? CuentaBancoNumeroNavigation { get; set; }
 
     public virtual ICollection<CuotaInversion>? CuetasInverion { get; set; }
+    [Required]
+    public decimal Interes { get; set; }
 }

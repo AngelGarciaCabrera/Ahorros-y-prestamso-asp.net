@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JoHl/QeGkivPPkh4U1g5ihAo3yBNi33Yd8U6MLaA5xk=",
+  "Hash": "Ua/WO2tE0Ts9sEvJ2tgZ7m/OW5XAPQPrz0o+FHXWVYk=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\banking.png",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "img/banking.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banking.png"
+    },
+    {
       "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\download (2).jfif",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
@@ -151,6 +168,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\familia2..jpg"
+    },
+    {
+      "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\financial-management.jpg",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "img/financial-management.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\financial-management.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\financiamiento.jpg",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "img/financiamiento.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\financiamiento.jpg"
     },
     {
       "Identity": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\foto3.jfif",

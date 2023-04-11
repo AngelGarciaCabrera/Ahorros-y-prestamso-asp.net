@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\img\\Secure-Now-web-header.jpg"
     },
     {
+      "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\banking.png",
+      "PackagePath": "staticwebassets\\img\\banking.png"
+    },
+    {
       "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\download (2).jfif",
       "PackagePath": "staticwebassets\\img\\download (2).jfif"
     },
@@ -31,6 +35,14 @@
     {
       "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\familia2..jpg",
       "PackagePath": "staticwebassets\\img\\familia2..jpg"
+    },
+    {
+      "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\financial-management.jpg",
+      "PackagePath": "staticwebassets\\img\\financial-management.jpg"
+    },
+    {
+      "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\financiamiento.jpg",
+      "PackagePath": "staticwebassets\\img\\financiamiento.jpg"
     },
     {
       "Id": "C:\\Users\\luisa\\OneDrive\\Escritorio\\Sis\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\foto3.jfif",

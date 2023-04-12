@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj": {}
+    "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj": {
+    "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj",
+        "projectUniqueName": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj",
         "projectName": "SistemaDeAhorroYPrestamos",
-        "projectPath": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj",
+        "projectPath": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj",
         "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\obj\\",
+        "outputPath": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,12 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.4, )"
             },

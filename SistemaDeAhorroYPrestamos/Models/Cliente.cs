@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeAhorroYPrestamos.Models;
 
-public partial class Cliente
+public class Cliente
 {
     [Key]
     [Required(ErrorMessage = "La cedula es requerida")]
@@ -31,9 +29,11 @@ public partial class Cliente
     /// [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$", ErrorMessage = "La contraseña debe tener al menos 1 letra mayúscula, 1 letra minúscula, 1 número y 1 carácter especial")]
     public string? Contrasena { get; set; }
 
-    public virtual CuentaBanco? CuentaBanco { get; set; }
+    public string? IdCuentaBanco { get; set; }
+    
+    public virtual CuentaBanco? CuentaBancoNavigation { get; set; }
 
-    public virtual ICollection<Inversione> Inversiones { get; } = new List<Inversione>();
+    public virtual ICollection<Inversiones> Inversiones { get; } = new List<Inversiones>();
 
     public virtual ICollection<Prestamo> Prestamos { get; } = new List<Prestamo>();
 }

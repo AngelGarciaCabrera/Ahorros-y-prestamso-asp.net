@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeAhorroYPrestamos.Models;
 
-public partial class CuentaBanco
+public class CuentaBanco
 {
     [Key]
     [Required]
@@ -21,5 +21,5 @@ public partial class CuentaBanco
 
     public virtual Cliente? ClienteCedulaNavigation { get; set; }
 
-    public virtual Inversione? Inversione { get; set; }
+    public virtual Inversiones? Inversione { get; set; }
 }

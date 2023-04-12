@@ -35,7 +35,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
             // Agregar a DB
             var clienteNuevo = this._BaseDatos.Add(cliente);
-            var T = _BaseDatos.Clientes.Where(d => d.CuentaBanco.Numero == "12")
+            var T = _BaseDatos.Clientes.Where(d => d.CuentaBancoNavigation.Numero == "12")
                 .ToList();
 
 

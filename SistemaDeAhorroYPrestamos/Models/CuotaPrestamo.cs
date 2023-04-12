@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaDeAhorroYPrestamos.Models;
 
-public partial class CuotaPrestamo
+public class CuotaPrestamo
 {
     [Required]
     public DateTime FechaPlanificacion { get; set; }
+    
     [Required]
+    [Column(TypeName = "decimal(9,2)")]
     public decimal Monto { get; set; }
     [Required]
     public string Tipo { get; set; } = null!;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ISELWKKbU0QE1fhH8qSbCF33u/ow2N3RzyE0eHFLHh/zWdA0kGZcUkd+057WsZ73ZJ0QGAJ+4M8YTJadCHRN1A==",
+  "dgSpecHash": "FeLm77IAcWqpOtlfJpDwZtcP+4U5zU5mbJskwhdZ4XSoCzikUmUeeEpKw9+7u2hv5EH4xgpbkFi941Af/B+z7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj",
+  "projectFilePath": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\SistemaDeAhorroYPrestamos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\angel\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\angel\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -31,7 +31,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         [HttpPost]
 
-        public IActionResult SolicitudInversion(Inversione inversione, string botonevaluar)
+        public IActionResult SolicitudInversion(Inversiones inversiones, string botonevaluar)
         {
 
             if (botonevaluar == "Enviar")
@@ -45,7 +45,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                  ModelState.ContainsKey("ClienteCedula") && ModelState["ClienteCedula"].Errors.Count != 0 ||
                  ModelState.ContainsKey("CuentaBancoNumero") && ModelState["CuentaBancoNumero"].Errors.Count != 0 )
                 {
-                    return View(inversione);
+                    return View(inversiones);
                 }
 
 

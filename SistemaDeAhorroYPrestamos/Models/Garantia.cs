@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaDeAhorroYPrestamos.Models;
 
-public partial class Garantium
+public class Garantia
 {
     [Required]
     [Key]
@@ -12,6 +13,7 @@ public partial class Garantium
     [Required]
     public string Tipo { get; set; } = null!;
     [Required]
+    [Column(TypeName = "decimal(9,2)")]
     public decimal Valor { get; set; }
     [Required]
     public string? Ubicacion { get; set; }

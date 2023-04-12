@@ -16,6 +16,7 @@ public partial class CuotaPrestamo
     public DateTime? FechaRealizado { get; set; }
     [Required]
     public int? CodigoComprobante { get; set; }
+    [Key]
     [Required]
     public int PrestamoCodigo { get; set; }
 

@@ -7,6 +7,7 @@ namespace SistemaDeAhorroYPrestamos.Models;
 public partial class Garantium
 {
     [Required]
+    [Key]
     public int Codigo { get; set; }
     [Required]
     public string Tipo { get; set; } = null!;

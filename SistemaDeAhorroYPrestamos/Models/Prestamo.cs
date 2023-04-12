@@ -8,6 +8,7 @@ public partial class Prestamo
 {
 
     [Required]
+    [Key]
     public int Codigo { get; set; }
 
 

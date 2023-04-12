@@ -7,6 +7,7 @@ namespace SistemaDeAhorroYPrestamos.Models;
 public partial class Inversione
 {
     [Required]
+    [Key]
     public int Codigo { get; set; }
     [Required(ErrorMessage = "El monto es requerido")]
     [Range(1000, 3_000_000, ErrorMessage = "El monto debe ser entre mil y 3 millones")]

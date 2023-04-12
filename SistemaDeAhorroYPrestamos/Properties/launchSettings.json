@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "SistemaDeAhorroYPrestamos": {
+    "SistemaDeAhorroYPrestamos": {  
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

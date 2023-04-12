@@ -32,7 +32,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                 // El botón "Enviar" fue presionado
                 // realizar las acciones correspondientes aquí
 
-                if (validator.validate(ModelState))
+                if (validator.validateErrors(ModelState))
                 {
                     return View(prestamo);
                 }

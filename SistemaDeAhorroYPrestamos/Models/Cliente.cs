@@ -6,8 +6,9 @@ namespace SistemaDeAhorroYPrestamos.Models;
 
 public partial class Cliente
 {
+    [Key]
     [Required(ErrorMessage = "La cedula es requerida")]
-    [StringLength(11,MinimumLength = 11, ErrorMessage = "La cedula no es valida")]
+    [StringLength(11, MinimumLength = 11, ErrorMessage = "La cedula no es valida")]
     public string Cedula { get; set; } = null!;
 
     [Required(ErrorMessage = "El nombre es requerida")]
@@ -24,10 +25,12 @@ public partial class Cliente
 
     [RegularExpression(@"^\d{10}$", ErrorMessage = "El campo Teléfono debe tener un formato válido")]
     public string? Telefono { get; set; }
+
     [Required(ErrorMessage = "La contraseña es requerida")]
     [StringLength(50, MinimumLength = 8, ErrorMessage = "La contraseña debe tener al menos 8 caracteres")]
-   /// [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$", ErrorMessage = "La contraseña debe tener al menos 1 letra mayúscula, 1 letra minúscula, 1 número y 1 carácter especial")]
+    /// [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$", ErrorMessage = "La contraseña debe tener al menos 1 letra mayúscula, 1 letra minúscula, 1 número y 1 carácter especial")]
     public string? Contrasena { get; set; }
+
     public virtual CuentaBanco? CuentaBanco { get; set; }
 
     public virtual ICollection<Inversione> Inversiones { get; } = new List<Inversione>();

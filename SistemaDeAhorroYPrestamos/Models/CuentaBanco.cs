@@ -6,6 +6,7 @@ namespace SistemaDeAhorroYPrestamos.Models;
 
 public partial class CuentaBanco
 {
+    [Key]
     [Required]
     [StringLength(14, MinimumLength =10,ErrorMessage ="La Cuenta no es valida")]
     public string Numero { get; set; } = null!;

@@ -7,6 +7,7 @@ namespace SistemaDeAhorroYPrestamos.Models;
 public partial class CuotaInversion
 {
     [Required]
+    [Key]
     public int Id { get; set; }
     [Required]
     public DateTime FechaPlanificada { get; set; }

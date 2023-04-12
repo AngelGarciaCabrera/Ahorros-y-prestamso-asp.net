@@ -10,7 +10,7 @@ namespace SistemaDeAhorroYPrestamos.Helpers.Validators
 
         }
 
-        public bool validate(ModelStateDictionary keys)
+        public bool validateErrors(ModelStateDictionary keys)
         {
             return keys.ContainsKey("Monto") && keys["Monto"].Errors.Count != 0 ||
                 keys.ContainsKey("FechaBeg") && keys["FechaBeg"].Errors.Count != 0 ||

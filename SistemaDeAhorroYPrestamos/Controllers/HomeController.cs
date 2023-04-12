@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
+﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SistemaDeAhorroYPrestamos.Helpers.Validators;
 using SistemaDeAhorroYPrestamos.Models;
-using System.Diagnostics;
-
 
 namespace SistemaDeAhorroYPrestamos.Controllers
 {
@@ -11,11 +11,13 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private readonly AhorrosPrestamosContext _BaseDatos;
+        private readonly ClienteValidator _validator;
 
-        public HomeController(ILogger<HomeController> logger , AhorrosPrestamosContext baseDatos)
+        public HomeController(ILogger<HomeController> logger, AhorrosPrestamosContext baseDatos)
         {
             _logger = logger;
             _BaseDatos = baseDatos;
+            _validator = new ClienteValidator();
         }
 
         public IActionResult Index()
@@ -23,9 +25,30 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Register(Cliente cliente)
+        {
+            if (_validator.validateRegisterErrors(ModelState))
+            {
+                return View("login", cliente);
+            }
+
+            // Agregar a DB
+            var clienteNuevo = this._BaseDatos.Add(cliente);
+            var T = _BaseDatos.Clientes.Where(d => d.CuentaBanco.Numero == "12")
+                .ToList();
+
+
+            if (clienteNuevo.State == EntityState.Added)
+            {
+                return View("login", cliente);
+            }
+
+            return View("login");
+        }
+
         public IActionResult Register()
         {
-            
             return View("login");
         }
 
@@ -33,8 +56,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         [HttpPost]
         public IActionResult login(Cliente cliente)
         {
-            if (ModelState.ContainsKey("Cedula") && ModelState["Cedula"].Errors.Count != 0 ||
-                ModelState.ContainsKey("Contrasena") && ModelState["Contrasena"].Errors.Count != 0)
+            if (_validator.validateErrors(ModelState))
             {
                 return View(cliente);
             }
@@ -44,8 +66,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         public IActionResult login()
         {
-                return View();
-           
+            return View();
         }
 
         public IActionResult SolicitudDePrestamo()
@@ -57,16 +78,18 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+
         public IActionResult AboutUS()
         {
             return View();
         }
 
-      
+
         public IActionResult SegundoHome(Cliente cliente)
         {
             return View();
-        } 
+        }
+
         public IActionResult SolicitudDeInversion()
         {
             return View();

@@ -21,8 +21,8 @@
       "PackagePath": "staticwebassets\\css\\animation.css"
     },
     {
-      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\site.css",
@@ -123,6 +123,10 @@
     {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\inversion.js",
       "PackagePath": "staticwebassets\\js\\inversion.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\js.js",
+      "PackagePath": "staticwebassets\\js\\js.js"
     },
     {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\logicaHome2.js",

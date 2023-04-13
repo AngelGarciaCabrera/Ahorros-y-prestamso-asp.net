@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "peim6MsstVh5M+b6i+TFQc2gAdOdyD3RO6l7UqU6d2k=",
+  "Hash": "BuvOM8EPkHp44PaxcfxQFKWWy0u2QexXGSUNFoYuAvY=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\css\\animation.css"
     },
     {
-      "Identity": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\bootstrap.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
-      "RelativePath": "css/bootstrap.min.css",
+      "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
       "Identity": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Home2.css",
@@ -542,6 +542,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\inversion.js"
+    },
+    {
+      "Identity": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\js.js",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "js/js.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\js.js"
     },
     {
       "Identity": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\logicaHome2.js",

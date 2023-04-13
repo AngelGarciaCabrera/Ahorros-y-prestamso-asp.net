@@ -1,7 +1,48 @@
-
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Raleway:800,700,400);
 @import url(http://fonts.googleapis.com/css?family=Signika:400,600);
+
+/* Reset
+---------------------------------*/
+ul {
+    list-style: none;
+}
+
+.figure {
+    margin: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a, a:hover, a:active {
+    outline: 0px !important;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
 
 /* Styles
 ---------------------------------*/
@@ -114,9 +155,9 @@ a.read_more2 {
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     background: transparent;
     color: #fff;
     border: 1px solid #fff;
@@ -161,9 +202,9 @@ a.contact_btn {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     border: 2px solid #21609b;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
     a.contact_btn:hover {
@@ -196,4 +237,46 @@ a.contact_btn {
 
 #aboutUs {
     padding: 60px 0;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 14px;
+    }
+
+    .hero_section {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .top_left_cont {
+        padding: 38px 0;
+    }
+
+        .top_left_cont h2 {
+            font-size: 25px;
+            color: #FFF;
+            line-height: 39px;
+            margin: 0 0 9px 0;
+        }
+
+    .inner_section {
+        padding: 20px 0 20px;
+    }
+
+    #aboutUs img {
+        margin-bottom: 20px;
+    }
+
+    #aboutUs h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .class {
+        margin-top: 30%;
+    }
 }

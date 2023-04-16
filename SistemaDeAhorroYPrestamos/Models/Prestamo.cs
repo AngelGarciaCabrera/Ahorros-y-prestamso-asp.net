@@ -33,7 +33,7 @@ public class Prestamo
     [Required]
     public string ClienteCedula { get; set; } = null!;
 
-    public virtual Cliente ClienteCedulaNavigation { get; set; } = null!;
+    public virtual Cliente ClienteCedulaNavigation { get; set; }
 
     public virtual ICollection<Garantia> Garantia { get; } = new List<Garantia>();
     public virtual ICollection<CuotaPrestamo> CuotasPrestamo { get; } = new List<CuotaPrestamo>();

@@ -1,7 +1,7 @@
-﻿
+﻿@model SistemaDeAhorroYPrestamos.Models.Cliente
 @{
     ViewData["Title"] = "SegundoHome";
-    @ViewBag.Cedula
+    
 }
 
 
@@ -67,22 +67,25 @@
                 <!--Fin Navbar-->
                 <!--Page Content-->
                 <div id="content" class="bg-grey w-100">
-
-                    <section class="bg-light py-3">
+                    <section  class="bg-light py-3">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-9 col-md-8">
-                                    <h1 class="font-weight-bold mb-0">Bienvenido @ViewBag.Cedula </h1>
-                                     <label type="text" class="form-control" id="inputCedula"> </label>
-                                    <p class="lead text-muted">Cedula: @ViewBag.Cedula </p>
+                                    <h1 class="font-weight-bold mb-0">Bienvenido </h1>
+                                    <p>@Model.Nombre</p>
+                                    <p class="text-black">Cedula: @Model.Cedula </p>
                                 </div>
                                 <div class="col-lg-3 col-md-4 d-flex btn-group-vertical" role="group" aria-label="Vertical button group">
-                                    <button class="btn btn-primary w-100 align-self-center" id="solicitarPrestamos"> Solicitar Prestamo</button>
+                                   
+                                        <button onclick="location.href='@Url.Action("SolicitudPrestamo","Prestamos")'" class="btn btn-primary w-100 align-self-center"> Solicitar Prestamo</button>
+                                       
 
-                                    <button class="btn btn-secondary w-100 align-self-center" id="solicitarInversion">Solicitar Invercion</button>
+                                        <button class="btn btn-secondary w-100 align-self-center" id="solicitarInversion">Solicitar Invercion</button>
+                                  
                                 </div>
                             </div>
-                           </div>
+                        </div>
+                        
                     </section>
                     <section>
                         <section class="bg-mix py-3">

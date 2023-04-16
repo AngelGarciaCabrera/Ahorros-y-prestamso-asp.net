@@ -1,105 +1,70 @@
-﻿
+﻿@model Prestamo
+
+
+
 @{
+    
+    var codigo = new Random().Next(1, 1000);
     ViewData["Title"] = "SolicitudDePrestamo";
+    var fechaHoy = DateTime.Now;
+    var fechaMinima = fechaHoy.AddMonths(1);
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap.min.css">
-    <link rel="stylesheet" href="../style/style.css">
-    <title>Document</title>
-</head>
-<body  onload="AsignacionDeCodigoP()">
-    <section id="formularioP" style="padding-top: 60px; padding-bottom: 40px;">
-        <center>
-        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded " style="max-width: 500px; " >
-            <div class="card-header p-3 mb-2 bg-success text-white" id="card-header" >
+
+ <section id="formularioP" style="padding-top: 60px; padding-bottom: 40px;" >
+
+<center>
+        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded"  style="max-width: 500px; ">
+             <div class="card-header p-3 mb-2 bg-success text-white" id="card-header" >
                 <h3 class="card-title">Solicitud de Prestamos</h3>
             </div>
-                <div class="card-body " id="car-body" >
-                    <div class="mb-3" style="float: left">
-                        <label for="" class="form-label">Codigo</label>
-                        <input type="text" id="Codigo"  class="form-control"  readonly>
+            <div class="card-body">
+                <form asp-action="SolicitudDePrestamo">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                     <div class="mb-3" style="float: left">
+                        <label asp-for="Codigo" class="control-label"></label>
+                        <input disabled asp-for="Codigo" class="form-control" value="@codigo" />
+                     </div>
+                     <div class="mb-3" style="float: right">
+                        <label asp-for="Interes" class="control-label"></label>
+                       <input disabled asp-for="Interes" class="form-control" />    
                     </div>
-                    <div  style="float:right"> 
-                        <label for="" class="form-label"> Interes</label>
-                        <input type="text" value="12%" id="Interes"  class="form-control" readonly>
-                    </div>
-                    
+                   
                     <div class="mb-3" style="padding-top: 100px;">  
-                        <label for="" class="form-label" style="float: left">Monto</label>
-                        <input type="number" id="Monto"  class="form-control">
+                        <label asp-for="Monto" class="control-label"></label>
+                        <input asp-for="Monto" class="form-control" />
+                        <span asp-validation-for="Monto" class="text-danger"></span>
                     </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">Fecha Inicio</label>
-                        <input type="date" value="" id="FechaI"  class="form-control">
-                    </div>
-                    <div class="mb-3" >
-                        <label for="" class="form-label">Fecha Final</label>
-                        <input type="date" id="FechaF"  class="form-control">
+                     <div class="mb-3">
+                        <label asp-for="FechaBeg" class="control-label">Fecha Inicial</label>
+                        <input asp-for="FechaBeg" min="@fechaHoy" value="@fechaHoy" class="form-control" />
+                        <span asp-validation-for="FechaBeg" class="text-danger"></span>
                     </div>
                      <div class="mb-3" >
-                        <label for="" class="form-label">Cedula de Fiador</label>
-                        <input type="number" id="Fiador"  class="form-control">
+                        <label asp-for="FechaEnd" class="control-label"> Fecha final</label>
+                        <input  asp-for="FechaEnd" min="@fechaMinima" class="form-control" />
+                        <span asp-validation-for="FechaEnd" class="text-danger"></span>
                     </div>
-                <form>
-                  <div class="form-group" style="padding-bottom:13px">
-                    <label for="garantia">Garantía:</label>
-                    <input type="text" class="form-control" id="garantia" name="garantia">
-                  </div>
-                  <button type="button" id="addgarantia" class="btn btn-primary mb-3"  onclick="mostrarOpciones()">Agregar garantía</button>
-                  <div id="opciones" style="display: none;">
-                    <div class="form-group">
-                      <label for="tipo-garantia">Tipo de garantía:</label><br>
-
-                          <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input"  name="tipo-garantia" value="inmueble" onclick="mostrarCampos()">
-                            <label class="form-check-label" id="TipoGarantia" value="inmueble" for="inmueble">Inmueble</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input"  name="tipo-garantia" value="automovil" onclick="mostrarCampos()">
-                            <label class="form-check-label"id="TipoGarantia" value="AutoMovil"  for="automovil">Automóvil</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input"  name="tipo-garantia" value="otros" onclick="mostrarCampos()">
-                            <label class="form-check-label"  id="TipoGarantia"for="otros" value="otro">Otros</label>
-                          </div>
-                        </div>
-
-                    <div id="campos" style="display: none;">
-                      <div class="form-group">
-                        <label for="valor">Valor estimado:</label>
-                        <input type="number" class="form-control" id="valor" name="valor">
-                      </div>
-                      <div class="form-group">
-                        <label for="ubicacion">Ubicación:</label>
-                        <input type="text" class="form-control" id="ubicacion" name="ubicacion">
-                      </div>
-                    </div>
-                  </div>
-                </form>
-
                    
+                    <div class="form-group">
+                        <label asp-for="ClienteCedula" class="control-label">Cliente Cedula</label>
+                       <input asp-for="ClienteCedula" class="form-control" value="@Model.ClienteCedula" disabled />
 
-                </div>
-                    <div style="padding-left: 20px;" >
-                        <button  style="float:left;"  type="button" class="btn btn-outline-success" id="Calcularinteres" onclick="CalcularInteres1()" >Calcular Interes</button>
+
                     </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-top: 80px; padding: 1em;"> 
-                    <button type="button" class="btn btn-outline-info" id="Solicitar" onclick="enviar()">Solicitar</button>
-                     <button type="button" class="btn btn-outline-danger " id="LimpiarP" onclick="limpiar()"> Limpiar</button>
-                </div>
+                     
+                       <div style="padding-left: 20px;padding-top: 20px" >
+                        <button  style="float:left;"  type="submit" class="btn btn-outline-success" name="botonPresionado" value="CalcularInteres" >Calcular Interes</button>
+                        </div>
+                         <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-top: 80px; padding: 1em;"> 
+                              <button type="submit" class="btn btn-outline-info"  name="botonPresionado" value="Enviar">Solicitar</button>
+                              <button type="submit" class="btn btn-outline-danger"name="botonPresionado"value="eliminar"> Limpiar</button>
+                         </div>
+                       
+                </form>
+            </div>
         </div>
-    </center>
-      
-    </section>
-    
-</body>
-<script src="../js/FormularioP.js"></script>
+</center>
+  </section>
 
-</html>
 

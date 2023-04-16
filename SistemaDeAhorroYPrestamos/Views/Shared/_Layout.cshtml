@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using SistemaDeAhorroYPrestamos.Helpers
+@{
+    var Cedula = TempData[IKeysData.CEDULA];
+    TempData.Keep(IKeysData.CEDULA);
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +35,7 @@
                         <a  href="/Home/login">Inicia Sesion </a>
                     </li>
                     <li>
-                        <a href="/Home/register">  Registro</a>
+                        <a href="/Home/register">  Registro</a> 
                     </li>
                 </ul>
             </div>
@@ -48,6 +53,12 @@
                     <li>
                         <a href="/Home/login">Sobre Nosotros</a>
                     </li>
+                    @if (Cedula != null)
+                    {
+                        <li>
+                            <a href="/Home/SegundoHome"> Mi home</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </nav>

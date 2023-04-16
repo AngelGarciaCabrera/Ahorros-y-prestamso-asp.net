@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SistemaDeAhorroYPrestamos.Helpers;
 using SistemaDeAhorroYPrestamos.Models;
 
 var builder = WebApplication.CreateBuilder(args);

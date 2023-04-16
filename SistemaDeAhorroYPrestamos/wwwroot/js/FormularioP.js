@@ -98,7 +98,17 @@ function CalcularInteres1() {
 
 
 };
+//para cambiar el minimo de la fecha final
+FechaI.addEventListener('change', () => {
+    const valuefechaSelected = new Date(FechaI.value)
+    const dateTOChange = new Date(valuefechaSelected)
+    console.log("coño")
+    dateTOChange.setMonth(valuefechaSelected.getMonth() + 1)
+    debugger
+    FechaF.setAttribute("min", dateTOChange.toISOString().split('T')[0]);
+})
 function VerificarFecha() {
+    
     let FechaIsValida = true;
     var inical = FechaI.value
     var final = FechaF.value

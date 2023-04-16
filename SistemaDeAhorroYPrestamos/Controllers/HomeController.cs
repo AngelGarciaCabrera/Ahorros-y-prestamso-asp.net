@@ -1,13 +1,8 @@
 ﻿using System.Diagnostics;
-using System.Drawing.Imaging;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using SistemaDeAhorroYPrestamos.Helpers;
 using SistemaDeAhorroYPrestamos.Helpers.Validators;
 using SistemaDeAhorroYPrestamos.Models;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using Microsoft.Extensions.Caching.Memory;
-using Newtonsoft.Json;
-using SistemaDeAhorroYPrestamos.Helpers;
 
 namespace SistemaDeAhorroYPrestamos.Controllers
 {
@@ -27,7 +22,6 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         public IActionResult Index()
         {
-            
             return View();
         }
 
@@ -95,53 +89,6 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-        public IActionResult SolicitudDePrestamo()
-        {
-            // var prestamo = JsonConvert.DeserializeObject<Prestamo>(TempData["Prestamo"].ToString());
-            // return View(prestamo);
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult SolicitudDePrestamo(Prestamo prestamo, string botonPresionado)
-        {
-            if (botonPresionado == "CalcularInteres")
-            {
-                var dias = (prestamo.FechaEnd - prestamo.FechaBeg).TotalDays;
-                var interes = dias / 365 * (double)0.1m * (double)prestamo.Monto;
-                prestamo.Interes = (decimal)Math.Round(interes, 2);
-                TempData["Interes"] = prestamo.Interes; // Guardar el valor de interés en TempData
-                return View(prestamo);
-            }
-
-            if (botonPresionado == "Enviar")
-            {
-                // Código para enviar el formulario
-            }
-
-            if (botonPresionado == "eliminar")
-            {
-                // Código para limpiar el formulario
-            }
-
-            return View(prestamo);
-        }
-
-
-        public IActionResult SegundoHome()
-        {
-            // Si no lo contiene
-            if (!TempData.ContainsKey(IKeysData.CEDULA))
-            {
-                return RedirectToAction("login");
-            }
-
-            var cedula = TempData[IKeysData.CEDULA];
-            var cliente = _BaseDatos.Clientes.FirstOrDefault(c => c.Cedula == cedula);
-            
-            return View(cliente);
-        }
-
         ///Home/SegundoHome
         public IActionResult AboutUS()
         {
@@ -158,6 +105,46 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
+        public IActionResult SolicitudDePrestamo()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult SolicitudDePrestamo(Prestamo prestamo, string botonPresionado)
+        {
+            switch (botonPresionado)
+            {
+                case "CalcularInteres":
+                    var dias = (prestamo.FechaEnd - prestamo.FechaBeg).TotalDays;
+                    var interes = dias / 365 * 0.1 * (double)prestamo.Monto;
+                    prestamo.Interes = (decimal)Math.Round(interes, 2);
+                    return View(prestamo);
+
+                case "Enviar": // Código para enviar el formulario
+                    break;
+                case "eliminar": // Código para limpiar el formulario
+                    break;
+            }
+
+            return View(prestamo);
+        }
+
+
+        public IActionResult SegundoHome()
+        {
+            // Si no lo contiene
+            if (!TempData.ContainsKey(IKeysData.CEDULA))
+            {
+                return RedirectToAction("login");
+            }
+
+            var cedula = TempData[IKeysData.CEDULA];
+            var cliente = _BaseDatos.Clientes.FirstOrDefault(c => c.Cedula == cedula);
+
+            return View(cliente);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

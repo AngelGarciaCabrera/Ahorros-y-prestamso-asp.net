@@ -9,11 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SistemaDeAhorroYPrestamos
 build_property.RootNamespace = SistemaDeAhorroYPrestamos
-build_property.ProjectDir = C:\Users\Henry\Source\Repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos\
+build_property.ProjectDir = C:\Users\Henry\source\repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Henry\Source\Repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos
+build_property.MSBuildProjectDirectory = C:\Users\Henry\source\repos\AngelGarciaCabrera\Ahorros-y-prestamso-asp.net\SistemaDeAhorroYPrestamos
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/Henry/Source/Repos/AngelGarciaCabrera/Ahorros-y-prestamso-asp.net/SistemaDeAhorroYPrestamos/Views/Home/AboutUS.cshtml]

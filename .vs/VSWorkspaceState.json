@@ -8,9 +8,8 @@
     "\\SistemaDeAhorroYPrestamos\\Views",
     "\\SistemaDeAhorroYPrestamos\\Views\\Home",
     "\\SistemaDeAhorroYPrestamos\\Views\\Shared",
-    "\\SistemaDeAhorroYPrestamos\\wwwroot",
-    "\\SistemaDeAhorroYPrestamos\\wwwroot\\js"
+    "\\SistemaDeAhorroYPrestamos\\wwwroot"
   ],
-  "SelectedNode": "\\SistemaDeAhorroYPrestamos.sln",
+  "SelectedNode": "\\SistemaDeAhorroYPrestamos\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

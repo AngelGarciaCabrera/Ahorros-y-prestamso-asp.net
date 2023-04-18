@@ -137,6 +137,10 @@
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\scrpts.js",
+      "PackagePath": "staticwebassets\\js\\scrpts.js"
+    },
+    {
       "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

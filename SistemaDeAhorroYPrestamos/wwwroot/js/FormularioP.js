@@ -241,10 +241,7 @@ function calcularTasaDeInteres1() {
 
 }
 */
-function Buscar() {
-    window.location.href = '/Home/TablaPrestamos'
-    
-}
+
 /*
 function enviar() {
 

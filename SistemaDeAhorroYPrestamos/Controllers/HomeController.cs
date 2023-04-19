@@ -4,6 +4,7 @@ using SistemaDeAhorroYPrestamos.Helpers;
 using SistemaDeAhorroYPrestamos.Helpers.Validators;
 using SistemaDeAhorroYPrestamos.Models;
 
+
 namespace SistemaDeAhorroYPrestamos.Controllers
 {
     public class HomeController : Controller
@@ -127,11 +128,11 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                     // Guardar el préstamo en la base de datos
                     _BaseDatos.Prestamos.Add(prestamo);
                     _BaseDatos.SaveChanges();
-                    return RedirectToAction("SegundoHome");
+                    return RedirectToAction("TablaPrestamos");
                    
                 
                 case "eliminar":
-                    return RedirectToAction("TablaPrestamos",prestamo);
+                    return RedirectToAction("SegundoHome",prestamo);
             }
            
 

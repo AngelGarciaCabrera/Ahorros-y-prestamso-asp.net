@@ -123,6 +123,9 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             
             //alamcenar en cuotasPrestamo
             prestamo.Codigo = cuotaPrestamo.PrestamoCodigo;
+            cuotaPrestamo.Monto = montoMensual;
+            cuotaPrestamo.FechaPlanificacion = fechaPago;
+            cuotaPrestamo.FechaRealizado = prestamo.FechaBeg;
             
             switch (botonPresionado)
             {

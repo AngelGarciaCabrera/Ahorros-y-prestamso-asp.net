@@ -110,26 +110,46 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         }
 
         [HttpPost]
-        public IActionResult SolicitudDePrestamo([FromForm] Prestamo prestamo, string botonPresionado)
+        public IActionResult SolicitudDePrestamo([FromForm] Prestamo prestamo, string botonPresionado,CuotaPrestamo cuotaPrestamo)
         {
             var dias = (prestamo.FechaEnd - prestamo.FechaBeg).TotalDays;
             var interes = dias / 365 * 0.1D * (double)prestamo.Monto;
-            prestamo.Interes = (decimal)Math.Round(interes, 2) /100;
-            
-            
-            
+            prestamo.Interes = (decimal)Math.Round(interes, 2) / 100;
 
+            var fechaPago = prestamo.FechaEnd.AddDays(1);
+            var duracionMeses = (int)Math.Ceiling(dias / 30.0);
+            var numCuotas = duracionMeses + 1;
+            var montoMensual = (prestamo.Monto + prestamo.Interes) / numCuotas;
+            
+            //alamcenar en cuotasPrestamo
+            prestamo.Codigo = cuotaPrestamo.PrestamoCodigo;
+            
             switch (botonPresionado)
             {
                 case "CalcularInteres":
                     
                     break;
                 case "Enviar":
-                    // Guardar el préstamo en la base de datos
-                    _BaseDatos.Prestamos.Add(prestamo);
-                    _BaseDatos.SaveChanges();
-                    return RedirectToAction("TablaPrestamos");
-                   
+                    var PrestamosLogeados =
+                        _BaseDatos.Prestamos.SingleOrDefault(C =>
+                            C.Codigo == prestamo.Codigo && C.ClienteCedula == prestamo.ClienteCedula);
+                    if (PrestamosLogeados == null)
+                    {
+                        // Guardar el préstamo en la base de datos
+                        _BaseDatos.Prestamos.Add(prestamo);
+                        _BaseDatos.SaveChanges();
+                        ModelState.AddModelError("", "Prestamo Agregado");
+                        return RedirectToAction("TablaPrestamos");
+                        
+                        
+                    }
+                    if (PrestamosLogeados.Codigo == prestamo.Codigo)
+                    {
+                        ModelState.AddModelError("", "Prestamo existente");
+
+                        return View("SegundoHome");
+                    }
+                    return RedirectToAction("SegundoHome");
                 
                 case "eliminar":
                     return RedirectToAction("SegundoHome",prestamo);

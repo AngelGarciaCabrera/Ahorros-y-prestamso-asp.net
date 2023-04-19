@@ -1,7 +1,6 @@
 ﻿@using SistemaDeAhorroYPrestamos.Helpers
 @{
-    var Cedula = TempData[IKeysData.CEDULA];
-    TempData.Keep(IKeysData.CEDULA);
+    var Cedula = Context.Session.GetString(IKeysData.CEDULA);
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -13,71 +12,84 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="~/css/Index.css" />
+    <link rel="stylesheet" href="~/css/Index.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/SistemaDeAhorroYPrestamos.styles.css" asp-append-version="true" />
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/SistemaDeAhorroYPrestamos.styles.css" asp-append-version="true"/>
 </head>
 <body class="body">
-    <header>
-        <nav>
-            
-            <a  href="/Home/Index " class="logo" style="max-width: 50px; height: auto; margin-top:5%; margin-bottom:3%">  <img src="~/img/images.png" style="max-width:190px;"  alt=""> </a>
-            <div class="ul_user">
-                <ul>
+<header>
+    <nav>
+
+        <a href="/Home/Index " class="logo" style="max-width: 50px; height: auto; margin-top:5%; margin-bottom:3%">
+            <img src="~/img/images.png" style="max-width:190px;" alt="">
+        </a>
+        <div class="ul_user">
+            <ul>
+                @if (Cedula == null)
+                {
                     <li>
                         <i class="fa-solid fa-user"></i>
-                        <a  href="/Home/login">Inicia Sesion </a>
+                        <a href="/Home/login">Inicia Sesion </a>
                     </li>
                     <li>
-                        <a href="/Home/register">  Registro</a> 
+                        <i class="fa-solid fa-user-plus"></i>
+                        <a href="/Home/register"> Registro</a>
                     </li>
-                </ul>
-            </div>
-        </nav>
-        <span class="divisor"></span>
-        <nav class="">
-            <div class="ul_user2">
-                <ul>
+                }
+                else
+                {
                     <li>
-                        <a href="/Home/index" >Home</a>
+                        <i class="fa-solid fa-sign-out"></i>
+                        <a href="@Url.Action("logout", "Home")">Cerrar sesion</a>
                     </li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <span class="divisor"></span>
+    <nav class="">
+        <div class="ul_user2">
+            <ul>
+                <li>
+                    <a href="/Home/index">Home</a>
+                </li>
+                <li>
+                    <a href="/Home/AboutUS">Contactanos</a>
+                </li>
+                <li>
+                    <a href="/Home/login">Sobre Nosotros</a>
+                </li>
+                @if (Cedula != null)
+                {
                     <li>
-                        <a href="/Home/AboutUS">Contactanos</a>
+                        <a href="/Home/SegundoHome"> Mi home</a>
                     </li>
-                    <li>
-                        <a href="/Home/login">Sobre Nosotros</a>
-                    </li>
-                    @if (Cedula != null)
-                    {
-                        <li>
-                            <a href="/Home/SegundoHome"> Mi home</a>
-                        </li>
-                    }
-                </ul>
-            </div>
-        </nav>
+                }
+            </ul>
+        </div>
+    </nav>
 
-    </header>
-    </body>
-            @RenderBody()
-   
-    
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/inversion.js" asp-append-version="true"></script>
-    <script src="~/js/Login.js"  asp-append-version="true"></script>
-     <script src="~/js/FormularioP.js"  asp-append-version="true"></script>
-     <script src="~/js/script.js"  asp-append-version="true"></script>
-     <script src="~/js/logicaHome2.js"  asp-append-version="true"></script>
-     <script src="~/js/TablaPrestamos.js"  asp-append-version="true"></script>
+</header>
+</body>
+@RenderBody()
 
-    @await RenderSectionAsync("Scripts", required: false)
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/inversion.js" asp-append-version="true"></script>
+<script src="~/js/Login.js" asp-append-version="true"></script>
+<script src="~/js/FormularioP.js" asp-append-version="true"></script>
+<script src="~/js/script.js" asp-append-version="true"></script>
+<script src="~/js/logicaHome2.js" asp-append-version="true"></script>
+<script src="~/js/TablaPrestamos.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
 
 </html>

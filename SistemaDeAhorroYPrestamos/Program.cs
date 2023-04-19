@@ -7,6 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSession(options =>
+{
+    // Configuración de la cookie de sesión
+    options.Cookie.Name = IKeysData.ICookie.COOKIE_USER_KEY;
+    options.Cookie.SameSite = SameSiteMode.None;
+    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+    options.IdleTimeout = TimeSpan.FromMinutes(3);
+});
 builder.Services.AddDbContext<AhorrosPrestamosContext>(opcion =>
 {
     opcion.UseSqlServer(builder.Configuration.GetConnectionString("BaseDeDatos"));
@@ -26,6 +36,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthorization();
 

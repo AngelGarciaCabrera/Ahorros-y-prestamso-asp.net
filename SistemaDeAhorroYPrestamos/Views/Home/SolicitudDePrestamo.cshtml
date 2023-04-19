@@ -2,23 +2,21 @@
 
 @{
     ViewData["Title"] = "SolicitudDePrestamo";
-    var codigo = new Random().Next(1, 1000);
 }
-
 
 <section id="formularioP" style="padding-top: 60px; padding-bottom: 40px;">
 
-    <center >
+    <center>
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="max-width: 500px; ">
             <div class="card-header p-3 mb-2 bg-success text-white" id="card-header">
                 <h3 class="card-title">Solicitud de Prestamos</h3>
             </div>
             <div class="card-body">
-                <form asp-action="SolicitudDePrestamo">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @using (Html.BeginForm("SolicitudDePrestamo", "Home", FormMethod.Post))
+                {
                     <div class="mb-3" style="float: left">
-                        @Html.LabelFor(model => model.Codigo, new { htmlAttributes = new {  @value = @codigo, @class = "form-label" } })
-                        @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @disabled = "disabled", @class = "form-control" } })
+                        @Html.LabelFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-label" } })
+                        @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @readonly = "readonly", @class = "form-control" } })
                     </div>
                     <div class="mb-3" style="float: right">
                         @Html.LabelFor(model => model.Interes, new { htmlAttributes = new { @class = "form-label" } })
@@ -38,7 +36,6 @@
                             htmlAttributes = new
                             {
                                 @id = "FechaI",
-                                
                                 @class = "form-control"
                             }
                         })
@@ -59,7 +56,7 @@
 
                     <div class="form-group">
                         @Html.LabelFor(model => model.ClienteCedula, new { htmlAttributes = new { @class = "form-label" } })
-                        @Html.EditorFor(model => model.ClienteCedula, new { htmlAttributes = new { @disabled = "disabled", @class = "form-control" } })
+                        @Html.EditorFor(model => model.ClienteCedula, new { htmlAttributes = new { @readonly = "readonly", @class = "form-control" } })
                     </div>
 
                     <div style="padding-left: 20px;padding-top: 20px">
@@ -70,10 +67,8 @@
                         <button type="submit" class="btn btn-outline-info" name="botonPresionado" value="Enviar">Solicitar</button>
                         <button type="submit" class="btn btn-outline-danger"name="botonPresionado"value="eliminar"> Limpiar</button>
                     </div>
-
-                </form>
+                }
             </div>
         </div>
     </center>
 </section>
-

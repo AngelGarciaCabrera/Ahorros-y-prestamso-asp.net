@@ -13,6 +13,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         private readonly AhorrosPrestamosContext _BaseDatos;
         private readonly ClienteValidator _validator;
 
+
         public HomeController(ILogger<HomeController> logger, AhorrosPrestamosContext baseDatos)
         {
             _logger = logger;
@@ -44,8 +45,8 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                 Console.WriteLine("se agrego");
 
                 //Guarda al usuario en la sesion
-                TempData[IKeysData.CEDULA] = cliente.Cedula;
-                return View("login");
+                HttpContext.Session.SetString(IKeysData.CEDULA, cliente.Cedula);
+                return View("SegundoHome");
             }
             else
             {
@@ -79,9 +80,9 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                 return View("login");
             }
 
-            TempData[IKeysData.CEDULA] = UsuarioLogiados.Cedula;
+            HttpContext.Session.SetString(IKeysData.CEDULA, cliente.Cedula);
 
-            return RedirectToAction("SegundoHome", "Home", new { cedula = cliente.Cedula });
+            return RedirectToAction("SegundoHome");
         }
 
         public IActionResult login()
@@ -89,10 +90,66 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-        ///Home/SegundoHome
-        public IActionResult AboutUS()
+        public IActionResult SolicitudDePrestamo()
         {
-            return View();
+            var cedulaLogueda = HttpContext.Session.GetString(IKeysData.CEDULA);
+            if (cedulaLogueda == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var codigo = new Random().Next(1, 1000);
+
+            var prestamo = new Prestamo() { Codigo = codigo, ClienteCedula = cedulaLogueda };
+            return View(prestamo);
+        }
+
+        [HttpPost]
+        public IActionResult SolicitudDePrestamo([FromForm] Prestamo prestamo, string botonPresionado)
+        {
+            var dias = (prestamo.FechaEnd - prestamo.FechaBeg).TotalDays;
+            var interes = dias / 365 * 0.1D * (double)prestamo.Monto;
+            prestamo.Interes = (decimal)Math.Round(interes, 2) /100;
+            
+            
+            
+
+            switch (botonPresionado)
+            {
+                case "CalcularInteres":
+                    
+                    break;
+                case "Enviar":
+                    // Guardar el préstamo en la base de datos
+                    _BaseDatos.Prestamos.Add(prestamo);
+                    _BaseDatos.SaveChanges();
+                    return RedirectToAction("SegundoHome");
+                   
+                
+                case "eliminar":
+                    return RedirectToAction("TablaPrestamos",prestamo);
+            }
+           
+
+
+            return View(prestamo);
+        }
+
+
+        [HttpGet]
+        public IActionResult SegundoHome()
+        {
+            // Si no lo contiene
+            var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
+
+            if (cedulaLogueada == null)
+            {
+                return RedirectToAction("login");
+            }
+
+            var cliente = _BaseDatos.Clientes.FirstOrDefault(c => c.Cedula == cedulaLogueada);
+
+            return View(cliente);
         }
 
         public IActionResult SolicitudDeInversion()
@@ -100,56 +157,29 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-        public IActionResult TablaPrestamos()
+        public IActionResult TablaPrestamos( Prestamo prestamo, CuotaPrestamo cuotaPrestamo)
         {
+            cuotaPrestamo.Monto = prestamo.Monto;
+            cuotaPrestamo.PrestamoCodigo = prestamo.Codigo;
+          
+           
+            
             return View();
         }
 
-        public IActionResult SolicitudDePrestamo()
-        {
-            return View();
-        }
-
-
-        [HttpPost]
-        public IActionResult SolicitudDePrestamo(Prestamo prestamo, string botonPresionado)
-        {
-            switch (botonPresionado)
-            {
-                case "CalcularInteres":
-                    var dias = (prestamo.FechaEnd - prestamo.FechaBeg).TotalDays;
-                    var interes = dias / 365 * 0.1 * (double)prestamo.Monto;
-                    prestamo.Interes = (decimal)Math.Round(interes, 2);
-                    return View(prestamo);
-
-                case "Enviar": // Código para enviar el formulario
-                    break;
-                case "eliminar": // Código para limpiar el formulario
-                    break;
-            }
-
-            return View(prestamo);
-        }
-
-
-        public IActionResult SegundoHome()
-        {
-            // Si no lo contiene
-            if (!TempData.ContainsKey(IKeysData.CEDULA))
-            {
-                return RedirectToAction("login");
-            }
-
-            var cedula = TempData[IKeysData.CEDULA];
-            var cliente = _BaseDatos.Clientes.FirstOrDefault(c => c.Cedula == cedula);
-
-            return View(cliente);
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Logout()
+        {
+            var requestCookie = Request.Cookies[IKeysData.ICookie.COOKIE_USER_KEY];
+            HttpContext.Session.Clear();
+
+            return RedirectToAction("Index");
         }
     }
 }

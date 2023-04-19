@@ -1,4 +1,4 @@
-﻿
+﻿/*
 //botones
 const CedulaFiador = document.getElementById("Fiador");
 const Garantia = document.getElementById("garantia");
@@ -129,6 +129,7 @@ function VerificarFecha() {
         return FechaIsValida = false;
     } else {
         alert("Ambas fechas son iguales, Favor ingresar las fechas nuevamente");
+        
         FechaF.value = null;
         FechaI.value = null;
         return FechaIsValida = false;
@@ -232,32 +233,33 @@ function calcularTasaDeInteres1() {
     const PrestamosGuardados = JSON.parse(localStorage.getItem(KeyPrestamos) || '[]');
     PrestamosGuardados.push(resultados)
 
-    /*console.log(resultados)*/
+ /*
     localStorage.setItem('Prestamo', JSON.stringify(PrestamosGuardados));
     console.log("subido al local")
     // devolver el objeto con los resultados
     return resultados;
 
 }
-
+*/
 function Buscar() {
     window.location.href = '/Home/TablaPrestamos'
     
 }
+/*
 function enviar() {
 
-    if (Validate()) {
-        VerificarFecha()
-        CalcularInteres1()
+   if (Validate()) {
+       VerificarFecha()
+       CalcularInteres1()
 
-        calcularTasaDeInteres1();
-        Buscar()
-        calcular()
-        
+       calcularTasaDeInteres1();
+       Buscar()
+       calcular()
+       
 
-    } else {
-        alert("debe completar los datos")
-    }
+   } else {
+       alert("debe completar los datos")
+   }
 
 
 
@@ -265,32 +267,62 @@ function enviar() {
 }
 
 function mostrarOpciones() {
-    document.getElementById("opciones").style.display = "block";
+   document.getElementById("opciones").style.display = "block";
 }
 
 function mostrarCampos() {
-    document.getElementById("campos").style.display = "block";
+   document.getElementById("campos").style.display = "block";
 }
 
 function calcular() {
 
-    const cuotas = {};
+   const cuotas = {};
 
-    for (let i = 0; i <= meses; i++) {
-        const saldoPendiente = monto * Math.pow(1 + (tasaDeInteres / 12), i) - cuotaMensual * (Math.pow(1 + (tasaDeInteres / 12), i) - 1) / (tasaDeInteres / 12);
-        const interesMensual = saldoPendiente * (tasaDeInteres / 12);
-        const capitalMensual = cuotaMensual - interesMensual;
-        const fechaCuota = new Date(fechaInicial.getFullYear(), fechaInicial.getMonth() + i, fechaInicial.getDate());
-        const fechaFormato = `${fechaCuota.getDate()}/${fechaCuota.getMonth() + 1}`;
-        cuotas.push({
-            fecha: fechaFormato,
-            capital: capitalMensual.toFixed(2),
-            interes: interesMensual.toFixed(2),
-            cuota: cuotaMensual.toFixed(2),
-            saldo: saldoPendiente.toFixed(2)
+   for (let i = 0; i <= meses; i++) {
+       const saldoPendiente = monto * Math.pow(1 + (tasaDeInteres / 12), i) - cuotaMensual * (Math.pow(1 + (tasaDeInteres / 12), i) - 1) / (tasaDeInteres / 12);
+       const interesMensual = saldoPendiente * (tasaDeInteres / 12);
+       const capitalMensual = cuotaMensual - interesMensual;
+       const fechaCuota = new Date(fechaInicial.getFullYear(), fechaInicial.getMonth() + i, fechaInicial.getDate());
+       const fechaFormato = `${fechaCuota.getDate()}/${fechaCuota.getMonth() + 1}`;
+       cuotas.push({
+           fecha: fechaFormato,
+           capital: capitalMensual.toFixed(2),
+           interes: interesMensual.toFixed(2),
+           cuota: cuotaMensual.toFixed(2),
+           saldo: saldoPendiente.toFixed(2)
 
-        })
-                    
-    }
-    console.log(cuotas)
+       })
+                   
+   }
+   console.log(cuotas)
 }
+//presentar codigo en formulario Prestamos
+
+
+
+sd
+*/
+const FechaI = document.getElementById("FechaI");
+const FechaF = document.getElementById("FechaF");
+
+function setDatesFormValues(date = new Date()) {
+    FechaI.value = date.toISOString().split('T')[0]
+    const dateToChange = new Date(date)
+    debugger
+    dateToChange.setMonth(date.getMonth() + 1)
+
+    if (!FechaF.value) {
+        FechaF.value = ''
+    }
+    FechaF.setAttribute("min", dateToChange.toISOString().split('T')[0]);
+}
+
+FechaI.addEventListener('change', () => {
+    const FechaIDate = new Date(FechaI.value)
+    setDatesFormValues(FechaIDate);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    console.log('Subio el onload')
+    setDatesFormValues();
+})

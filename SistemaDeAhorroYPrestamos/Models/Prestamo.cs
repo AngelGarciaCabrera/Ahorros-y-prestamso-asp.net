@@ -10,6 +10,7 @@ public class Prestamo
 
     [Required]
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public int Codigo { get; set; }
 
 

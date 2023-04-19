@@ -127,6 +127,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             cuotaPrestamo.FechaPlanificacion = fechaPago;
             cuotaPrestamo.FechaRealizado = prestamo.FechaBeg;
             
+            
             switch (botonPresionado)
             {
                 case "CalcularInteres":
@@ -160,7 +161,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
            
 
 
-            return View(prestamo);
+            return RedirectToAction("TablaPrestamos",typeof(CuotaPrestamo));
         }
 
 
@@ -185,14 +186,35 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             return View();
         }
 
-        public IActionResult TablaPrestamos( Prestamo prestamo, CuotaPrestamo cuotaPrestamo)
+        public IActionResult TablaPrestamos( )
         {
-            cuotaPrestamo.Monto = prestamo.Monto;
-            cuotaPrestamo.PrestamoCodigo = prestamo.Codigo;
-          
+            var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
+            if (cedulaLogueada == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            // Obtener todos los préstamos del cliente
+            var prestamosCliente = _BaseDatos.Prestamos
+                .Where(p => p.ClienteCedula == cedulaLogueada)
+                .ToList();
+
+            // Crear una lista para almacenar todas las cuotas de préstamos
+            var cuotasPrestamo = new List<CuotaPrestamo>();
+
+            // Agregar todas las cuotas de préstamos para cada préstamo del cliente
+            foreach (var prestamo in prestamosCliente)
+            {
+                var cuotasPrestamoPrestamo = _BaseDatos.CuotasPrestamo
+                    .Where(c => c.PrestamoCodigo == prestamo.Codigo)
+                    .ToList();
+
+                cuotasPrestamo.AddRange(cuotasPrestamoPrestamo);
+            }
+
+            // Pasa la lista de cuotas de préstamos a la vista
+            return View(cuotasPrestamo);
            
-            
-            return View();
         }
 
 

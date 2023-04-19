@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ltJaigZnCQpZZVYxfpmczGzT0YLS4rd80LdFSRQOLe8=",
+  "Hash": "tgFQcj7sHz44++mutvUtWMUlHfpZkhuH96BGT1dHbdg=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -610,23 +610,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\script.js"
-    },
-    {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\scrpts.js",
-      "SourceId": "SistemaDeAhorroYPrestamos",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
-      "BasePath": "_content/SistemaDeAhorroYPrestamos",
-      "RelativePath": "js/scrpts.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\scrpts.js"
     },
     {
       "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\site.js",

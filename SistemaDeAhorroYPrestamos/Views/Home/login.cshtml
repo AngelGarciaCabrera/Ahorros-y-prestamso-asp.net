@@ -1,6 +1,8 @@
 ﻿
+@model Cliente
 @{
     ViewData["Title"] = "login";
+    var url = Context.Request.Path.ToString();
 }
 <style>
     .Fondo-negro {
@@ -8,11 +10,13 @@
     }
 </style>
 
-  <main  id="formulario1" style="margin-top:10%" >
+
+
+<main id="formulario1" style="margin-top:10%"  >
 
     <div class="contenedor__todo">
         <div class="caja__trasera">
-            <div class="caja__trasera-login" >
+            <div class="caja__trasera-login">
                 <h3>¿Ya tienes una cuenta?</h3>
                 <p>Inicia sesión para entrar en la página</p>
                 <button id="btn__iniciar-sesion">Iniciar Sesión</button>
@@ -26,40 +30,20 @@
 
         <!--Formulario de Login y registro-->
         <div class="contenedor__login-register  ">
-            <!--Login-->
-            <form action="" class="formulario__login shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-                <h2>Iniciar Sesión</h2>
-                <input type="number"  id="cedula1" placeholder="Ingrese Su Cedula" >
-                <p id="mi-elemento-p" class="text-muted">La cedula no es valida</p>
-                <input type="password"   id="contrasena1" placeholder="Ingrese Su Contraseña">
-                  <p id="contraseñap" class="text-muted">Debe ingresar su contraseña</p>
+          
+            @Html.Partial("LoginComponet")
 
-                <button type="button"  id="ingresar4">Ingresar</button>
-                
-               
-
-            </form>
-
-            <!--Register-->
-            <form action="" class="formulario__register shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-                <h2>Regístrarse</h2>
-                <input type="text"  id="name" placeholder="Nombre de usario" >
-                <p id="Nombrep" class="text-muted">Debe agregar su nombre</p>
-                <input type="text"  id="lastname" placeholder="Apellido de usario" >
-                <p id="ApellidoP" class="text-muted">Debe agregar su Apellido</p>
-                <input type="number"  id="cedula" placeholder="Ingrese Cedula">
-                <p id="cedulaP" class="text-muted">Su cedula no es valida</p>
-                <input type="text"  id="Direccion" placeholder="Direccion de usario">
-                <p id="DireccionP" class="text-muted">Debe agregar su Dirrecion</p>
-                <input type="number"  id="Telefono" placeholder="Telefono">
-                <p id="telefonoP" class="text-muted">Debe agregar su telefono</p>
-                <input type="password"  id="contrasena" placeholder="Contraseña">
-                <p id="contraseñaP" class="text-muted">Debe agregar su contraseña</p>
-
-                <button id="guardar">Regístrarse</button>
-            </form>
+           
+            @Html.Partial("RegistroComponet")
         </div>
     </div>
 
 
 </main>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    updateLogin('@url');
+
+    
+});
+</script>

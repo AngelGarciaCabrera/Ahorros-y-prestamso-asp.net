@@ -25,6 +25,10 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+        public IActionResult AboutUS()
+        {
+            return View();
+        }
 
         [HttpPost]
         public IActionResult Register(Cliente cliente)

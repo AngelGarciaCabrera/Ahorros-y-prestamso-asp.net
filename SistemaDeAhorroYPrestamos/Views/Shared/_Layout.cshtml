@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using SistemaDeAhorroYPrestamos.Helpers
+@{
+    var Cedula = Context.Session.GetString(IKeysData.CEDULA);
+}
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,6 +48,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/Home/Index">Inicio</a>
                         </li>
+                        <li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Contactenos</a>
                         </li>
@@ -54,6 +61,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/Home/Register">Registro</a>
                         </li>
+                        
+                        
+                         @if (Cedula != null)
+                          {
+                            <li class="nav-item">
+                                <a  class="nav-link text-white" href="/Home/SegundoHome"> Mi home</a>
+                            </li>
+                                            
+                          }
+                        
+
                     </ul>
                 </div>
             </div>

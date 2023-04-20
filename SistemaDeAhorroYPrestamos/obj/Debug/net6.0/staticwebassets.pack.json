@@ -9,6 +9,7 @@
       "PackagePath": "staticwebassets\\css\\Home2.css"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
@@ -42,6 +43,61 @@
     },
     {
       "Id": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\download (2).jfif",
+=======
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\animation.css",
+      "PackagePath": "staticwebassets\\css\\animation.css"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
+      "PackagePath": "staticwebassets\\css\\styles1erHome.css"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\20998787.jpg",
+      "PackagePath": "staticwebassets\\img\\20998787.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\Capa 1.png",
+      "PackagePath": "staticwebassets\\img\\Capa 1.png"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\Secure-Now-web-header.jpg",
+      "PackagePath": "staticwebassets\\img\\Secure-Now-web-header.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\about-img.jpg",
+      "PackagePath": "staticwebassets\\img\\about-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\bg4.jpg",
+      "PackagePath": "staticwebassets\\img\\bg4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\brooke-cagle--uHVRvDr7pg-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\brooke-cagle--uHVRvDr7pg-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\download (2).jfif",
+>>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
       "PackagePath": "staticwebassets\\img\\download (2).jfif"
     },
     {
@@ -53,6 +109,7 @@
       "PackagePath": "staticwebassets\\img\\familia2..jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg",
       "PackagePath": "staticwebassets\\img\\ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg"
     },
@@ -114,6 +171,77 @@
     },
     {
       "Id": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\site.js",
+=======
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\foto3.jfif",
+      "PackagePath": "staticwebassets\\img\\foto3.jfif"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\images.png",
+      "PackagePath": "staticwebassets\\img\\images.png"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\jason-goodman-bzqU01v-G54-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\jason-goodman-bzqU01v-G54-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\kenny-eliason-GrXWeoP-Ji0-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\kenny-eliason-GrXWeoP-Ji0-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\main_device_image.png",
+      "PackagePath": "staticwebassets\\img\\main_device_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\nathan-anderson-FHiJWoBodrs-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\nathan-anderson-FHiJWoBodrs-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\pexels-rodnae-productions-7947663.jpg",
+      "PackagePath": "staticwebassets\\img\\pexels-rodnae-productions-7947663.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\priscilla-du-preez-XkKCui44iM0-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\priscilla-du-preez-XkKCui44iM0-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\tim-marshall-cAtzHUz7Z8g-unsplash.jpg",
+      "PackagePath": "staticwebassets\\img\\tim-marshall-cAtzHUz7Z8g-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\FormularioP.js",
+      "PackagePath": "staticwebassets\\js\\FormularioP.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\inversion.js",
+      "PackagePath": "staticwebassets\\js\\inversion.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\js.js",
+      "PackagePath": "staticwebassets\\js\\js.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\logicaHome2.js",
+      "PackagePath": "staticwebassets\\js\\logicaHome2.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\scrpts.js",
+      "PackagePath": "staticwebassets\\js\\scrpts.js"
+    },
+    {
+      "Id": "C:\\Users\\Henry\\Source\\Repos\\AngelGarciaCabrera\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\site.js",
+>>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {

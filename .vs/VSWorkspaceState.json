@@ -2,15 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\SistemaDeAhorroYPrestamos",
-    "\\SistemaDeAhorroYPrestamos\\Controllers",
-    "\\SistemaDeAhorroYPrestamos\\Controllers\\Models",
     "\\SistemaDeAhorroYPrestamos\\Properties",
     "\\SistemaDeAhorroYPrestamos\\Views",
     "\\SistemaDeAhorroYPrestamos\\Views\\Home",
     "\\SistemaDeAhorroYPrestamos\\Views\\Shared",
     "\\SistemaDeAhorroYPrestamos\\wwwroot",
-    "\\SistemaDeAhorroYPrestamos\\wwwroot\\js"
+    "\\SistemaDeAhorroYPrestamos\\wwwroot\\css"
   ],
-  "SelectedNode": "\\SistemaDeAhorroYPrestamos\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\SistemaDeAhorroYPrestamos\\Views\\Home\\SegundoHome.cshtml",
   "PreviewInSolutionExplorer": false
 }

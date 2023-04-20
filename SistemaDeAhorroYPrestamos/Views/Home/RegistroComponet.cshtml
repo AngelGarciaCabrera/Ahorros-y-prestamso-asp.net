@@ -1,42 +1,75 @@
-﻿@model Cliente
-@{
-    ViewData["Title"] = "LoginComponet";
+﻿
+
+@model Cliente 
+
+@{ 
+
+    ViewData["Title"] = "LoginComponet"; 
+
+} 
+
+  
+
+  
+
+  
+
+@using (Html.BeginForm("register", "Home", FormMethod.Post, htmlAttributes: new { @class = "formulario__register shadow-lg p-3 mb-5 bg-body-tertiary rounded",@style="padding-top: 60px"})) 
+
+{   <h2>Regístrarse</h2> 
+
+    @Html.LabelFor(model => model.Nombre) 
+
+    @Html.EditorFor(model => model.Nombre) 
+
+    @Html.ValidationMessageFor(model => model.Nombre) 
+
+    <br /> 
+
+    @Html.LabelFor(model => model.Apellido) 
+
+    @Html.EditorFor(model => model.Apellido) 
+
+    @Html.ValidationMessageFor(model => model.Apellido) 
+
+    <br /> 
+
+    @Html.LabelFor(model => model.Cedula) 
+
+    @Html.EditorFor(model => model.Cedula) 
+
+    @Html.ValidationMessageFor(model => model.Cedula) 
+
+    <br /> 
+
+    @Html.LabelFor(model => model.Direccion) 
+
+    @Html.EditorFor(model => model.Direccion) 
+
+    @Html.ValidationMessageFor(model => model.Direccion) 
+
+    <br /> 
+
+    @Html.LabelFor(model => model.Telefono) 
+
+    @Html.EditorFor(model => model.Telefono) 
+
+    @Html.ValidationMessageFor(model => model.Telefono) 
+
+    <br /> 
+
+    @Html.LabelFor(model => model.Contrasena) 
+
+    @Html.EditorFor(model => model.Contrasena) 
+
+    @Html.ValidationMessageFor(model => model.Contrasena) 
+
+    <br /> 
+
+                
+
+    <input type="submit" value="Submit" /> 
+
+    @Html.ValidationSummary(true) 
+
 }
-
-
-
-       @using (Html.BeginForm("register", "Home", FormMethod.Post, htmlAttributes: new { @class = "formulario__register shadow-lg p-3 mb-5 bg-body-tertiary rounded" }))
-            {   <h2>Regístrarse</h2>
-                @Html.LabelFor(model => model.Nombre)
-                @Html.EditorFor(model => model.Nombre)
-                @Html.ValidationMessageFor(model => model.Nombre)
-                <br />
-                 @Html.LabelFor(model => model.Apellido)
-                @Html.EditorFor(model => model.Apellido)
-                @Html.ValidationMessageFor(model => model.Apellido)
-                <br />
-                @Html.LabelFor(model => model.Cedula)
-                @Html.EditorFor(model => model.Cedula)
-                @Html.ValidationMessageFor(model => model.Cedula)
-                <br />
-                 @Html.LabelFor(model => model.Direccion)
-                @Html.EditorFor(model => model.Direccion)
-                @Html.ValidationMessageFor(model => model.Direccion)
-                <br />
-                 @Html.LabelFor(model => model.Telefono)
-                @Html.EditorFor(model => model.Telefono)
-                @Html.ValidationMessageFor(model => model.Telefono)
-                <br />
-                 @Html.LabelFor(model => model.Contrasena)
-                @Html.EditorFor(model => model.Contrasena)
-                @Html.ValidationMessageFor(model => model.Contrasena)
-                <br />
-               
-                <input type="submit" value="Submit" />
-                @Html.ValidationSummary(true)
-            }
-
-
-
-
-          

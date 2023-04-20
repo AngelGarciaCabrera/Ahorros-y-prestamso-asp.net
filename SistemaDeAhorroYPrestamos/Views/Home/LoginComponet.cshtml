@@ -5,7 +5,7 @@
 
 
 
- @using (Html.BeginForm("login", "Home", FormMethod.Post, htmlAttributes: new { @class = "formulario__login shadow-lg p-3 mb-5 bg-body-tertiary rounded" }))
+ @using (Html.BeginForm("login", "Home", FormMethod.Post, htmlAttributes: new { @class = "formulario__login shadow-lg p-3 mb-5 bg-body-tertiary rounded",@style="padding-top: 60px" }))
             {    <h2>Iniciar Sesión</h2>
                 @Html.LabelFor(model => model.Cedula)
                 @Html.EditorFor(model => model.Cedula)

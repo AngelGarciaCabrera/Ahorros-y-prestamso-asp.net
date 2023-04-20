@@ -1,10 +1,18 @@
-﻿@model Cliente
+﻿
+@model Cliente
 @{
     ViewData["Title"] = "login";
     var url = Context.Request.Path.ToString();
 }
+<style>
+    .Fondo-negro {
+        background: #343a40;
+    }
+</style>
 
-<main id="formulario1" style="margin-top:10%"  >
+
+
+<main id="formulario1" style="margin-top: 15%"  >
 
     <div class="contenedor__todo">
         <div class="caja__trasera">
@@ -23,10 +31,10 @@
         <!--Formulario de Login y registro-->
         <div class="contenedor__login-register  ">
           
-             @Html.Partial("LoginComponet")
+            @Html.Partial("LoginComponet")
 
            
-             @Html.Partial("RegistroComponet")
+            @Html.Partial("RegistroComponet")
         </div>
     </div>
 
@@ -36,6 +44,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     updateLogin('@url');
 
-    console.log("juan")
+    
 });
 </script>

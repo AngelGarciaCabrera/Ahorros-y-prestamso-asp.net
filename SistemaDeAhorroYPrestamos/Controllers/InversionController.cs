@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SistemaDeAhorroYPrestamos.Helpers;
 using SistemaDeAhorroYPrestamos.Models;
 
@@ -42,21 +43,24 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         [HttpPost]
 
-        public IActionResult SolicitudInversion(Inversiones inversiones, string botonPresionado)
+        public IActionResult SolicitudInversion([FromForm] Inversiones inversiones, string botonPresionado)
         {
-            var dias = (inversiones.FechaEnd - inversiones.FechaBeg).TotalDays;
-            var interes = dias / 365 * 0.1D * (double)inversiones.Monto;
-            inversiones.Interes = (decimal)Math.Round(interes, 2) / 100;
+           
 
             switch (botonPresionado)
             {
                 case "CalcularInteres":
-
-                    break;
+                    var dias = (inversiones.FechaEnd - inversiones.FechaBeg).TotalDays;
+                    var interes = dias / 365 * 0.1D * (double)inversiones.Monto;
+                    inversiones.Interes = (decimal)Math.Round(interes, 2) / 100;
+                    
+                    return View(inversiones);
                 case "Enviar":
                     // Guardar el préstamo en la base de datos
-                    _BaseDatos.Inversiones.Add(inversiones);
+                    var entityEntry = _BaseDatos.Inversiones.Add(inversiones);
+
                     _BaseDatos.SaveChanges();
+                    
                     return RedirectToAction("SegundoHome");
 
 
@@ -65,8 +69,12 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             }
 
 
+            return View(inversiones); ;
+        }
 
-            return View(inversiones);
+        public IActionResult TablaInversion()
+        {
+            return View();
         }
     }
 }

@@ -59,7 +59,7 @@
 
                 <div class="mb-3">
                       <label  class="form-label" for="fecha">Fecha:</label>
-                    <input type="date" class="form-control" id="fecha" name="fecha" readonly>
+                    <input type="date" class="form-control" id="fecha" name="fecha">
 
 
                 </div>
@@ -68,7 +68,7 @@
 
                     </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-top: 80px; padding: 1em;">
-                    <button type="submit" class="btn btn-outline-danger"value="Generar factura"> Generar factura</button>
+                    <button type="submit" class="btn btn-outline-danger"value="Generar factura" id="EnviarFactura"> Generar factura</button>
 
                 </div>
 
@@ -80,3 +80,11 @@
 
 </section> 
 
+<script >
+const enviar = document.getElementById("EnviarFactura");
+
+enviar.addEventListener('click', () => {
+    alert("Pago Realizado")
+    window.location.href="/Home/SegundoHome";
+});
+</script> 

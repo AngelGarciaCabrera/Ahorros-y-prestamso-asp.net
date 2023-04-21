@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "SegundoHome";
 }
-
+@model Cliente
 <style>
 	.Fondo-negro {
 		background: #343a40;
@@ -16,6 +16,7 @@
 			<i class='bx bxs-bank'></i>
 			<span class="text">BANKCC</span>
 		</a>
+		<h6> Cuenta de Banco: @Model.IdCuentaBanco</h6>
 		<ul class="side-menu top">
 			<li class="active">
 				<a href="#">
@@ -50,7 +51,60 @@
 			<li>
 				<a href="#">
 					<i class='bx bxs-user'></i>
-					<span class="text">Usuario</span>
+					<span class="text" id="usuariof">Usuario</span>
+					<ul id="info-usuario">
+                      <li><span class="text" id="cedulaf">@Model.Cedula</span></li>
+                      <li><span class="text" id="cuentabancof">@Model.IdCuentaBanco</span></li>
+                      <li><span class="text" id="nombref">@Model.Nombre</span></li>
+                      <li><span class="text" id="apellidof">@Model.Apellido</span></li>
+                    </ul>
+                    
+                    <script>
+                      const UsuarioF = document.getElementById("usuariof");
+                      const InfoUsuario = document.getElementById("info-usuario");
+                    
+                      function mostrarInfoUsuario() {
+                        // Muestra la lista
+                        InfoUsuario.style.display = "block";
+                      }
+                    
+                      function ocultarInfoUsuario() {
+                        // Oculta la lista
+                        InfoUsuario.style.display = "none";
+                      }
+                    
+                      // Oculta la lista inicialmente
+                      ocultarInfoUsuario();
+                    
+                      // Agrega los eventos al span
+                      UsuarioF.addEventListener("click", () => {
+                        if (InfoUsuario.style.display === "none") {
+                          mostrarInfoUsuario();
+                        } else {
+                          ocultarInfoUsuario();
+                        }
+                      });
+                    </script>
+					<style>
+                      #info-usuario {
+                        display: none;
+                        position: absolute;
+                        background-color: white;
+                        padding: 5px;
+                        list-style-type: none;
+                        border: 1px solid black;
+                        top: 70%;
+                      }
+                    
+                      #info-usuario li {
+                        margin: 5px;
+                      }
+                      
+                      #usuariof {
+                        position: relative;
+                      }
+                    </style>
+					
 				</a>
 			</li>
 		</ul>
@@ -76,7 +130,9 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>FINANZAS</h1>
+					<h5> @Model.Nombre</h5>
+					<h6>Cedula: @Model.Cedula</h6>
+					
 					<ul class="breadcrumb">
 						<li>
 							<a href="#">Dashboard</a>

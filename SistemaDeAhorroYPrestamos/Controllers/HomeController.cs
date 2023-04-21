@@ -177,6 +177,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
             return View(prestamo);
         }
+        
 
 
         [HttpGet]

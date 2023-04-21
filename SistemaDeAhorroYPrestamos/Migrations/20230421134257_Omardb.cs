@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SistemaDeAhorroYPrestamos.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Omardb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -74,8 +74,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
                 name: "Inversiones",
                 columns: table => new
                 {
-                    Codigo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Codigo = table.Column<int>(type: "int", nullable: false),
                     Monto = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
                     FechaBeg = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaEnd = table.Column<DateTime>(type: "datetime2", nullable: false),

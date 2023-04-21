@@ -12,8 +12,8 @@ using SistemaDeAhorroYPrestamos.Models;
 namespace SistemaDeAhorroYPrestamos.Migrations
 {
     [DbContext(typeof(AhorrosPrestamosContext))]
-    [Migration("20230419032810_Initial")]
-    partial class Initial
+    [Migration("20230421134257_Omardb")]
+    partial class Omardb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -200,10 +200,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
             modelBuilder.Entity("SistemaDeAhorroYPrestamos.Models.Inversiones", b =>
                 {
                     b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<string>("ClienteCedula")
                         .IsRequired()

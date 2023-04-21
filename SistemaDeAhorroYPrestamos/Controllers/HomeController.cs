@@ -30,8 +30,11 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
-
-        [HttpPost]
+		public IActionResult Contactenos()
+		{
+			return View();
+		}
+		[HttpPost]
         public IActionResult Register(Cliente cliente)
         {
             if (_validator.validateRegisterErrors(ModelState))

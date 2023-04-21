@@ -197,10 +197,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
             modelBuilder.Entity("SistemaDeAhorroYPrestamos.Models.Inversiones", b =>
                 {
                     b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<string>("ClienteCedula")
                         .IsRequired()

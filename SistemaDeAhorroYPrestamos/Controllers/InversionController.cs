@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaDeAhorroYPrestamos.Helpers;
 using SistemaDeAhorroYPrestamos.Models;
 
 namespace SistemaDeAhorroYPrestamos.Controllers
@@ -26,45 +27,46 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         public IActionResult SolicitudInversion()
         {
-            return View();
+            var cedulaLogueda = HttpContext.Session.GetString(IKeysData.CEDULA);
+            if (cedulaLogueda == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var codigo = new Random().Next(1, 1000);
+
+            var inversion = new Prestamo() { Codigo = codigo, ClienteCedula = cedulaLogueda };
+            return View(inversion);
+            
         }
 
         [HttpPost]
 
-        public IActionResult SolicitudInversion(Inversiones inversiones, string botonevaluar)
+        public IActionResult SolicitudInversion(Inversiones inversiones, string botonPresionado)
         {
+            var dias = (inversiones.FechaEnd - inversiones.FechaBeg).TotalDays;
+            var interes = dias / 365 * 0.1D * (double)inversiones.Monto;
+            inversiones.Interes = (decimal)Math.Round(interes, 2) / 100;
 
-            if (botonevaluar == "Enviar")
+            switch (botonPresionado)
             {
-                // El botón "Enviar" fue presionado
-                // realizar las acciones correspondientes aquí
+                case "CalcularInteres":
 
-                if (ModelState.ContainsKey("Monto") && ModelState["Monto"].Errors.Count != 0 ||
-                ModelState.ContainsKey("FechaBeg") && ModelState["FechaBeg"].Errors.Count != 0 ||
-                ModelState.ContainsKey("FechaEnd") && ModelState["FechaEnd"].Errors.Count != 0 ||
-                 ModelState.ContainsKey("ClienteCedula") && ModelState["ClienteCedula"].Errors.Count != 0 ||
-                 ModelState.ContainsKey("CuentaBancoNumero") && ModelState["CuentaBancoNumero"].Errors.Count != 0 )
-                {
-                    return View(inversiones);
-                }
+                    break;
+                case "Enviar":
+                    // Guardar el préstamo en la base de datos
+                    _BaseDatos.Inversiones.Add(inversiones);
+                    _BaseDatos.SaveChanges();
+                    return RedirectToAction("SegundoHome");
 
 
-                return RedirectToAction("login", "Home");
-            }
-            if (botonevaluar == "Limpiar")
-            {
-                return RedirectToAction("Exito");
+                case "eliminar":
+                    return RedirectToAction("TablaPrestamos", inversiones);
             }
 
-            else 
-            {
-                
-                return RedirectToAction("Inicio");
-            }
-          
-            
 
-            
+
+            return View(inversiones);
         }
     }
 }

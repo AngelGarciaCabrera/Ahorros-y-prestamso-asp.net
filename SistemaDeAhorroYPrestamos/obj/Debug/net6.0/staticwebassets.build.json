@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "HCaWen2PEv0qe2WeA3W2V+Mzbso4tubN+tuQSGWfg+g=",
-=======
-  "Hash": "tgFQcj7sHz44++mutvUtWMUlHfpZkhuH96BGT1dHbdg=",
->>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
+  "Hash": "1ycz6BAPq0uF0u7szWAqufavJZE04eeRLS0Az8xxZBw=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -55,13 +51,10 @@
       "OriginalItemSpec": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SistemaDeAhorroYPrestamos.bundle.scp.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Home2.css",
-=======
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\animate.css",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\animate.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "css/animate.css",
       "AssetKind": "All",
@@ -75,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\animate.css"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\animation.css",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\animation.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "css/animation.css",
       "AssetKind": "All",
@@ -92,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\animation.css"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\bootstrap.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "css/bootstrap.css",
       "AssetKind": "All",
@@ -109,8 +102,7 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Home2.css",
->>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Home2.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
@@ -161,13 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\favicon.ico",
-=======
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "css/styles1erHome.css",
       "AssetKind": "All",
@@ -181,8 +170,7 @@
       "OriginalItemSpec": "wwwroot\\css\\styles1erHome.css"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\favicon.ico",
->>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\favicon.ico",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
@@ -216,13 +204,10 @@
       "OriginalItemSpec": "wwwroot\\img\\20998787.jpg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\bg4.jpg",
-=======
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\about-img.jpg",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\about-img.jpg",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "img/about-img.jpg",
       "AssetKind": "All",
@@ -236,8 +221,7 @@
       "OriginalItemSpec": "wwwroot\\img\\about-img.jpg"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\bg4.jpg",
->>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\bg4.jpg",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
@@ -424,13 +408,10 @@
       "OriginalItemSpec": "wwwroot\\img\\kenny-eliason-GrXWeoP-Ji0-unsplash.jpg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\nathan-anderson-FHiJWoBodrs-unsplash.jpg",
-=======
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\main_device_image.png",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\main_device_image.png",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "img/main_device_image.png",
       "AssetKind": "All",
@@ -444,8 +425,7 @@
       "OriginalItemSpec": "wwwroot\\img\\main_device_image.png"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\nathan-anderson-FHiJWoBodrs-unsplash.jpg",
->>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\img\\nathan-anderson-FHiJWoBodrs-unsplash.jpg",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
@@ -564,13 +544,10 @@
       "OriginalItemSpec": "wwwroot\\js\\inversion.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\logicaHome2.js",
-=======
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\js.js",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\js.js",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "js/js.js",
       "AssetKind": "All",
@@ -584,8 +561,7 @@
       "OriginalItemSpec": "wwwroot\\js\\js.js"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\logicaHome2.js",
->>>>>>> 91718d581eeaca8e2811f62f5e8c2d079ae6ad55
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\logicaHome2.js",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",

@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SistemaDeAhorroYPrestamos.Helpers;
 using SistemaDeAhorroYPrestamos.Helpers.Validators;
 using SistemaDeAhorroYPrestamos.Models;
@@ -26,6 +27,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+
         public IActionResult AboutUS()
         {
             return View();
@@ -48,9 +50,26 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
             if (clienteNuevo == null)
             {
-                _BaseDatos.Add(cliente);
-                _BaseDatos.SaveChanges();
-                Console.WriteLine("se agrego");
+                var entityEntry = _BaseDatos.Add(cliente);
+
+                if (entityEntry.State == EntityState.Added)
+                {
+                    CuentaBanco cuentaBanco = new CuentaBanco();
+                    cuentaBanco.ClienteCedula = cliente.Cedula;
+                    cuentaBanco.Numero = new Random().NextInt64(1_000_000_000, 10_000_000_000).ToString();
+                    cuentaBanco.Banco = "BANKCC";
+                    cuentaBanco.Tipo = "COMUN";
+
+                    _BaseDatos.CuentaBancos.Add(cuentaBanco);
+                    cliente.IdCuentaBanco = cuentaBanco.Numero;
+                    _BaseDatos.SaveChanges();
+                    Console.WriteLine("se agrego");
+
+
+                    //Guarda al usuario en la sesion
+                    HttpContext.Session.SetString(IKeysData.CEDULA, cliente.Cedula);
+                    return View("SegundoHome");
+                }
 
                 //Guarda al usuario en la sesion
                 HttpContext.Session.SetString(IKeysData.CEDULA, cliente.Cedula);
@@ -117,32 +136,50 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             var dias = (prestamo.FechaEnd - prestamo.FechaBeg).TotalDays;
             var interes = dias / 365 * 0.1D * (double)prestamo.Monto;
-            prestamo.Interes = (decimal)Math.Round(interes, 2) /100;
-            
-            
+            prestamo.Interes = (decimal)Math.Round(interes, 2) / 100;
+
+            var fechaPago = prestamo.FechaEnd.AddDays(1);
+            var duracionMeses = (int)Math.Ceiling(dias / 30.0);
+            var numCuotas = duracionMeses + 1;
+            var montoMensual = (prestamo.Monto + prestamo.Interes) / numCuotas;
+
+            //alamcenar en cuotasPrestamo
+            CuotaPrestamo cuotaPrestamo = new CuotaPrestamo();
+            cuotaPrestamo.PrestamoCodigo = prestamo.Codigo;
+            cuotaPrestamo.FechaRealizado = prestamo.FechaBeg;
+            cuotaPrestamo.Monto = montoMensual;
+            cuotaPrestamo.FechaPlanificacion = fechaPago;
             
 
             switch (botonPresionado)
             {
                 case "CalcularInteres":
-                    
+
                     break;
                 case "Enviar":
+
                     // Guardar el préstamo en la base de datos
-                    _BaseDatos.Prestamos.Add(prestamo);
-                    _BaseDatos.SaveChanges();
+                    var entityEntry = _BaseDatos.Prestamos.Add(prestamo);
+
+                    if (entityEntry.State == EntityState.Added)
+                    {
+                        //añadir su cuota a la base de datos
+                        cuotaPrestamo.PrestamoCodigoNavigation = entityEntry.Entity;
+                        _BaseDatos.CuotaPrestamos.Add(cuotaPrestamo); // Guardar el préstamo en la base de datos
+
+                        _BaseDatos.SaveChanges();
+                    }
+
                     return RedirectToAction("SegundoHome");
-                   
-                
+
+
                 case "eliminar":
-                    return RedirectToAction("TablaPrestamos",prestamo);
+                    return RedirectToAction("TablaPrestamos", prestamo);
             }
-           
 
 
             return View(prestamo);
         }
-
 
 
         [HttpGet]
@@ -165,13 +202,20 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
-
-        public IActionResult TablaPrestamos( )
+        public IActionResult PagosPrestamos()
         {
-            
-            
             return View();
-           
+        }
+
+        public IActionResult TablaPrestamos()
+        {
+            var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
+            
+
+            var listaCuotas = _BaseDatos.CuotaPrestamos.Where(c => 
+                c.ClienteCedula == cedulaLogueada).ToList();
+
+            return View(listaCuotas);
         }
 
 

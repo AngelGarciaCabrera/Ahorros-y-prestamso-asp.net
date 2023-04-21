@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "1ycz6BAPq0uF0u7szWAqufavJZE04eeRLS0Az8xxZBw=",
+=======
+  "Hash": "q2+j8/jKkLRB0Uy5wIXQOlhcwJazKfxosLPbHLhBBkY=",
+>>>>>>> b680f5ed8627295adae74ff463795d02f380976b
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -153,7 +157,28 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
+=======
+      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\stlyepagos.css",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "css/stlyepagos.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\stlyepagos.css"
+    },
+    {
+      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
+>>>>>>> b680f5ed8627295adae74ff463795d02f380976b
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",

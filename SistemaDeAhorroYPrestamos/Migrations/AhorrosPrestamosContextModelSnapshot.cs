@@ -132,10 +132,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
             modelBuilder.Entity("SistemaDeAhorroYPrestamos.Models.CuotaPrestamo", b =>
                 {
                     b.Property<int>("PrestamoCodigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PrestamoCodigo"));
 
                     b.Property<int?>("CodigoComprobante")
                         .IsRequired()

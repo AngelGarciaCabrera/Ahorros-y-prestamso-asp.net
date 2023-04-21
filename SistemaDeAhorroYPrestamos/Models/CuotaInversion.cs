@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaDeAhorroYPrestamos.Models;
 
@@ -8,6 +9,7 @@ public class CuotaInversion
 {
     [Required]
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public int Id { get; set; }
     [Required]
     public DateTime FechaPlanificada { get; set; }

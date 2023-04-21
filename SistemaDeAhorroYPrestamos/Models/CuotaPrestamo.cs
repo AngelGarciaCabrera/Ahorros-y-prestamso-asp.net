@@ -14,14 +14,17 @@ public class CuotaPrestamo
     [Column(TypeName = "decimal(9,2)")]
     public decimal Monto { get; set; }
     [Required]
-    public string Tipo { get; set; } = null!;
+    public string? Tipo { get; set; } = null!;
     [Required]
     public DateTime? FechaRealizado { get; set; }
     [Required]
     public int? CodigoComprobante { get; set; }
     [Key]
     [Required]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public int PrestamoCodigo { get; set; }
+    
+    public string ClienteCedula { get; set; }
 
     public virtual Prestamo PrestamoCodigoNavigation { get; set; } = null!;
 }

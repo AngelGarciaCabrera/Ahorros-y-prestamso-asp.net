@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaDeAhorroYPrestamos.Models;
 
@@ -8,6 +9,7 @@ public class CuentaBanco
 {
     [Key]
     [Required]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [StringLength(14, MinimumLength =10,ErrorMessage ="La Cuenta no es valida")]
     public string Numero { get; set; } = null!;
     [Required]

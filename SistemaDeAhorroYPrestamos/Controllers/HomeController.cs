@@ -199,6 +199,10 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+        public IActionResult PagosPrestamos()
+        {
+            return View();
+        }
 
         public IActionResult TablaPrestamos()
         {

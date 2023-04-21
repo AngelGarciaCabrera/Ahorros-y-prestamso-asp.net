@@ -1,0 +1,27 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<form>
+    <h1>Factura de Préstamo</h1>
+    <label for="codigo">Código del Préstamo:</label>
+    <input type="text" id="codigo" name="codigo" readonly>
+        
+    <label for="pago">Monto Mensual a Pagar:</label>
+    <input type="text" id="pago" name="pago" readonly>
+        
+    <label for="metodo">Método de Pago:</label>
+    <select id="metodo" name="metodo" required>
+        <option value="">Selecciona una opción</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="cheque">Cheque</option>
+        <option value="tarjeta">Tarjeta</option>
+    </select>
+        
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" readonly>
+        
+    <input type="submit" value="Generar factura">
+</form>

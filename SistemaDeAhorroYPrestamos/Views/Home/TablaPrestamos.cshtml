@@ -1,4 +1,4 @@
-﻿
+﻿@model List<CuotaPrestamo>
 
 @{
     ViewData["Title"] = "TablaPrestamos";
@@ -17,7 +17,28 @@
                  <h1 class="card-title">Tabla Prestamos</h1></div>
                 <div class="card-body"  style="overflow-y: scroll;">
                    <table class="table table-hover " id="tabla" >
-                      
+                        <thead>
+                              <tr>
+                                  <th>Número de prestamo</th>
+                                  <th>Monto</th>
+                                  <th>Fecha planificada</th>
+                                  <th>Fecha realizada</th>
+                              </tr>
+                          </thead>
+                          @if (Model != null)
+                          {
+                              <tbody>
+                              @foreach (var cuota in Model)
+                              {
+                                  <tr>
+                                      <td>@cuota.PrestamoCodigo</td>
+                                      <td>@cuota.Monto</td>
+                                      <td>@cuota.FechaPlanificacion</td>
+                                      <td>@cuota.FechaRealizado</td>
+                                  </tr>
+                              }
+                              </tbody>
+                          }
                     </table>
                     
         </div>

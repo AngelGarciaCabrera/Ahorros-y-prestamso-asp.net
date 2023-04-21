@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaDeAhorroYPrestamos.Models;
 
@@ -28,8 +29,10 @@ public class Cliente
     [StringLength(50, MinimumLength = 8, ErrorMessage = "La contraseña debe tener al menos 8 caracteres")]
     /// [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$", ErrorMessage = "La contraseña debe tener al menos 1 letra mayúscula, 1 letra minúscula, 1 número y 1 carácter especial")]
     public string? Contrasena { get; set; }
-
+    
     public string? IdCuentaBanco { get; set; }
+    
+    
     
     public virtual CuentaBanco? CuentaBancoNavigation { get; set; }
 

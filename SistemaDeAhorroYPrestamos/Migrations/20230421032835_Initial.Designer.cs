@@ -12,7 +12,7 @@ using SistemaDeAhorroYPrestamos.Models;
 namespace SistemaDeAhorroYPrestamos.Migrations
 {
     [DbContext(typeof(AhorrosPrestamosContext))]
-    [Migration("20230419032810_Initial")]
+    [Migration("20230421032835_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -135,10 +135,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
             modelBuilder.Entity("SistemaDeAhorroYPrestamos.Models.CuotaPrestamo", b =>
                 {
                     b.Property<int>("PrestamoCodigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PrestamoCodigo"));
 
                     b.Property<int?>("CodigoComprobante")
                         .IsRequired()

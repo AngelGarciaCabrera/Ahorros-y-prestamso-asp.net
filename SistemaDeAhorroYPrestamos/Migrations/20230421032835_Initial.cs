@@ -104,13 +104,12 @@ namespace SistemaDeAhorroYPrestamos.Migrations
                 name: "CuotaPrestamos",
                 columns: table => new
                 {
-                    PrestamoCodigo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PrestamoCodigo = table.Column<int>(type: "int", nullable: false),
                     FechaPlanificacion = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Monto = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
-                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Monto = table.Column<decimal>(type: "decimal(9,2)", nullable: false, defaultValue: 0D),
+                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaRealizado = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CodigoComprobante = table.Column<int>(type: "int", nullable: false),
+                    CodigoComprobante = table.Column<int>(type: "int", nullable: true),
                     PrestamoCodigoNavigationCodigo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

@@ -110,59 +110,36 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         }
 
         [HttpPost]
-        public IActionResult SolicitudDePrestamo([FromForm] Prestamo prestamo, string botonPresionado,CuotaPrestamo cuotaPrestamo)
+        public IActionResult SolicitudDePrestamo([FromForm] Prestamo prestamo, string botonPresionado)
         {
             var dias = (prestamo.FechaEnd - prestamo.FechaBeg).TotalDays;
             var interes = dias / 365 * 0.1D * (double)prestamo.Monto;
-            prestamo.Interes = (decimal)Math.Round(interes, 2) / 100;
+            prestamo.Interes = (decimal)Math.Round(interes, 2) /100;
+            
+            
+            
 
-            var fechaPago = prestamo.FechaEnd.AddDays(1);
-            var duracionMeses = (int)Math.Ceiling(dias / 30.0);
-            var numCuotas = duracionMeses + 1;
-            var montoMensual = (prestamo.Monto + prestamo.Interes) / numCuotas;
-            
-            //alamcenar en cuotasPrestamo
-            prestamo.Codigo = cuotaPrestamo.PrestamoCodigo;
-            cuotaPrestamo.Monto = montoMensual;
-            cuotaPrestamo.FechaPlanificacion = fechaPago;
-            cuotaPrestamo.FechaRealizado = prestamo.FechaBeg;
-            
-            
             switch (botonPresionado)
             {
                 case "CalcularInteres":
                     
                     break;
                 case "Enviar":
-                    var PrestamosLogeados =
-                        _BaseDatos.Prestamos.SingleOrDefault(C =>
-                            C.Codigo == prestamo.Codigo && C.ClienteCedula == prestamo.ClienteCedula);
-                    if (PrestamosLogeados == null)
-                    {
-                        // Guardar el préstamo en la base de datos
-                        _BaseDatos.Prestamos.Add(prestamo);
-                        _BaseDatos.SaveChanges();
-                        ModelState.AddModelError("", "Prestamo Agregado");
-                        return RedirectToAction("TablaPrestamos");
-                        
-                        
-                    }
-                    if (PrestamosLogeados.Codigo == prestamo.Codigo)
-                    {
-                        ModelState.AddModelError("", "Prestamo existente");
-
-                        return View("SegundoHome");
-                    }
+                    // Guardar el préstamo en la base de datos
+                    _BaseDatos.Prestamos.Add(prestamo);
+                    _BaseDatos.SaveChanges();
                     return RedirectToAction("SegundoHome");
+                   
                 
                 case "eliminar":
-                    return RedirectToAction("SegundoHome",prestamo);
+                    return RedirectToAction("TablaPrestamos",prestamo);
             }
            
 
 
-            return RedirectToAction("TablaPrestamos",typeof(CuotaPrestamo));
+            return View(prestamo);
         }
+
 
 
         [HttpGet]
@@ -188,32 +165,9 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         public IActionResult TablaPrestamos( )
         {
-            var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
-            if (cedulaLogueada == null)
-            {
-                return RedirectToAction("Index");
-            }
-
-            // Obtener todos los préstamos del cliente
-            var prestamosCliente = _BaseDatos.Prestamos
-                .Where(p => p.ClienteCedula == cedulaLogueada)
-                .ToList();
-
-            // Crear una lista para almacenar todas las cuotas de préstamos
-            var cuotasPrestamo = new List<CuotaPrestamo>();
-
-            // Agregar todas las cuotas de préstamos para cada préstamo del cliente
-            foreach (var prestamo in prestamosCliente)
-            {
-                var cuotasPrestamoPrestamo = _BaseDatos.CuotasPrestamo
-                    .Where(c => c.PrestamoCodigo == prestamo.Codigo)
-                    .ToList();
-
-                cuotasPrestamo.AddRange(cuotasPrestamoPrestamo);
-            }
-
-            // Pasa la lista de cuotas de préstamos a la vista
-            return View(cuotasPrestamo);
+            
+            
+            return View();
            
         }
 

@@ -21,6 +21,7 @@ public class CuotaInversion
     public int? CodigoComprobante { get; set; }
     [Required]
     public string? CuentaBancoNumero { get; set; }
+    public string? CedulaClienteInversion { get; set; }
     [Required]
     public int? CodigoInversion { get; set; }
 

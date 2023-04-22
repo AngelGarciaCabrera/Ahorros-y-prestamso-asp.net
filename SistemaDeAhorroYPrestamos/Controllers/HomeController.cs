@@ -180,59 +180,43 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
             return View(prestamo);
         }
-        [HttpPost]
 
+        [HttpPost]
         public IActionResult SolicitudDeInversion([FromForm] Inversiones inversiones, string botonPresionado)
         {
             var dias = (inversiones.FechaEnd - inversiones.FechaBeg).TotalDays;
             var interes = dias / 365 * 0.1D * (double)inversiones.Monto;
             inversiones.Interes = (decimal)Math.Round(interes, 2) / 100;
-
-            var fechaPago = inversiones.FechaEnd.AddDays(1);
-            var duracionMeses = (int)Math.Ceiling(dias / 30.0);
-            var numCuotas = duracionMeses + 1;
-            var montoMensual = (inversiones.Monto + inversiones.Interes) / numCuotas;
-
-            //alamcenar en cuotasinversiones
-            CuotaInversion cuotainversiones = new CuotaInversion();
-            cuotainversiones.CodigoInversion = inversiones.Codigo;
-            cuotainversiones.FechaRealizada = inversiones.FechaBeg;
-            cuotainversiones.FechaPlanificada = fechaPago;
-            cuotainversiones.CuentaBancoNumero = inversiones.CuentaBancoNumero;
-
+            
             switch (botonPresionado)
             {
-                case "CalcularInteres":
-                   
-                 
-
-                    break;
                 case "Enviar":
+                    // Guardar la inversion en la base de datos
+                    
+                    var cedula = HttpContext.Session.GetString(IKeysData.CEDULA);
+                    var cliente = _BaseDatos.Clientes.FirstOrDefault(c=> c.Cedula == cedula);
 
-                    // Guardar el préstamo en la base de datos
-                    var entityEntry = _BaseDatos.Inversiones.Add(inversiones);
+                    inversiones.ClienteCedula = cliente.Cedula;
+                    inversiones.CuentaBancoNumero = cliente.IdCuentaBanco;
+                    CuotaInversion cuotaInversion = new CuotaInversion();
+                    cuotaInversion.CedulaClienteInversion = cliente.Cedula;
+                    cuotaInversion.CuentaBancoNumero = cliente.IdCuentaBanco;
 
-                    if (entityEntry.State == EntityState.Added)
-                    {
-                        //añadir su cuota a la base de datos
-                        cuotainversiones.CodigoInversionNavigation = entityEntry.Entity;
-                        _BaseDatos.CuotaInversiones.Add(cuotainversiones); // Guardar el préstamo en la base de datos
+                    
+                    _BaseDatos.Inversiones.Add(inversiones);
+                    _BaseDatos.SaveChanges();
 
-                        _BaseDatos.SaveChanges();
-                    }
-
-                    return RedirectToAction("SegundoHome");
-
+                    return View("SegundoHome");
 
                 case "eliminar":
-                    return RedirectToAction("TablaPrestamos", cuotainversiones);
+                    return RedirectToAction("SegundoHome", inversiones);
             }
 
-
             return View(inversiones);
-            
-          
         }
+
+        
+        
         public IActionResult SolicitudDeInversion()
         {
             var cedulaLogueda = HttpContext.Session.GetString(IKeysData.CEDULA);
@@ -245,6 +229,26 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
             var inversion = new Inversiones() { Codigo = codigo, ClienteCedula = cedulaLogueda };
             return View(inversion);
+        }
+        public IActionResult TablaInversion()
+        {
+            try
+            {
+                var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
+            
+                
+                var listaCuotasInversion = _BaseDatos.CuotaInversiones.Where(c => 
+                    c.CedulaClienteInversion == cedulaLogueada).ToList();
+                return View(listaCuotasInversion);
+
+            }
+            catch (Exception e)
+            {
+                
+                Console.WriteLine(e);
+                throw new Exception(e.Message);
+            }
+           
         }
 
 
@@ -263,7 +267,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
             return View(cliente);
         }
-
+        
 
         [HttpPost]
         public IActionResult PagosPrestamos(int cuota)

@@ -1,8 +1,11 @@
 ﻿@model List<CuotaInversion>
 
 @{
-    ViewData["Title"] = "TablaPrestamos";
+    ViewBag.Title = "title";
+    Layout = "_Layout";
 }
+
+<h2>title</h2>
 <style>
     .Fondo-negro {
         background: #343a40;
@@ -14,16 +17,16 @@
     <section style="margin-top: 70px">
         <div class="card" style="max-width:70%">
             <div class="card-header "style="background-color:dodgerblue">
-                <h1 class="card-title">Tabla Prestamos</h1>
+                <h1 class="card-title">Tabla Inversiones</h1>
             </div>
             <div class="card-body" style="overflow-y: scroll;">
                 <table class="table table-hover " id="tabla">
                     <thead>
                     <tr>
-                        <th>Número de prestamo</th>
-                        <th>Cuenta de banco</th>
+                        <th>Número de Inversion</th>
                         <th>Fecha planificada</th>
                         <th>Fecha realizada</th>
+                        <th>Cuenta DE banco</th>
                     </tr>
                     </thead>
                     @if (Model != null)
@@ -33,16 +36,9 @@
                         {
                             <tr>
                                 <td>@cuota.CodigoInversion</td>
-                                <td>@cuota.CuentaBancoNumero</td>
                                 <td>@cuota.FechaPlanificada</td>
                                 <td>@cuota.FechaRealizada</td>
-                                 <td>
-                                     @using (Html.BeginForm("PagosPrestamos", "Home", FormMethod.Post))
-                                       {
-                                           <input type="hidden" name="cuota" value="@cuota.CodigoInversion" />
-                                             <button class="btn-danger" type="submit">Ir a la vista</button>
-                                       }
-                                 </td>
+                                <td>@cuota.CuentaBancoNumero</td>
                             </tr>
 
                             

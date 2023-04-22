@@ -1,7 +1,49 @@
 ﻿
+@model Cliente
 @{
     ViewData["Title"] = "login";
+    var url = Context.Request.Path.ToString();
 }
+<style>
+    .Fondo-negro {
+        background: #343a40;
+    }
+</style>
 
-<h1>login</h1>
 
+
+<main id="formulario1" style="margin-top: 15%"  >
+
+    <div class="contenedor__todo">
+        <div class="caja__trasera">
+            <div class="caja__trasera-login">
+                <h3>¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <button id="btn__registrarse">Regístrarse</button>
+            </div>
+        </div>
+
+        <!--Formulario de Login y registro-->
+        <div class="contenedor__login-register  ">
+          
+            @Html.Partial("LoginComponet")
+
+           
+            @Html.Partial("RegistroComponet")
+        </div>
+    </div>
+
+
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    updateLogin('@url');
+
+    
+});
+</script>

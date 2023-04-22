@@ -1,0 +1,65 @@
+﻿@model List<CuotaPrestamo>
+
+@{
+    ViewData["Title"] = "TablaPrestamos";
+}
+<style>
+    .Fondo-negro {
+        background: #343a40;
+    }
+</style>
+<body onload="LlenarTablaPrestmaos()">
+
+<center>
+    <section style="margin-top: 70px">
+        <div class="card" style="max-width:70%">
+            <div class="card-header "style="background-color:dodgerblue">
+                <h1 class="card-title">Tabla Prestamos</h1>
+            </div>
+            <div class="card-body" style="overflow-y: scroll;">
+                <table class="table table-hover " id="tabla">
+                    <thead>
+                    <tr>
+                        <th>Número de prestamo</th>
+                        <th>Monto</th>
+                        <th>Fecha planificada</th>
+                        <th>Fecha realizada</th>
+                    </tr>
+                    </thead>
+                    @if (Model != null)
+                    {
+                        <tbody>
+                        @foreach (var cuota in Model)
+                        {
+                            <tr>
+                                <td>@cuota.PrestamoCodigo</td>
+                                <td>@cuota.Monto</td>
+                                <td>@cuota.FechaPlanificacion</td>
+                                <td>@cuota.FechaRealizado</td>
+                                 <td>
+                                     @using (Html.BeginForm("PagosPrestamos", "Home", FormMethod.Post))
+                                       {
+                                           <input type="hidden" name="cuota" value="@cuota.PrestamoCodigo" />
+                                             <button class="btn-danger" type="submit">Ir a la vista</button>
+                                       }
+                                 </td>
+                            </tr>
+
+                            
+                        }
+                        </tbody>
+                    }
+                </table>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</center>
+
+
+</body>

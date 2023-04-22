@@ -1,0 +1,280 @@
+﻿
+@{
+    ViewData["Title"] = "SegundoHome";
+}
+@model Cliente
+<style>
+	.Fondo-negro {
+		background: #343a40;
+	}
+</style>
+
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-bank'></i>
+			<span class="text">BANKCC</span>
+		</a>
+		<h6> Cuenta de Banco: @Model.IdCuentaBanco</h6>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Home/TablaInversion">
+					<i class='bx bxs-coin-stack'></i>
+					<span class="text"> Mis Inversiones</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Home/TablaPrestamos">
+					<i class='bx bxs-wallet' ></i>
+					<span class="text"> Mis Prestamos</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Home/SolicitudDePrestamo">>
+					<i class='bx bx-money-withdraw'></i>
+					<span class="text">Solicitar Prestamo</span>
+				</a>
+			</li>
+			<li>
+				<a href="/Home/SolicitudDeInversion">
+					<i class='bx bxs-credit-card-front' > </i>
+					<span class="text">Solicitar Inversion</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-user'></i>
+					<span class="text" id="usuariof">Usuario</span>
+					<ul id="info-usuario">
+                      <li><span class="text" id="cedulaf">@Model.Cedula</span></li>
+                      <li><span class="text" id="cuentabancof">@Model.IdCuentaBanco</span></li>
+                      <li><span class="text" id="nombref">@Model.Nombre</span></li>
+                      <li><span class="text" id="apellidof">@Model.Apellido</span></li>
+                    </ul>
+                    
+                    <script>
+                      const UsuarioF = document.getElementById("usuariof");
+                      const InfoUsuario = document.getElementById("info-usuario");
+                    
+                      function mostrarInfoUsuario() {
+                        // Muestra la lista
+                        InfoUsuario.style.display = "block";
+                      }
+                    
+                      function ocultarInfoUsuario() {
+                        // Oculta la lista
+                        InfoUsuario.style.display = "none";
+                      }
+                    
+                      // Oculta la lista inicialmente
+                      ocultarInfoUsuario();
+                    
+                      // Agrega los eventos al span
+                      UsuarioF.addEventListener("click", () => {
+                        if (InfoUsuario.style.display === "none") {
+                          mostrarInfoUsuario();
+                        } else {
+                          ocultarInfoUsuario();
+                        }
+                      });
+                    </script>
+					<style>
+                      #info-usuario {
+                        display: none;
+                        position: absolute;
+                        background-color: white;
+                        padding: 5px;
+                        list-style-type: none;
+                        border: 1px solid black;
+                        top: 70%;
+                      }
+                    
+                      #info-usuario li {
+                        margin: 5px;
+                      }
+                      
+                      #usuariof {
+                        position: relative;
+                      }
+                    </style>
+					
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog'></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a  class="logout" href="@Url.Action("logout", "Home")">
+                                             
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h5> @Model.Nombre</h5>
+					<h6>Cedula: @Model.Cedula</h6>
+					
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download'></i>
+					<span class="text">Download Report</span>
+				</a>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-credit-card-alt'></i>
+					<span class="text">
+						<h3>120.00</h3>
+						<p>Transferencia via tarjeta</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-transfer-alt'></i>
+					<span class="text">
+						<h3>200.00</h3>
+						<p>Transferencia via otro banco</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-bank'></i>
+					<span class="text">
+						<h3>500.00</h3>
+						<p>Transferencia via mismo banco</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recent Orders</h3>
+						<i class='bx bx-search'></i>
+						<i class='bx bx-filter'></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Pagos</th>
+								<th>fecha</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<i class='bx bxs-credit-card'></i>
+									<p>Tarjetas</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-money'></i>
+									<p>Pago de casa</p>
+								</td>
+								<td>10-04-2023</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bxs-collection'></i>
+									<p>Impuestos</p>
+								</td>
+								<td>17-04-2023</td>
+								<td><span class="status process">Process</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bxs-receipt'></i>
+									<p>Seguros</p>
+								</td>
+								<td>20-04-2023</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<i class='bx bx-coin-stack'></i>
+									<p>Prestamo de 20,000</p>
+								</td>
+								<td>01-04-2023</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Planes</h3>
+						<i class='bx bx-plus'></i>
+						<i class='bx bx-filter'></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<i class='bx bxs-donate-heart bx-tada'></i>
+							<p>Prestamos Personales</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="completed">
+							<i class='bx bxs-check-shield bx-tada'></i>
+							<p>Proteccion Completa</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="not-completed">
+							<i class='bx bx-list-check bx-tada'></i>
+							<p>Certificado de deposito</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="completed">
+							<i class='bx bxs-home bx-tada'></i>
+							<p>Prestamos Hipotecarios</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="not-completed">
+							<i class='bx bxs-car bx-tada'></i>
+							<p>Prestamos para vehiculos nuevos y usados</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+
+	
+</body>
+
+

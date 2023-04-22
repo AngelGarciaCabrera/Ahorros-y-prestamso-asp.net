@@ -11,10 +11,15 @@ html {
 html {
   position: relative;
   min-height: 100%;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body {
   margin-bottom: 60px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 .input-error {
     border-color: red;
@@ -25,3 +30,80 @@ body {
     border-color: green;
     border-width: medium;
 }
+.encabezado-img {
+    background-image: url(/img/Secure-Now-web-header.jpg);
+    height:500px;
+    background-size: cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    color:#fff;
+
+}
+.encabezado-img p{
+    font-size:20px;
+}
+.encabezado-img h1{
+    font-size:50px;
+}
+.foto {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#mi-elemento-p {
+    display: none;
+}
+.{
+    display: none;
+}
+
+
+
+.subTITULO {
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: small;
+    font-style: normal;
+}
+
+.contenedor-principal {
+    width: 100%; /* La página ocupa el ancho completo del navegador */
+    max-width: 1200px; /* El ancho máximo de la página es de 1200px */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    box-sizing: border-box; /* Incluye los bordes y el padding en el ancho total */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.Titulo {
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-style: normal;
+}
+
+.subTITULO {
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: small;
+    font-style: normal;
+}
+
+    .text-muted {
+        display: none;
+    }

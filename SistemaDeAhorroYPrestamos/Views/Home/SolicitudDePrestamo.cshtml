@@ -1,0 +1,181 @@
+﻿@{ 
+    
+    ViewData["Title"] = "SolicitudDePrestamo"; 
+
+} 
+@model Prestamo 
+
+<style>
+    .Fondo-negro {
+        background: #343a40;
+    }
+</style>
+  
+<br>
+<section id="formularioP" style="margin-top: 7%"> 
+
+  
+
+    <center> 
+
+        <div class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="max-width: 500px; "> 
+
+            <div class="card-header p-3 mb-2 bg-success text-white" id="card-header"> 
+
+                <h3 class="card-title">Solicitud de Prestamos</h3> 
+
+            </div> 
+
+            <div class="card-body"> 
+
+                @using (Html.BeginForm("SolicitudDePrestamo", "Home", FormMethod.Post)) 
+
+                { 
+
+                    <div class="mb-3" style="float: left"> 
+
+                        @Html.LabelFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-label" } }) 
+
+                        @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @readonly = "readonly", @class = "form-control" } }) 
+
+                    </div> 
+
+                    <div class="mb-3" style="float: right"> 
+
+                        @Html.LabelFor(model => model.Interes, new { htmlAttributes = new { @class = "form-label" } }) 
+
+                        @Html.EditorFor(model => model.Interes, new { htmlAttributes = new { @disabled = "disabled", @class = "form-control" } }) 
+
+                        @Html.ValidationMessageFor(model => model.Interes) 
+
+                    </div> 
+
+  
+
+                    <div class="mb-3" style="padding-top: 100px;"> 
+
+                        @Html.LabelFor(model => model.Monto, new { htmlAttributes = new { @class = "form-label" } }) 
+
+                        @Html.EditorFor(model => model.Monto, new { htmlAttributes = new { @class = "form-control" } }) 
+
+                        @Html.ValidationMessageFor(model => model.Monto, "", new { @class = "text-danger" }) 
+
+                    </div> 
+
+                    <div class="mb-3"> 
+
+                        @Html.LabelFor(model => model.FechaBeg, new { htmlAttributes = new { @class = "form-label" } }) 
+
+                        @Html.EditorFor(model => model.FechaBeg, new 
+
+                        { 
+
+                            htmlAttributes = new 
+
+                            { 
+
+                                @id = "FechaI", 
+
+                                @class = "form-control" 
+
+                            } 
+
+                        }) 
+
+                        @Html.ValidationMessageFor(model => model.FechaBeg, "", new { @class = "form-label" }) 
+
+                    </div> 
+
+                    <div class="mb-3"> 
+
+                        @Html.LabelFor(model => model.FechaEnd, new { htmlAttributes = new { @class = "form-label" } }) 
+
+                        @Html.EditorFor(model => model.FechaEnd, new 
+
+                        { 
+
+                            htmlAttributes = new 
+
+                            { 
+
+                                @id = "FechaF", 
+
+                                @class = "form-control" 
+
+                            } 
+
+                        }) 
+
+                        @Html.ValidationMessageFor(model => model.FechaEnd) 
+
+                    </div> 
+
+  
+
+                    <div class="form-group"> 
+
+                        @Html.LabelFor(model => model.ClienteCedula, new { htmlAttributes = new { @class = "form-label" } }) 
+
+                        @Html.EditorFor(model => model.ClienteCedula, new { htmlAttributes = new { @readonly = "readonly", @class = "form-control" } }) 
+
+                    </div> 
+
+  
+
+                    <div style="padding-left: 20px;padding-top: 20px"> 
+
+                        <button style="float:left;" type="submit" class="btn btn-outline-success" name="botonPresionado" value="CalcularInteres" onclick="VerificarFecha()">Calcular Interes</button> 
+
+                    </div> 
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-top: 80px; padding: 1em;"> 
+
+  
+
+                        <button type="submit" class="btn btn-outline-info"id="enviar"  name="botonPresionado" value="Enviar">Solicitar</button> 
+
+                        <button type="submit" class="btn btn-outline-danger"name="botonPresionado"value="eliminar"> Limpiar</button> 
+
+                    </div> 
+
+                } 
+
+            </div> 
+
+        </div> 
+
+    </center> 
+
+</section> 
+<script >
+const FechaI = document.getElementById("FechaI");
+const FechaF = document.getElementById("FechaF");
+const enviar = document.getElementById("enviar");
+
+function setDatesFormValues(date = new Date()) {
+    FechaI.value = date.toISOString().split('T')[0]
+    const dateToChange = new Date(date)
+    debugger
+    dateToChange.setMonth(date.getMonth() + 1)
+
+    if (!FechaF.value) {
+        FechaF.value = ''
+    }
+    FechaF.setAttribute("min", dateToChange.toISOString().split('T')[0]);
+}
+
+FechaI.addEventListener('change', () => {
+    const FechaIDate = new Date(FechaI.value)
+    setDatesFormValues(FechaIDate);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    console.log('Subio el onload')
+    setDatesFormValues();
+})
+enviar.addEventListener('submit',() => {
+    
+   // crea un elemento div
+   alert("se añadio Correctamente")
+  })
+</script>

@@ -226,6 +226,12 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             
             return RedirectToAction("SegundoHome");
         }
+        public IActionResult Contacto()
+        {
+            
+            
+            return View();
+        }
 
         public IActionResult TablaPrestamos()
         {

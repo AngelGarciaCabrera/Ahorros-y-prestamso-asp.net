@@ -1,0 +1,48 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<style>
+    .Fondo-negro {
+        background: #343a40;
+    }
+</style>
+<br>
+<br>
+
+<section class="form_wrap" style="margin-top: 70px">
+
+    <section class="cantact_info">
+        <section class="info_title">
+            <span class="fa fa-user-circle"></span>
+            <h2>INFORMACION<br>DE CONTACTO</h2>
+        </section>
+        <section class="info_items">
+            <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+            <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+        </section>
+    </section>
+
+    <form class="form_contact"  action="https://formspree.io/f/xeqwvewd"
+          method="POST">
+        <h2>Envia un mensaje</h2>
+        <div class="user_info">
+            <label for="names">Nombres *</label>
+            <input type="text" name="name" id="names">
+
+            <label for="phone">Telefono / Celular</label>
+            <input type="text" name="telefono" id="phone">
+
+            <label for="email">Correo electronico *</label>
+            <input type="text" name="email"id="email">
+
+            <label for="mensaje">Mensaje *</label>
+            <textarea name="mesage" id="mensaje"></textarea>
+
+            <input type="button" value="Enviar Mensaje" id="btnSend">
+        </div>
+    </form>
+
+</section>

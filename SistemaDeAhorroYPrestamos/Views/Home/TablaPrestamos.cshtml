@@ -11,7 +11,7 @@
 <body onload="LlenarTablaPrestmaos()">
 
 <center>
-    <section style="padding-top: 60px">
+    <section style="margin-top: 70px">
         <div class="card" style="max-width:70%">
             <div class="card-header "style="background-color:dodgerblue">
                 <h1 class="card-title">Tabla Prestamos</h1>
@@ -40,7 +40,7 @@
                                      @using (Html.BeginForm("PagosPrestamos", "Home", FormMethod.Post))
                                        {
                                            <input type="hidden" name="cuota" value="@cuota.PrestamoCodigo" />
-                                             <button class="btn-check" type="submit">Ir a la vista</button>
+                                             <button class="btn-danger" type="submit">Ir a la vista</button>
                                        }
                                  </td>
                             </tr>

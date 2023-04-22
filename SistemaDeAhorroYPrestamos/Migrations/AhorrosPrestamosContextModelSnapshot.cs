@@ -89,10 +89,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
             modelBuilder.Entity("SistemaDeAhorroYPrestamos.Models.CuotaInversion", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int?>("CodigoComprobante")
                         .IsRequired()
@@ -134,15 +131,18 @@ namespace SistemaDeAhorroYPrestamos.Migrations
                     b.Property<int>("PrestamoCodigo")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CodigoComprobante")
+                    b.Property<string>("ClienteCedula")
                         .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<int?>("CodigoComprobante")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FechaPlanificacion")
+                    b.Property<DateTime?>("FechaPlanificacion")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("FechaRealizado")
-                        .IsRequired()
+                    b.Property<DateTime>("FechaRealizado")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("Monto")
@@ -165,10 +165,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
             modelBuilder.Entity("SistemaDeAhorroYPrestamos.Models.Garantia", b =>
                 {
                     b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<int>("PrestamoCodigo")
                         .HasColumnType("int");
@@ -194,10 +191,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
             modelBuilder.Entity("SistemaDeAhorroYPrestamos.Models.Inversiones", b =>
                 {
                     b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<string>("ClienteCedula")
                         .IsRequired()

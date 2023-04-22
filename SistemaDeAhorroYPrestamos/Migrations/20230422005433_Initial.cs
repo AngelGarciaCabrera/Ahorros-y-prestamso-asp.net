@@ -74,8 +74,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
                 name: "Inversiones",
                 columns: table => new
                 {
-                    Codigo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Codigo = table.Column<int>(type: "int", nullable: false),
                     Monto = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
                     FechaBeg = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaEnd = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -105,11 +104,12 @@ namespace SistemaDeAhorroYPrestamos.Migrations
                 columns: table => new
                 {
                     PrestamoCodigo = table.Column<int>(type: "int", nullable: false),
-                    FechaPlanificacion = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Monto = table.Column<decimal>(type: "decimal(9,2)", nullable: false, defaultValue: 0D),
-                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaPlanificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Monto = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
+                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaRealizado = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CodigoComprobante = table.Column<int>(type: "int", nullable: true),
+                    ClienteCedula = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
                     PrestamoCodigoNavigationCodigo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -127,8 +127,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
                 name: "Garantias",
                 columns: table => new
                 {
-                    Codigo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Codigo = table.Column<int>(type: "int", nullable: false),
                     Tipo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Valor = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
                     Ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -149,8 +148,7 @@ namespace SistemaDeAhorroYPrestamos.Migrations
                 name: "CuotaInversiones",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     FechaPlanificada = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Tipo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaRealizada = table.Column<DateTime>(type: "datetime2", nullable: false),

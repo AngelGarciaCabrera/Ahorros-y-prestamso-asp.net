@@ -146,6 +146,9 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             cuotaPrestamo.FechaRealizado = prestamo.FechaBeg;
             cuotaPrestamo.Monto = montoMensual;
             cuotaPrestamo.FechaPlanificacion = fechaPago;
+            cuotaPrestamo.ClienteCedula = prestamo.ClienteCedula;
+           
+            
             
 
             switch (botonPresionado)
@@ -207,13 +210,24 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
         public IActionResult TablaPrestamos()
         {
-            var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
+            try
+            {
+                var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
             
 
-            var listaCuotas = _BaseDatos.CuotaPrestamos.Where(c => 
-                c.ClienteCedula == cedulaLogueada).ToList();
+                var listaCuotas = _BaseDatos.CuotaPrestamos.Where(c => 
+                    c.ClienteCedula == cedulaLogueada).ToList();
+                return View(listaCuotas);
 
-            return View(listaCuotas);
+            }
+            catch (Exception e)
+            {
+                
+                Console.WriteLine(e);
+                throw new Exception(e.Message);
+            }
+           
+            
         }
 
 

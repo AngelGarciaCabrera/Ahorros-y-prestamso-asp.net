@@ -7,24 +7,31 @@ namespace SistemaDeAhorroYPrestamos.Models;
 
 public class CuotaPrestamo
 {
-    [Required]
-    public DateTime FechaPlanificacion { get; set; }
+    [Column(TypeName = "datetime2")]
+    public DateTime? FechaPlanificacion { get; set; }
     
-    [Required]
+   
     [Column(TypeName = "decimal(9,2)")]
-    public decimal Monto { get; set; }
-    [Required]
-    public string? Tipo { get; set; } = null!;
-    [Required]
+    public decimal? Monto { get; set; }
+  
+    public string? Tipo { get; set; } 
+    [Column(TypeName = "datetime2")]
     public DateTime? FechaRealizado { get; set; }
-    [Required]
+    
+    
+    
+   
     public int? CodigoComprobante { get; set; }
+  
+   
+   
     [Key]
-    [Required]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public int PrestamoCodigo { get; set; }
-    
+    [Required]
+    [StringLength(11)]
     public string ClienteCedula { get; set; }
+   
 
-    public virtual Prestamo PrestamoCodigoNavigation { get; set; } = null!;
+    public virtual Prestamo PrestamoCodigoNavigation { get; set; }
 }

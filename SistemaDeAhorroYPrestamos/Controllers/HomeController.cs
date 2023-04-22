@@ -70,7 +70,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
                 //Guarda al usuario en la sesion
                 HttpContext.Session.SetString(IKeysData.CEDULA, cliente.Cedula);
-                return View("SegundoHome");
+                return RedirectToAction("SegundoHome");
             }
             else
             {

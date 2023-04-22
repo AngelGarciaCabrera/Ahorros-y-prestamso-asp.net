@@ -203,9 +203,28 @@ namespace SistemaDeAhorroYPrestamos.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult PagosPrestamos(int cuota)
+        {
+
+            var cuotaM = _BaseDatos.CuotaPrestamos.FirstOrDefault(c => c.PrestamoCodigo == cuota);
+            
+            return View(cuotaM);
+        }
         public IActionResult PagosPrestamos()
         {
+            
+            
             return View();
+        }
+        public IActionResult BorrarCuotaPrestamo(int codigo)
+        {
+            var cuotaM = _BaseDatos.CuotaPrestamos.FirstOrDefault(c => c.PrestamoCodigo == codigo);
+
+            _BaseDatos.CuotaPrestamos.Remove(cuotaM);
+            _BaseDatos.SaveChanges();
+            
+            return RedirectToAction("SegundoHome");
         }
 
         public IActionResult TablaPrestamos()
@@ -214,6 +233,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
             {
                 var cedulaLogueada = HttpContext.Session.GetString(IKeysData.CEDULA);
             
+                
 
                 var listaCuotas = _BaseDatos.CuotaPrestamos.Where(c => 
                     c.ClienteCedula == cedulaLogueada).ToList();
@@ -227,6 +247,7 @@ namespace SistemaDeAhorroYPrestamos.Controllers
                 throw new Exception(e.Message);
             }
            
+            
             
         }
 

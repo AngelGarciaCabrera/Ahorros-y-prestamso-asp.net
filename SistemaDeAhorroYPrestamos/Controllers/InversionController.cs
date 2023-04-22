@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using SistemaDeAhorroYPrestamos.Helpers;
 using SistemaDeAhorroYPrestamos.Models;
 
@@ -36,40 +37,41 @@ namespace SistemaDeAhorroYPrestamos.Controllers
 
             var codigo = new Random().Next(1, 1000);
 
-            var inversion = new Prestamo() { Codigo = codigo, ClienteCedula = cedulaLogueda };
+            var cliente = _BaseDatos.Clientes.FirstOrDefault(c => c.Cedula == cedulaLogueda);
+            if (cliente == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var inversion = new Inversiones() { Codigo = codigo, ClienteCedula = cedulaLogueda, CuentaBancoNumero = cliente.IdCuentaBanco    };
             return View(inversion);
-            
+
         }
 
         [HttpPost]
 
-        public IActionResult SolicitudInversion([FromForm] Inversiones inversiones, string botonPresionado)
+        public IActionResult SolicitudInversion(Inversiones inversiones, string botonPresionado)
         {
-           
-
             switch (botonPresionado)
             {
                 case "CalcularInteres":
                     var dias = (inversiones.FechaEnd - inversiones.FechaBeg).TotalDays;
                     var interes = dias / 365 * 0.1D * (double)inversiones.Monto;
                     inversiones.Interes = (decimal)Math.Round(interes, 2) / 100;
-                    
-                    return View(inversiones);
+                    break;
+
                 case "Enviar":
-                    // Guardar el préstamo en la base de datos
-                    var entityEntry = _BaseDatos.Inversiones.Add(inversiones);
-
+                    // Guardar la inversion en la base de datos
+                    _BaseDatos.Inversiones.Add(inversiones);
                     _BaseDatos.SaveChanges();
-                    
-                    return RedirectToAction("SegundoHome");
 
+                    return View("SegundoHome");
 
                 case "eliminar":
-                    return RedirectToAction("TablaPrestamos", inversiones);
+                    return RedirectToAction("TablaInversion", inversiones);
             }
 
-
-            return View(inversiones); ;
+            return View(inversiones);
         }
 
         public IActionResult TablaInversion()

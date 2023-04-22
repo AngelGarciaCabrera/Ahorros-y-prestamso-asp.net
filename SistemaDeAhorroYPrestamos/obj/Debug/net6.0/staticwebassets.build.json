@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "1ycz6BAPq0uF0u7szWAqufavJZE04eeRLS0Az8xxZBw=",
-=======
-  "Hash": "q2+j8/jKkLRB0Uy5wIXQOlhcwJazKfxosLPbHLhBBkY=",
->>>>>>> b680f5ed8627295adae74ff463795d02f380976b
+  "Hash": "Ice0Nj71wFhelJXM1I8m7DD3kztSDd8reNAJtJEMh6g=",
   "Source": "SistemaDeAhorroYPrestamos",
   "BasePath": "_content/SistemaDeAhorroYPrestamos",
   "Mode": "Default",
@@ -106,6 +102,40 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Contact.css",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "css/Contact.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Contact.css"
+    },
+    {
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Contact2.css",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "css/Contact2.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Contact2.css"
+    },
+    {
       "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\Home2.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
@@ -157,13 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
-=======
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\stlyepagos.css",
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\stlyepagos.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
       "BasePath": "_content/SistemaDeAhorroYPrestamos",
       "RelativePath": "css/stlyepagos.css",
       "AssetKind": "All",
@@ -177,8 +204,7 @@
       "OriginalItemSpec": "wwwroot\\css\\stlyepagos.css"
     },
     {
-      "Identity": "C:\\Users\\angel\\Desktop\\Tarea final  programacion 2\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
->>>>>>> b680f5ed8627295adae74ff463795d02f380976b
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\css\\styles1erHome.css",
       "SourceId": "SistemaDeAhorroYPrestamos",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
@@ -652,6 +678,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\TablaInversion.js",
+      "SourceId": "SistemaDeAhorroYPrestamos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\",
+      "BasePath": "_content/SistemaDeAhorroYPrestamos",
+      "RelativePath": "js/TablaInversion.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\TablaInversion.js"
     },
     {
       "Identity": "C:\\Users\\frank\\OneDrive\\Escritorio\\Ahorros-y-prestamso-asp.net\\SistemaDeAhorroYPrestamos\\wwwroot\\js\\TablaPrestamos.js",
